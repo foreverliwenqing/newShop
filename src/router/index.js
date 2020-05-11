@@ -13,6 +13,14 @@ export default new Router({
     {
       path: '/product',
       component: resolve => require(['@/components/productInfo'], resolve)
+    },
+    {
+      path: '/userinfo',
+      component: resolve => require(['@/components/userInfo'], resolve)
+    },
+    {
+      path: '/search',
+      component: resolve => require(['@/components/search'], resolve)
     }
   ]
 })

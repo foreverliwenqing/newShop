@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <van-search v-model="value" placeholder="Please enter a keyword" shape="round" />
+    <van-search v-model="value" readonly placeholder="Please enter a keyword" shape="round" background="#dcdcdc" @click="goBack()"/>
 
     <div class="headBanner">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
@@ -85,10 +85,14 @@ export default {
       loading: false,
       finished: false,
       refreshing: false,
-      prefix: "http://jd.itying.com/"
+      prefix: "http://jd.itying.com/",
+      price: 100,
     };
   },
   methods: {
+    goBack() {
+      this.$router.push("/search");
+    },
     goProduct() {
       this.$router.push("/product");
     },
@@ -130,6 +134,12 @@ export default {
     this.$api.getData.plist().then(res => {
       this.plist = res.result;
     });
+  },
+  created() {
+    console.log(1)
+    fbq('track', 'Purchase',{value:this.price,currency:'USD'});
+    console.log(2)
+    console.log(this.price)
   }
 };
 </script>

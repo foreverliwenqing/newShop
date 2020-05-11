@@ -1,0 +1,4360 @@
+{
+    "SA": {
+        "Al Khobar": {
+            "Ibn Sina": 1,
+            "Ishbiliya": 2,
+            "Al Iskan": 3,
+            "Al Amwaj": 4,
+            "Al Andalus": 5,
+            "Al Bahar": 6,
+            "Al Buhayrah": 7,
+            "Al Bustan": 8,
+            "Al Bandariyah": 9,
+            "At Tahliyah": 10,
+            "At Taawn": 11,
+            "Ath Thuqbah": 12,
+            "Al Jisr": 13,
+            "Al Jawharah": 14,
+            "Al Hizam Al Akhdar": 15,
+            "Al Hizam Adh Dhahabi": 16,
+            "Al Hamra": 17,
+            "Al Khubar Al Janubiyah": 18,
+            "Al Khubar Ash Shamaliyah": 19,
+            "Al Khuzama": 20,
+            "Al Khawr": 21,
+            "Ar Rakah Al Janubiyah": 22,
+            "Ar Raja": 23,
+            "Ar Rawabi": 24,
+            "As Sahil": 25,
+            "As Sufun": 26,
+            "Ash Sheraa": 27,
+            "As Sawari": 28,
+            "Al Aqrabiyah": 29,
+            "Al Aqiq": 30,
+            "Al Ulaya": 31,
+            "Al Kawthar": 32,
+            "Al Kurnaish": 33,
+            "Al Lulu": 34,
+            "Sporting City": 35,
+            "Al Murjan": 36,
+            "Al Maha": 37,
+            "Al Hada": 38,
+            "Al Yarmok": 39,
+            "Sinaiyah Ath Thuqbah": 40,
+            "Sinaiyah Al Foaziah": 41,
+            "Qurtubah": 42,
+            "Madinat Al Ummal": 43,
+            "Other": 44
+        },
+        "Dammam": {
+            "Ibn Khaldun": 1,
+            "Uhud": 2,
+            "Al Itisalat": 3,
+            "Al Iskan": 4,
+            "Al Amir Muhammed Ibn Saud": 5,
+            "Al Athir": 6,
+            "Al Amanah": 7,
+            "Al Amal": 8,
+            "Al Anwar": 9,
+            "Al Badiyah": 10,
+            "Al Buhayrah": 11,
+            "Al Badi": 12,
+            "Al Basatin": 13,
+            "Al Jamiyin": 14,
+            "Al Jalawiyah": 15,
+            "Al Jawharah": 16,
+            "Al Hussam": 17,
+            "Al Hamra": 18,
+            "Al Khalidiyah Al Janubiyah": 19,
+            "Al Khalidiyah Ash Shamaliyah": 20,
+            "Al Kuthriah": 21,
+            "Al Khalij": 22,
+            "Ad Danah": 23,
+            "Ad Dawasir": 24,
+            "Ar Rabiyah": 25,
+            "Ar Rakah Ash Shamaliyah": 26,
+            "Ar Rabi": 27,
+            "Ar Rawdah": 28,
+            "Ar Rayyan": 29,
+            "Az Zuhur": 30,
+            "As Salam": 31,
+            "As Suq": 32,
+            "As Saif": 33,
+            "Ash Shati Ash Sharqi": 34,
+            "Ash Shati Al Gharbi": 35,
+            "Ash Sharq": 36,
+            "Ash Shulah": 37,
+            "Ash Shifa": 38,
+            "As Sadafah": 39,
+            "As Safa": 40,
+            "Industrial": 41,
+            "Industrial Area No1": 42,
+            "Ad Dabab": 43,
+            "At Tubayshi": 44,
+            "Al Adamah": 45,
+            "Al Aziziyah": 46,
+            "Al Amamrah": 47,
+            "Al Anud": 48,
+            "Al Firdaws": 49,
+            "Al Fursan": 50,
+            "Al Fanar": 51,
+            "Al Faiha": 52,
+            "Al Faisaliyah": 53,
+            "Al Qadisiyah": 54,
+            "Al Qazaz": 55,
+            "Al Muhammadiyah": 56,
+            "Industrial City 2": 57,
+            "Al Muraikabat": 58,
+            "Al Mazruiyah": 59,
+            "Al Matar": 60,
+            "Al Manar": 61,
+            "Al Muntazah": 62,
+            "Al Maha": 63,
+            "An Nasriyah": 64,
+            "An Nakhil": 65,
+            "An Nada": 66,
+            "An Nuzhah": 67,
+            "An Nasim": 68,
+            "An Nahdah": 69,
+            "An Nur": 70,
+            "An Nawras": 71,
+            "Al Hadabah": 72,
+            "Al Wahah": 73,
+            "Badr": 74,
+            "Dahiyat Al Malik Fahd": 75,
+            "Taybah": 76,
+            "Ghirnatah": 77,
+            "Qasr Al Khalij": 78,
+            "Madinat Al Umal": 79,
+            "King Faysal University": 80,
+            "King Fahd International Airport": 81,
+            "King Abdul Aziz Seaport": 82,
+            "Other": 83
+        },
+        "Dhahran": {
+            "Al Jamiah": 1,
+            "Al Haras Al Watani": 2,
+            "Ad Danah Al Janubiyah": 3,
+            "Ad Danah Ash Shamaliyah": 4,
+            "Ad Dawhah Al Janubiyah": 5,
+            "Ad Dawhah Ash Shamaliyah": 6,
+            "Al Qashlah": 7,
+            "Al Qusur": 8,
+            "Tihamah": 9,
+            "Kfupm": 10,
+            "Gharb Adh Dhahran": 11,
+            "Hajr": 12,
+            "Thuqba": 13,
+            "Al-Jsh": 14,
+            "Jafar": 15,
+            "Khodaria": 16,
+            "Sarar": 17,
+            "Safanyah": 18,
+            "Othmanyah": 19,
+            "Tanjeeb": 20,
+            "Ras Al Kheir": 21,
+            "Other": 22
+        },
+        "Jeddah": {
+            "Abhur Al Janubiyah": 1,
+            "Abhur Ash Shamaliyah": 2,
+            "Abruq Ar Rughamah": 3,
+            "Al Ajaweed": 4,
+            "Al Ajwad": 5,
+            "Al Asalah": 6,
+            "Al Amwaj": 7,
+            "Al Amir Abdoulmajed": 8,
+            "Al Amir Fawaz Al Janouby": 9,
+            "Al Amir Fawaz Ash Shamaly": 10,
+            "Al Andalus": 11,
+            "Al Barakah": 12,
+            "Al Basatin": 13,
+            "Al Bashaer": 14,
+            "Al Baghdadiyah Ash Sharqiyah": 15,
+            "Al Baghdadiyah Al Gharbiyah": 16,
+            "Al Balad": 17,
+            "Al Bawadi": 18,
+            "At Tadamon": 19,
+            "At Taawon": 20,
+            "Ath Thaalibah": 21,
+            "Ath Thaghr": 22,
+            "Al Jamiah": 23,
+            "Al Jawharah": 24,
+            "Al Hamadaniyah": 25,
+            "Al Hamra": 26,
+            "Al Khalidiyah": 27,
+            "Al Khomrah": 28,
+            "Ar Rabwah": 29,
+            "Ar Rihab": 30,
+            "Ar Rahmanyah": 31,
+            "Ar Rahmah": 32,
+            "Ar Rawabi": 33,
+            "Ar Rawdah": 34,
+            "Ar Ruwais": 35,
+            "Ar Riyadh": 36,
+            "Ar Rayaan": 37,
+            "Az Zomorod": 38,
+            "Az Zahra": 39,
+            "As Sahil": 40,
+            "As Samir": 41,
+            "As Sabil": 42,
+            "As Sarawat": 43,
+            "As Sororyah": 44,
+            "As Salamah": 45,
+            "As Sulaymaniyah": 46,
+            "As Sanabel": 47,
+            "Ash Shati": 48,
+            "Ash Sheraa": 49,
+            "Ash Sharafiyah": 50,
+            "Ash Shrouk": 51,
+            "Ash Shefaa": 52,
+            "As Salhiyah": 53,
+            "As Sahifah": 54,
+            "As Safa": 55,
+            "As Swaryee": 56,
+            "Ad Dahiah": 57,
+            "Al Adel": 58,
+            "Al Aziziyah": 59,
+            "Al Ammariyah": 60,
+            "Al Farouk": 61,
+            "Al Ferdous": 62,
+            "Al Frosyah": 63,
+            "Al Fadel": 64,
+            "Al Fadeylah": 65,
+            "Al Falah": 66,
+            "Al Faiha": 67,
+            "Al Faisaliyah": 68,
+            "Al Quraiyat": 69,
+            "Al Qryniah": 70,
+            "Al Qouzeen": 71,
+            "Al Karamah": 72,
+            "Al Kandarah": 73,
+            "Al Kawthar": 74,
+            "Al Loaloa": 75,
+            "Al Mutanazahat": 76,
+            "Al Mahjar": 77,
+            "Al Muhammadiyah": 78,
+            "Al Murjan": 79,
+            "Al Marwah": 80,
+            "Al Masarah": 81,
+            "Al Moulysaa": 82,
+            "Al Manar": 83,
+            "Al Montazah": 84,
+            "Industrial Area": 85,
+            "An Nakhil": 86,
+            "An Nazlah Ash Sharqiyah": 87,
+            "An Nazlah Al Yamaniyah": 88,
+            "An Nuzhah": 89,
+            "An Nasim": 90,
+            "An Naim": 91,
+            "An Nahdah": 92,
+            "Al Hada": 93,
+            "Al Hindawiyah": 94,
+            "Al Wahah": 95,
+            "Al Wadi": 96,
+            "Al Wurud": 97,
+            "Al Waziriyah": 98,
+            "Al Yaqoot": 99,
+            "Um Asalam": 100,
+            "Um Hableen": 101,
+            "Petromin": 102,
+            "Bahrah": 103,
+            "Bryman": 104,
+            "Bani Malik": 105,
+            "King Abdul Aziz University": 106,
+            "Taibah": 107,
+            "Ghulail": 108,
+            "King Faisal Naval Base": 109,
+            "Madain Al Fahd": 110,
+            "King Abdul Aziz Medical City": 111,
+            "Mraykh": 112,
+            "Mishrifah": 113,
+            "King Abdul Aziz International Airport": 114,
+            "Jeddah Eslamic Seaport": 115,
+            "Bahara": 116,
+            "Shoaiba": 117,
+            "Other": 118
+        },
+        "Khobar": {
+            "Other": 2
+        },
+        "Ras Tanura": {
+            "Al Andalus": 1,
+            "Ad Danah": 2,
+            "Ar Rawdah": 3,
+            "Az Zuhur": 4,
+            "As Sinaiyah": 5,
+            "Al Faihaa": 6,
+            "Al Montazah": 7,
+            "An Naim": 8,
+            "Qurtubah": 9,
+            "Other": 10
+        },
+        "Riyadh": {
+            "Al Ghnamiah": 1,
+            "Uhud": 2,
+            "Ishbiliyah": 3,
+            "Al Izdihar": 4,
+            "Al Iskan": 5,
+            "Al Andalus": 6,
+            "Al Badiah": 7,
+            "Al Bariah": 8,
+            "Al Batha": 172,
+            "At Taawun": 10,
+            "Al Jaradiyah": 11,
+            "Al Jazirah": 12,
+            "Al Janadriyah": 13,
+            "Al Haer": 14,
+            "Al Hazm": 15,
+            "Al Hamra": 16,
+            "Al Khalidiyah": 17,
+            "Al Khuzama": 18,
+            "Al Khalij": 19,
+            "Ad Dar Al Baida": 20,
+            "Al Dho": 21,
+            "Ad Duraihimiyah": 22,
+            "Ad Difa": 23,
+            "Ad Dubiyah": 24,
+            "Ad Dirah": 25,
+            "Ar Raid": 26,
+            "Ar Rabwah": 27,
+            "Ar Rabi": 28,
+            "Ar Rahmaniyah": 29,
+            "Ar Rafiah": 30,
+            "Ar Rimal": 31,
+            "Ar Rimayah": 32,
+            "Ar Rawabi": 33,
+            "Ar Rawdah": 34,
+            "Ar Rayan": 35,
+            "Az Zahra": 36,
+            "Az Zahrah": 37,
+            "As Saadah": 38,
+            "As Safarat": 39,
+            "As Salam": 41,
+            "As Sulai": 41,
+            "As Sulimaniyah": 42,
+            "As Suwaidi": 43,
+            "As Suwaidi Al Gharbi": 44,
+            "Ash Sharafiyah": 45,
+            "Ash Sharq": 46,
+            "Ash Shifa": 47,
+            "Ash Shimaisi": 48,
+            "Al Shohada": 49,
+            "As Salhiyah": 50,
+            "As Sahafah": 51,
+            "As Safa": 52,
+            "As Sinaiyah": 53,
+            "Adh Dhubbat": 54,
+            "Al Arid": 55,
+            "Al Uraija": 56,
+            "Al Uraija Al Gharbiyah": 57,
+            "Al Uraija Al Wusta": 58,
+            "Al Aziziyah": 59,
+            "Al Aqiq": 60,
+            "Al Ulaya": 61,
+            "Al Umjiah": 62,
+            "Al Amal": 63,
+            "Al Ud": 64,
+            "Al Ghadir": 65,
+            "Al Fakhriyah": 66,
+            "Al Faruq": 67,
+            "Al Falah": 68,
+            "Al Futah": 69,
+            "Al Faiha": 70,
+            "Al Faisaliyah": 71,
+            "Al Qadisiyah": 72,
+            "Al Quds": 73,
+            "Al Qura": 74,
+            "Al Qirawan": 75,
+            "Al Muhammadiyah": 76,
+            "Second Industrial City": 77,
+            "Al Murabba": 78,
+            "Al Mursalat": 79,
+            "Al Marqab": 80,
+            "Al Marwah": 81,
+            "Al Muruj": 82,
+            "Al Mishal": 83,
+            "Al Masani": 84,
+            "Al Misfat": 85,
+            "Al Masif": 86,
+            "Al Madhar": 87,
+            "Al Madhar Ash Shamali": 88,
+            "Al Mikal": 89,
+            "Al Maizilah": 90,
+            "Al Mughrizat": 91,
+            "Al Malaz": 92,
+            "Al Malqa": 93,
+            "King Abdul Aziz": 94,
+            "King Abdullah": 95,
+            "King Fahd": 96,
+            "King Faisal": 97,
+            "Al Manakh": 98,
+            "Al Manar": 99,
+            "Al Mansurah": 100,
+            "Mansuriyah": 101,
+            "Al Mahdiyah": 102,
+            "Al Munsiyah": 103,
+            "Al Mutamarat": 104,
+            "An Nasriyah": 105,
+            "An Nakhil": 106,
+            "An Nada": 107,
+            "An Narjis": 108,
+            "An Nuzhah": 109,
+            "An Nasim Ash Sharqi": 110,
+            "An Nasim Al Gharbi": 111,
+            "An Nazim": 112,
+            "An Nafl": 113,
+            "An Namudhajiyah": 114,
+            "An Nahdah": 115,
+            "An Nur": 116,
+            "Al Hada": 117,
+            "Al Wahah": 118,
+            "Al Wadi": 119,
+            "Al Wurud": 120,
+            "Al Wazarat": 121,
+            "Al Wusayta": 122,
+            "Al Wisham": 123,
+            "Al Yasmin": 124,
+            "Al Yarmuk": 125,
+            "Al Yamamah": 126,
+            "Umm Al Hamam Ash Sharqi": 127,
+            "Umm Al Hamam Al Gharbi": 128,
+            "Um Alshal": 129,
+            "Umm Salim": 130,
+            "Badr": 131,
+            "Banban": 132,
+            "Thulaim": 133,
+            "Al Imam Muhammed Ibn Saud Islamic University": 134,
+            "King Saud University": 135,
+            "Jabrah": 136,
+            "Jarir": 137,
+            "Hittin": 138,
+            "Khashm Al An": 139,
+            "Dirab": 140,
+            "Skirinah": 141,
+            "Sultanah": 142,
+            "Shubra": 143,
+            "Salah Ad Din": 144,
+            "Siyah": 145,
+            "Dahiat Namar": 146,
+            "Tuwaiq": 147,
+            "Taibah": 148,
+            "Dhahrat Al Badiah": 149,
+            "Dhahrat Laban": 150,
+            "Dhahrat Namar": 151,
+            "Utaiqah": 152,
+            "Irqah": 153,
+            "Areed": 154,
+            "Uqaz": 155,
+            "Ilaishah": 156,
+            "Ghubairah": 157,
+            "Ghirnatah": 158,
+            "Qurtubah": 159,
+            "Laban": 160,
+            "King Khalid Airport": 161,
+            "Manfuhah": 162,
+            "Manfuhah Al Jadidah": 163,
+            "Namar": 164,
+            "Hyt": 165,
+            "Oyaynah": 166,
+            "Tebrak": 167,
+            "Deraab": 168,
+            "Remah": 169,
+            "Rwaydah": 170,
+            "Salbookh": 171,
+            "Other": 172
+        },
+        "Tarut": {
+            "Al Andalus": 1,
+            "Al Jamiyin": 2,
+            "Al Jabal": 3,
+            "Al Jawharah": 4,
+            "Ad Dirah": 5,
+            "Ar Rabeiyah": 6,
+            "Az Zomorod": 7,
+            "Az Zour": 8,
+            "As Sadafah": 9,
+            "As Sawari": 10,
+            "Al Lulu": 11,
+            "Al Manakh": 12,
+            "An Nakhil": 13,
+            "An Narjis": 14,
+            "Al Yamamah": 15,
+            "Darin": 16,
+            "Sanabis": 17,
+            "Other": 18
+        },
+        "Abha": {
+            "Abha Al Jadidah": 1,
+            "Al Andalus": 2,
+            "Al Khalidiyah": 3,
+            "Al Khasha": 4,
+            "Ar Rabwah": 5,
+            "As Sadd": 6,
+            "As Sarawat": 7,
+            "Ash Sharafiyah": 8,
+            "Ash Shifa": 9,
+            "Ad Dabab": 10,
+            "Al Arin": 11,
+            "Al Aziziyah": 12,
+            "Al Faisaliyah": 13,
+            "Al Qabil": 14,
+            "Al Qura": 15,
+            "Al Muruj": 16,
+            "Al Muftahah": 17,
+            "Al Manhal": 18,
+            "An Nuzhah": 19,
+            "An Nasim": 20,
+            "An Nasb": 21,
+            "Al Wardatain": 22,
+            "Al Wasaif": 23,
+            "Dhurah": 24,
+            "Shamsan": 25,
+            "Down Town": 26,
+            "Namas": 27,
+            "Bareq": 28,
+            "Balahmar": 29,
+            "Tanuma": 30,
+            "Harjah": 31,
+            "Rejal Alma'A": 32,
+            "Sarat Obeida": 33,
+            "Dhahran Al Janoob": 34,
+            "Turaib": 35,
+            "Wadeien": 36,
+            "Wadi Bin Hasbal": 37,
+            "Sabt El Alaya": 38,
+            "Other": 39
+        },
+        "Abqaiq": {
+            "Other": 2
+        },
+        "Abu Hadriyah": {
+            "Other": 2
+        },
+        "Al Duwadimi": {
+            "Sajir": 1,
+            "Al Harmin": 2,
+            "Al Khalidiyah": 3,
+            "Al Khalij": 4,
+            "Ad Dar": 5,
+            "Ad Dirah": 6,
+            "Ar Rabwah": 7,
+            "Ar Rawdah": 8,
+            "Ar Rayan": 9,
+            "As Salam": 10,
+            "As Sunbulah": 11,
+            "As Sanaiyyah": 12,
+            "Al Aziziyah": 13,
+            "Al Faysaliyyah": 14,
+            "Al Quds": 15,
+            "King Fahd": 16,
+            "An Nuzaha": 17,
+            "An Nahdah": 18,
+            "Badr": 19,
+            "Hatin": 20,
+            "Mishrifah": 21,
+            "Musaddah": 22,
+            "Mantiqat Al Istirahat": 23,
+            "Other": 24
+        },
+        "Al Hofuf": {
+            "Al Jishah": 1,
+            "Al Kawt An Naathil": 57,
+            "Al Wahah Riyadh": 57,
+            "Muhammed Al Isa": 57,
+            "At Tarf": 5,
+            "Al Munayzilah": 6,
+            "Jwatha": 7,
+            "Madinat Al Jafr": 8,
+            "Madinat Al Umran": 9,
+            "Madinat Al Uyun": 10,
+            "Madinat Al Fdool": 11,
+            "Agricultura Area": 13,
+            "Udhaliyah": 13,
+            "Uyun": 14,
+            "Batha": 15,
+            "Harad": 16,
+            "Salwa": 17,
+            "Qarah": 18,
+            "Al Iskan Al Am": 19,
+            "Al Basirah": 20,
+            "Al Bandariyah": 21,
+            "Al Jamiyin": 22,
+            "Al Khalidiyah": 23,
+            "Ar Rafah Al Janubiyah": 24,
+            "Ar Rafah Ash Shamaliyah": 25,
+            "Ar Ruqayqah": 26,
+            "Ar Rawdah": 27,
+            "Az Zahrah": 28,
+            "As Salmaniyah Al Janubiyah": 29,
+            "As Salmaniyah Ash Shamaliyah": 30,
+            "Al Sayasib": 31,
+            "Ash Shihabiyah": 32,
+            "As Salhiyah": 33,
+            "As Sayhad": 34,
+            "Al Aziziyah": 35,
+            "Al Uwaimiriyah": 36,
+            "Al Fadiliyah": 37,
+            "Al Muthalath": 38,
+            "Al Muhammadiyah": 39,
+            "Al Mazrua": 40,
+            "Al Mazruaiyah": 41,
+            "Al Mutayrifi": 42,
+            "Al Mualimin Ash Sharqiyah": 43,
+            "Al Mualimin Al Gharbiyah": 44,
+            "King Fahd": 45,
+            "An Nayfiyah": 46,
+            "An Nasim": 47,
+            "Al Wahah": 48,
+            "King Faisal University": 49,
+            "Janub Al Hafuf": 50,
+            "Janub Mansubi At Talim": 51,
+            "Abdul Latif Al Isa": 52,
+            "Airport": 53,
+            "HARADH 160 KM": 54,
+            "Batha 250 KM": 55,
+            "Salwa 160 KM": 56,
+            "Other": 57
+        },
+        "Al Hufuf": {
+            "Other": 2
+        },
+        "Al Jubail": {
+            "Other": 2
+        },
+        "Al Kharj": {
+            "Al Andalus": 1,
+            "Al Badiah": 2,
+            "Al Burj": 3,
+            "Al Barakah": 4,
+            "Al Khalidiyyah": 5,
+            "Al Khuzama": 6,
+            "Ar Rashidiyyah": 7,
+            "Ar Rafiah": 8,
+            "Ar Rayyan": 9,
+            "Az Zahir": 10,
+            "As Salam": 11,
+            "As Sulaymaniyah": 12,
+            "As Safa": 13,
+            "New Industrial Area": 14,
+            "Al Aliyah": 15,
+            "Al Aziziyyah": 16,
+            "Al Faysaliyyah": 17,
+            "Al Muntazah": 18,
+            "Al Mansurah": 19,
+            "Al Munyfiyah": 20,
+            "An Nasifah": 21,
+            "An Nuzhah": 22,
+            "An Nahdah": 23,
+            "Al Yamamah": 24,
+            "Mishrif": 25,
+            "Industrial Area": 26,
+            "Sahna": 27,
+            "Other": 28
+        },
+        "Al Muzahimiyah": {
+            "Al Andalus": 1,
+            "Al Huzaymiyyah": 2,
+            "As Suquriyyah": 3,
+            "As Sinaiyah": 4,
+            "Al Ulayya": 5,
+            "Al Muruj": 6,
+            "Al Hada": 7,
+            "Shukhib": 8,
+            "Tuwik": 9,
+            "Ghirnatah": 10,
+            "Other": 11
+        },
+        "Al Qatif": {
+            "Awamiah": 1,
+            "Rahima": 2,
+            "Al Bahari": 3,
+            "Al Bahr": 4,
+            "Al Badia": 5,
+            "Al Badiah": 6,
+            "Al Bustan": 7,
+            "Al Bawadi": 8,
+            "At Tawbi": 9,
+            "Ath Thuraiya": 10,
+            "Al Jarudiyah": 11,
+            "Al Jarrari": 12,
+            "Al Jazirah": 13,
+            "Al Jamiymah": 14,
+            "Al Jawahir": 15,
+            "Al Husain": 16,
+            "Al Khamisah": 17,
+            "Al Khuzama": 18,
+            "Al Khuwaildiyah": 19,
+            "Ad Dababiyyah": 20,
+            "Ad Doij": 21,
+            "Ar Rabiah": 22,
+            "Ar Rida": 23,
+            "Ar Rawdah": 24,
+            "Ar Rif": 25,
+            "Az Zarah": 26,
+            "Az Zomorod": 27,
+            "Az Zahra": 28,
+            "As Sahil": 29,
+            "Ash Shati": 30,
+            "Ash Shariah": 31,
+            "Ash Shamasiyyah": 32,
+            "Ash Shahba": 33,
+            "Ash Shweikah": 34,
+            "As Sinaiyah": 35,
+            "Al Awamiyah": 36,
+            "Al Fath": 37,
+            "Al Qadih": 38,
+            "Al Qalah": 39,
+            "Kuwaikib": 40,
+            "Al Majidiyah": 41,
+            "Al Madaris": 42,
+            "Al Madani": 43,
+            "Al Murjan": 44,
+            "Al Muruj": 45,
+            "Al Masudiyah": 46,
+            "Al Mashtal": 47,
+            "An Nasirah": 48,
+            "An Narjis": 49,
+            "Al Wahah": 50,
+            "Al Wadiah": 51,
+            "Al Wurud": 52,
+            "Al Wasadah": 53,
+            "Al Yaqut": 54,
+            "Umm Al Jazm": 55,
+            "Bab As Sab": 56,
+            "Bab Madinah Ash Shamal": 57,
+            "Badiah Al Basri": 58,
+            "Halat Mahish": 59,
+            "Warehouse Area": 60,
+            "Mayyas": 61,
+            "Other": 62
+        },
+        "AlKhhafah": {
+            "Other": 2
+        },
+        "Anak": {
+            "Al Iskan": 1,
+            "Al Anwar": 2,
+            "Al Badr": 3,
+            "Al Bustan": 4,
+            "Al Jish": 5,
+            "Ar Rayah": 6,
+            "Ar Rimal": 7,
+            "Al Aqiq": 8,
+            "Al Mahar": 9,
+            "Al Mallahah": 10,
+            "Umm Al Hamam": 11,
+            "Anak": 12,
+            "Other": 13
+        },
+        "Bahara": {
+            "Other": 2
+        },
+        "Bukeiriah": {
+            "Other": 2
+        },
+        "Buqaiq": {
+            "Other": 2
+        },
+        "Dawadmi": {
+            "Other": 2
+        },
+        "Hafar Al Batin": {
+            "Abu Musa Al Ashari": 1,
+            "Al Iskan": 2,
+            "Al Batin": 3,
+            "Al Baladiyah": 4,
+            "At Talal": 5,
+            "Al Jamiah": 6,
+            "Al Khalidiyah": 7,
+            "Al Khalij": 8,
+            "Ar Rabiyah": 9,
+            "Ar Raid": 10,
+            "Ar Rabwah": 11,
+            "Ar Rabi": 12,
+            "Ar Rawdah": 13,
+            "Ar Rayan": 14,
+            "As Sulimaniyah": 15,
+            "Ash Shifa": 16,
+            "As Safaa": 17,
+            "As Sinaiyah": 18,
+            "Al Aziziyah": 19,
+            "Al Faiha": 20,
+            "Al Faisaliyah": 21,
+            "Al Muhammadiyah": 22,
+            "Al Muruj": 23,
+            "Al Masif": 24,
+            "Al Manar": 25,
+            "An Nayfiyah": 26,
+            "An Nakhil": 27,
+            "An Nuzhah": 28,
+            "An Nahdah": 29,
+            "Al Wahah": 30,
+            "Al Wadi": 31,
+            "Al Wurud": 32,
+            "Al Yarmuk": 33,
+            "Ghirnatah": 34,
+            "Fulaij": 35,
+            "Qurtubah": 36,
+            "Qaysoomah": 37,
+            "Al Nariyah": 38,
+            "Other": 39
+        },
+        "Hail": {
+            "Al Izdihar": 1,
+            "Al Hamra": 2,
+            "Al Khalij": 3,
+            "As Salam": 4,
+            "As Salhiyah": 5,
+            "As Sinaiyah": 6,
+            "Al Aziziyah": 22,
+            "Al Ulaya": 8,
+            "King Abdullah": 9,
+            "An Nahdah": 10,
+            "Al Wurud": 11,
+            "Aja": 12,
+            "Al Buhayrah": 13,
+            "Al Badnah": 14,
+            "Al Khuraymi": 15,
+            "Al Khuzama": 16,
+            "Al Khamashiyah": 17,
+            "Az Zibarah": 18,
+            "Az Zahra": 19,
+            "As Samra": 20,
+            "As Suwayfilah": 22,
+            "Al Mahattah": 22,
+            "Al Muzaabar": 23,
+            "Al Masif": 24,
+            "Airport": 25,
+            "Al Muntazah Ash Sharqi": 26,
+            "Al Muntazah Al Gharbi": 27,
+            "Industrial Area": 28,
+            "An Nasiyah": 29,
+            "An Naqrah": 30,
+            "Al Wusayta": 31,
+            "Barzan": 32,
+            "Hadri Al Bilad": 33,
+            "Samah": 34,
+            "Sababah": 35,
+            "Labdah": 36,
+            "Hail Regional Airport": 38,
+            "Mughaydah": 38,
+            "Other": 39
+        },
+        "Hofuf": {
+            "Other": 2
+        },
+        "Jubail": {
+            "Al Ahsa": 1,
+            "Al Andalus": 2,
+            "Jubail City Center": 3,
+            "Al Hijaz": 4,
+            "Al Huwaylat": 5,
+            "Al Khalij": 6,
+            "Ash Shati": 7,
+            "Al Faruq": 8,
+            "Al Firdaws": 9,
+            "Al Faiha": 10,
+            "Al Quds": 11,
+            "Al Lualu": 12,
+            "Industrial Area": 13,
+            "First Industrial Area": 14,
+            "Third Industrial Area": 15,
+            "Second Industrial Area": 16,
+            "Jalmudah": 17,
+            "Darin": 18,
+            "Sudayr": 19,
+            "Ad Dakhal Al Mahdud Subdivision": 20,
+            "As Sarawat Subdivision": 21,
+            "Abdul Latif Jameel Subdivision": 22,
+            "Gharb Al Mazari Subdivision": 23,
+            "Makkah": 24,
+            "Al Urayfi Area": 25,
+            "Najd": 26,
+            "Satorp (Jubail Ind'L 2)": 27,
+            "Other": 28
+        },
+        "Khamis Mushait": {
+            "Al Humaylah": 1,
+            "Al Bawadi": 2,
+            "Al Jazirah": 3,
+            "Al Khalidiyah": 4,
+            "Al Khazan": 5,
+            "Ad Dawhah": 6,
+            "Ar Rabi": 7,
+            "Ar Rasras": 8,
+            "Ar Rawdah": 9,
+            "Ar Runah": 10,
+            "Az Zuhur": 11,
+            "As Sad": 12,
+            "As Salam": 13,
+            "Ash Sharafiyah": 14,
+            "Ash Shifa": 15,
+            "As Suqur": 16,
+            "Al Irq Al Janubi": 17,
+            "Al Irq Ash Shamali": 18,
+            "Al Aziziyah": 19,
+            "Al Fath": 20,
+            "Al Qafilah": 21,
+            "Al Mathnah": 22,
+            "Al Mizab": 23,
+            "Al Mamurah": 24,
+            "Al Muntazah": 25,
+            "An Nakhil": 26,
+            "An Nuzhah": 27,
+            "An Nasim": 28,
+            "An Nahdah": 29,
+            "Al Harir": 30,
+            "Al Wahah": 31,
+            "Umm Surur": 32,
+            "Dhalalah": 33,
+            "Airforce Housing": 34,
+            "Military City Housing": 35,
+            "14Th Brigade Housing": 36,
+            "Shubaah": 37,
+            "Shakar": 38,
+            "Damak": 39,
+            "Tayib Al Ism": 40,
+            "Atud": 41,
+            "Qambar": 42,
+            "Al Musa Subdivision": 43,
+            "Other": 44
+        },
+        "Kharj": {
+            "Other": 2
+        },
+        "Madinah": {
+            "Abu Burayqa": 1,
+            "Abu Kabir": 2,
+            "Al Iskan": 3,
+            "Al Usayfirin": 4,
+            "Al Barakah": 5,
+            "Al Balqa": 6,
+            "Al Jabirah": 7,
+            "Al Jamiah": 8,
+            "Al Jassah": 9,
+            "Al Jamawat": 10,
+            "Al Jumah": 11,
+            "Al Hadiqah": 12,
+            "Al Haram": 13,
+            "Al Hafya": 14,
+            "Al Khatim": 15,
+            "Al Khalidiyah": 16,
+            "Ad Dar": 17,
+            "Ad Difa": 18,
+            "Ad Duwaikhilah": 19,
+            "Ad Duwaimah": 20,
+            "Ar Ranuna": 21,
+            "Ar Rayah": 22,
+            "Ar Rumanah": 23,
+            "Ar Rawabi": 24,
+            "Az Zahrah": 25,
+            "As Sad": 26,
+            "As Suqya": 27,
+            "As Sakb": 28,
+            "As Sikkah Al Hadid": 29,
+            "As Salam": 30,
+            "As Sih": 31,
+            "Ash Shafiyah": 32,
+            "Ash Shuraybat": 33,
+            "Ash Shahba": 34,
+            "As Sadiqiyah": 35,
+            "Az Zahirah": 36,
+            "Al Ariyd": 37,
+            "Al Aziziyah": 38,
+            "Al Usbah": 39,
+            "Al Anabis": 40,
+            "Al Ihn": 41,
+            "Al Uyun": 42,
+            "Al Ghabah": 43,
+            "Al Gharra": 44,
+            "Al Fath": 45,
+            "Al Qiblatayn": 46,
+            "Al Qaswa": 47,
+            "Al Qalah": 48,
+            "Al Mabuth": 49,
+            "Al Masani": 50,
+            "Airport": 51,
+            "Al Mughaisilah": 52,
+            "King Fahd": 53,
+            "Al Manakhah": 54,
+            "Industrial Area": 55,
+            "An Nakhil": 56,
+            "An Naqa": 57,
+            "An Naqs": 58,
+            "Al Hadra": 59,
+            "Al Wabra": 60,
+            "Umm Khalid": 61,
+            "Badaah": 62,
+            "Bani Bayadah": 63,
+            "Bani Harithah": 64,
+            "Bani Khidrah": 65,
+            "Bani Zafar": 66,
+            "Bani Abdul Ashhal": 67,
+            "Bani Muawiyah": 68,
+            "Bir Uthman": 69,
+            "Jabal Uhud": 70,
+            "Hathm": 71,
+            "Khakh": 72,
+            "Dhu Al Hulayfah": 73,
+            "Raht": 74,
+            "Sayed Ash Shuhada": 75,
+            "Shizat": 76,
+            "Shuran": 77,
+            "Taibah": 78,
+            "Urwah": 79,
+            "Ayn Al Khif": 80,
+            "Qurban": 81,
+            "Qalat Makhit": 82,
+            "Kittanah": 83,
+            "Mudhainib": 84,
+            "Masjid Ad Dar": 85,
+            "Mahzur": 86,
+            "Nubala": 87,
+            "Warqan": 88,
+            "Wairah": 89,
+            "Hinakeya": 90,
+            "Mahad Al Dahab": 91,
+            "Other": 92
+        },
+        "Makkah": {
+            "Other": 2
+        },
+        "Manifah": {
+            "Other": 2
+        },
+        "Mecca": {
+            "Other": 2
+        },
+        "Medina": {
+            "Other": 2
+        },
+        "Muzamiyah": {
+            "Other": 2
+        },
+        "Nayriyah": {
+            "Other": 2
+        },
+        "Qassim": {
+            "Al Dalemya": 1,
+            "Qassim": 2,
+            "Muzneb": 3,
+            "Assiyah": 4,
+            "Uqlat Al Suqur": 5,
+            "Ayn Fuhayd": 6,
+            "Other": 7
+        },
+        "Qatif": {
+            "Other": 2
+        },
+        "Qilwah": {
+            "Other": 2
+        },
+        "Ras Al Kheir": {
+            "Other": 2
+        },
+        "Sakaka": {
+            "Ar Rabwah": 1,
+            "Ar Rawabi": 2,
+            "Ar Rawdah": 3,
+            "As Suq": 4,
+            "Ash Shuaib": 5,
+            "Ash Shalhub": 6,
+            "Al Dil": 7,
+            "At Tuwair": 8,
+            "Al Aziziyyah": 9,
+            "Al Laqait": 10,
+            "Al Muhammadiyah A": 11,
+            "Al Muhammadiyah B": 12,
+            "Al Muhammadiyah D": 13,
+            "Al Muhammadiyah G": 14,
+            "Al Muhammadiyah H": 15,
+            "Al Muhammadiyah E": 16,
+            "Al Muhammadiyah F": 17,
+            "Al Muruj": 18,
+            "Al Matar": 19,
+            "Al Matr": 20,
+            "Al Muaqilah": 21,
+            "Al Minah Al Khassah": 22,
+            "Southwestern Qara": 23,
+            "North Qara": 24,
+            "North Of Al Laqait Cemetery": 25,
+            "Qara": 26,
+            "Al Amal Subdivsion": 27,
+            "Az Zuhur Subdivision": 28,
+            "As Sulaimaniyyah": 30,
+            "As Siddiq Subdivsion": 30,
+            "As Sinaiyah Subdivision": 31,
+            "Al Urubah Subdivision": 32,
+            "Al Faisaliyyah Subdivision": 33,
+            "Old Subdivision": 34,
+            "Al Minah": 35,
+            "West Regional Road Subdivision": 36,
+            "Karim Durzi Subdivsion": 37,
+            "Kassab Al Muwayshir": 38,
+            "Nayf Durzi": 39,
+            "Other": 40
+        },
+        "Seihat": {
+            "Other": 2
+        },
+        "Skaka": {
+            "Other": 2
+        },
+        "Tabuk": {
+            "Abu Sabah": 1,
+            "General Security Force Housing": 2,
+            "Al Basatin": 3,
+            "Al Khalidiyah": 4,
+            "Ar Rawdah": 5,
+            "Ar Ruwayiyat": 6,
+            "As Saadah": 7,
+            "As Salam": 8,
+            "As Salman": 9,
+            "As Sulimaniyah": 10,
+            "Ash Shaikh": 11,
+            "As Salhiyah": 12,
+            "As Sinaiyah": 13,
+            "Al Aziziyah Al Jadidah": 14,
+            "Al Aziziyah Al Qadimah": 15,
+            "Al Ulaya": 16,
+            "Al Awayshah": 17,
+            "Al Faisaliyah Al Janubiyah": 18,
+            "Al Faisaliyah Ash Shamaliyah": 19,
+            "Al Qadisiyah": 20,
+            "Al Muruj": 21,
+            "Al Muruj B": 22,
+            "Al Masif": 23,
+            "Al Muntazah": 24,
+            "Al Munshiyah Al Jadidah": 25,
+            "Al Munshiyah Al Qadimah": 26,
+            "Al Mahrajan": 27,
+            "An Nahdah": 28,
+            "Al Hudaybah": 29,
+            "Al Wurud": 30,
+            "Petromin": 31,
+            "Rahil": 32,
+            "Sultanah": 33,
+            "Karim": 34,
+            "Ar Rabiyah Subdivision": 35,
+            "Ar Rajihi Subdivision": 36,
+            "Muruj Al Amir": 37,
+            "Airport": 38,
+            "Agricultura Area": 39,
+            "Military Area": 40,
+            "Al Bada": 41,
+            "Halat Ammar": 42,
+            "Other": 43
+        },
+        "Taif": {
+            "Al Khalidiyah": 1,
+            "Ar Rayan": 2,
+            "As Sadad": 3,
+            "As Salamah": 4,
+            "Ash Sharqiyah": 5,
+            "Ash Shuhada Al Janubiyah": 6,
+            "Ash Shuhada Ash Shamaliyah": 7,
+            "Al Aziziyah": 8,
+            "Al Aqiq": 9,
+            "Al Faisaliyah": 10,
+            "Al Qutbiyah": 11,
+            "Al Qamariyah": 12,
+            "Al Mathnah": 13,
+            "Central Area": 14,
+            "An Nuzhah": 15,
+            "Al Washha": 16,
+            "Umm Al Arad": 17,
+            "Jabrah": 18,
+            "Hawaya": 19,
+            "Shubra": 20,
+            "Shihar": 21,
+            "Awdah": 22,
+            "Qurwa": 23,
+            "Masarrah": 24,
+            "Maashi": 25,
+            "Nakhb": 26,
+            "Hawea\/Taif": 27,
+            "Alhada": 28,
+            "Rania": 29,
+            "Other": 30
+        },
+        "Umluj": {
+            "Abu Shajarah": 1,
+            "At Tahliyyah": 2,
+            "Ar Rawdhah": 3,
+            "Al Salam": 4,
+            "As Sayyadih": 5,
+            "Al Dawayhi": 6,
+            "Al Ulaya": 7,
+            "Al Murjan": 8,
+            "An Nassim": 9,
+            "Qaryat Al Jabnon": 10,
+            "Other": 11
+        },
+        "Unayzah": {
+            "Ishbiliyah": 1,
+            "Al Iskan": 2,
+            "Al Ashrafiyah": 3,
+            "Al Badiah": 4,
+            "Al Bustan": 5,
+            "Al Buaiten": 6,
+            "At Tahliyah": 7,
+            "Athaqafah": 8,
+            "Al Jamai": 9,
+            "Al Jazirah": 10,
+            "Al Jaldah": 11,
+            "Al Jawharah": 12,
+            "Al Hajeb": 13,
+            "Al Hadiqah": 14,
+            "Al Hazm": 15,
+            "Al Hufayrah": 16,
+            "Al Hamra": 17,
+            "Al Khalidiyah": 18,
+            "Al Kuzami": 19,
+            "Al Khalij": 20,
+            "Ad Dawhah": 21,
+            "Ad Dahbi": 22,
+            "Ar Rahmaniyah": 23,
+            "Ar Rimal": 24,
+            "Ar Rawdah": 25,
+            "Ar Rawghani": 26,
+            "Ar Riyadi": 27,
+            "Ar Rayan": 28,
+            "Az Zahir": 29,
+            "Az Zugaibah": 30,
+            "Az Zahra": 31,
+            "As Suhaymiyyah": 32,
+            "As Salam": 33,
+            "As Sulimaniyah": 34,
+            "Ash Shuaib": 35,
+            "Ash Shifa": 36,
+            "As Salhiyah": 37,
+            "As Safa": 38,
+            "As Safraa": 39,
+            "Al Absiah": 40,
+            "Al Aqiq": 41,
+            "Al Ulaya": 42,
+            "Al Awniyah": 43,
+            "Al Kada": 44,
+            "Al Fakhriyah": 45,
+            "Al Fakamah": 46,
+            "Al Faiha": 47,
+            "Al Faisaliyah": 48,
+            "Al Qadisiyah": 49,
+            "Al Qusor": 50,
+            "Al Qirawan": 51,
+            "Al Mubarkiah": 52,
+            "Al Muhammadiyah": 53,
+            "Al Mudwiah": 54,
+            "Al Marwah": 55,
+            "Al Muruj": 56,
+            "Warehouse": 57,
+            "Al Masif": 58,
+            "Airport": 59,
+            "King Khalid": 60,
+            "King Fahd": 61,
+            "Al Manar": 62,
+            "Al Muntazah": 63,
+            "Industrial Area No1 District": 64,
+            "Industrial Area No2 District": 65,
+            "An Nada": 66,
+            "An Narjis": 67,
+            "An Nasim": 68,
+            "An Nazim": 69,
+            "An Nofoad": 70,
+            "An Nuqailiah": 71,
+            "Al Hadaa": 72,
+            "Al Wahah": 73,
+            "Al Wadi": 74,
+            "Al Wusta": 75,
+            "Al Wafa": 76,
+            "Al Wahlan": 77,
+            "Al Yarmuk": 79,
+            "Al Yamamah": 79,
+            "Badr": 80,
+            "Hteen": 81,
+            "Damshiah": 82,
+            "Rabwat Al Hajeb": 83,
+            "Snam": 84,
+            "Suq Al Mashiya": 85,
+            "Uqaz": 86,
+            "Ghirnatah": 87,
+            "Qurtubah": 88,
+            "Marbidah": 89,
+            "Mlihah": 90,
+            "Down Town": 91,
+            "Other": 92
+        },
+        "Yanbu": {
+            "Al Balad": 1,
+            "Al Asalah": 2,
+            "Al Adwa": 3,
+            "Al Amarah": 4,
+            "Al Bathnah": 5,
+            "Al Buhayrah": 6,
+            "Al Bandar": 7,
+            "Al Bahjah": 8,
+            "Attaakhi": 9,
+            "At Taawn": 10,
+            "Al Jabriyah": 12,
+            "Al Jar": 12,
+            "Al Jamiah": 13,
+            "Al Jamiah Al Arabiyah": 14,
+            "Al Hadaiq": 15,
+            "Al Haras Al Watani": 16,
+            "Al Hawra": 17,
+            "Al Khalid": 18,
+            "Al Khurik": 19,
+            "Dasimah": 20,
+            "Ad Diyar": 21,
+            "Ar Rabwah": 22,
+            "Ar Rabi": 23,
+            "Ar Rayyan": 24,
+            "Az Zuhur": 25,
+            "As Salam": 26,
+            "As Sumayri": 28,
+            "As Sinaf": 28,
+            "As Sur": 29,
+            "As Suwayq": 30,
+            "Ash Shati": 31,
+            "Ash Sharbatli": 32,
+            "Ash Shuruq": 33,
+            "As Saaydah": 34,
+            "As Subh": 35,
+            "As Suraif": 36,
+            "As Safa": 37,
+            "As Saharij": 38,
+            "As Sawari": 40,
+            "Al Aziziyyah": 40,
+            "Al Usaylai": 41,
+            "Al Uywn": 42,
+            "Al Falah": 43,
+            "Al Fahd": 44,
+            "Al Faysal": 45,
+            "Al Qad": 46,
+            "Al Lulu": 47,
+            "Al Mubarak": 48,
+            "Al Majd": 49,
+            "Al Maharah": 50,
+            "Al Murjan": 51,
+            "Al Masarrah": 52,
+            "Al Mashhad": 53,
+            "Al Mushayrif": 54,
+            "Al Muntazah": 55,
+            "Industrial Area": 56,
+            "Al Mihan": 57,
+            "An Nibras": 58,
+            "An Nakhil": 59,
+            "An Nuzhah": 60,
+            "An Nasim": 61,
+            "An Nahdah": 63,
+            "An Nawah": 63,
+            "Al Wahah": 64,
+            "Al Yaqut": 65,
+            "Radwa": 66,
+            "Radwa An Naqadi": 67,
+            "Shajwa": 68,
+            "Abathir": 69,
+            "Adan": 70,
+            "Ayn An Nawa": 71,
+            "Mishrifah": 72,
+            "Yanbu Domestic Airport": 73,
+            "Light Industrial Park": 74,
+            "Yanbu Al Baher": 75,
+            "Other": 76
+        },
+        "Muzahmiah": {
+            "Other": 2
+        },
+        "Onaiza": {
+            "Other": 2
+        },
+        "Towal": {
+            "Other": 2
+        },
+        "Abu Areish": {
+            "Other": 2
+        },
+        "Abu Arish": {
+            "Al Andalus": 1,
+            "Al Khaldiyah": 2,
+            "Ar Rabi": 3,
+            "Ar Rawdah": 4,
+            "Az Zuhur": 5,
+            "As Sadiliyah": 6,
+            "As Salam": 7,
+            "Ash Shakah": 8,
+            "As Safa": 9,
+            "As Sinaiyah": 10,
+            "Al Uqdah": 11,
+            "Al Quds": 12,
+            "Al Muraikhiyah": 13,
+            "King Fahd": 14,
+            "Al Muhdaj": 15,
+            "An Nuzhah": 16,
+            "An Nasim": 17,
+            "An Nahdah": 18,
+            "Al Wurud": 19,
+            "Hakimat Abi Arish": 20,
+            "Kamirah": 21,
+            "Quwaiyyah": 22,
+            "Other": 23
+        },
+        "Ad Darb": {
+            "Other": 2
+        },
+        "Afif": {
+            "Al Idhaah": 1,
+            "Al Asfar": 2,
+            "Al Hujjaj": 3,
+            "Al Khazzan": 4,
+            "As Sulaymaniyah": 5,
+            "As Salhiyah": 6,
+            "As Sinaiyah": 7,
+            "Al Uud": 8,
+            "Al Maarid": 9,
+            "Al Malaz": 10,
+            "King Khalid": 11,
+            "King Fahd": 12,
+            "King Faisal": 13,
+            "Al Manfuhah": 14,
+            "Al Mihaniyin": 15,
+            "An Nahdah": 16,
+            "Al Idhaah North": 17,
+            "Other": 18
+        },
+        "Afifah": {
+            "Other": 2
+        },
+        "Aflaj": {
+            "Other": 2
+        },
+        "Ahad Al Masarihah": {
+            "Al Baladiah": 1,
+            "Al Bayatirah": 2,
+            "Al Hasamah": 3,
+            "Al Daghadir": 4,
+            "Ar Rawdah": 5,
+            "As Safa": 6,
+            "Al Iz": 7,
+            "Al Amariyah": 8,
+            "Al Ghusainiah": 9,
+            "Al Qasum": 10,
+            "Al Mutalla": 11,
+            "Al Manzam": 12,
+            "Al Mantiqah Al Sinaiah": 13,
+            "Al Mizab": 14,
+            "Al Wasit": 15,
+            "Hakimat Al Daghadir": 16,
+            "Hakimiat Al Iz": 17,
+            "Khalab": 18,
+            "Other": 19
+        },
+        "Ahad Masarha": {
+            "Other": 2
+        },
+        "Ahad Rafidah": {
+            "Al Khalidiyah": 1,
+            "Al Khalij": 2,
+            "Ar Runah": 3,
+            "Az Zuhur": 4,
+            "Az Zaytun": 5,
+            "As Salamah": 6,
+            "As Salhiyah": 7,
+            "Al Aziziyah": 8,
+            "Military City": 9,
+            "Al Masif": 10,
+            "An Nahdah": 11,
+            "Al Wurud": 12,
+            "Safwan": 13,
+            "Down Town": 14,
+            "Other": 15
+        },
+        "Ahad Rufaidah": {
+            "Other": 2
+        },
+        "AinDar": {
+            "Other": 2
+        },
+        "Al Aflaj": {
+            "Other": 2
+        },
+        "Al Ahmar Aflaj": {
+            "Other": 2
+        },
+        "Al Aqiq": {
+            "Other": 2
+        },
+        "Al Aridhah": {
+            "Other": 2
+        },
+        "Al Atawilah": {
+            "Other": 2
+        },
+        "Al Badayea": {
+            "Al Asfar": 1,
+            "Al Andalus": 2,
+            "Al Basatin": 3,
+            "At Taalim": 4,
+            "Ar Rimmah": 5,
+            "Ash Shayrami": 6,
+            "As Sinaaiyah": 7,
+            "Al Ubaylah": 8,
+            "Al Uthmaniyah": 9,
+            "Al Ulayya": 10,
+            "Al Mustashfa": 11,
+            "An Nakhil": 12,
+            "Al Wusta": 13,
+            "Umm Thalaah": 14,
+            "Ramat": 15,
+            "Other": 16
+        },
+        "Al Badie Shamali Aflaj": {
+            "Other": 2
+        },
+        "Al Baha": {
+            "Other": 2
+        },
+        "Al Bahah": {
+            "Atawleh": 1,
+            "Aqiq": 2,
+            "Mikhwa": 3,
+            "Mandak": 4,
+            "Biljurashi": 5,
+            "Gilwa": 6,
+            "Nimra": 7,
+            "Al Bahir": 8,
+            "Al Hazim": 9,
+            "Al Hawiyah": 10,
+            "Al Raib": 11,
+            "Az Zarqa": 12,
+            "Adh Dhafir": 13,
+            "Raghadan": 14,
+            "Shuhbah": 15,
+            "Towen Center": 16,
+            "Other": 17
+        },
+        "Al Bijadyah": {
+            "Other": 2
+        },
+        "Al Bikeryah": {
+            "Other": 2
+        },
+        "Al Birk": {
+            "Other": 2
+        },
+        "Al Bukayriyah": {
+            "Ibn Khaldun": 1,
+            "Al Balad Al Qadim": 2,
+            "Al Baida": 3,
+            "Al Khaldiyah": 4,
+            "Ar Rawdah": 5,
+            "Az Zahrah": 6,
+            "Al Aziziyah": 7,
+            "Al Fahd": 8,
+            "Al Qadisiyah": 9,
+            "An Nahdah": 10,
+            "Al Halaliyah": 11,
+            "Al Muhammadiyah Planning": 12,
+            "Other": 13
+        },
+        "Al Dhabyah": {
+            "Other": 2
+        },
+        "Al Ghat": {
+            "Al Andalus": 1,
+            "Al Bustan": 2,
+            "Al Khuzama": 3,
+            "Ar Rabi": 4,
+            "Az Zuhur": 5,
+            "As Sinaiyah": 6,
+            "Al Ghadir": 7,
+            "Al Muruj": 8,
+            "Al Masiaf": 9,
+            "An Nakhil": 10,
+            "An Naql": 11,
+            "Al Wurud": 12,
+            "Al Yasmin": 13,
+            "Ghirnatah": 14,
+            "Other": 15
+        },
+        "Al Hadithah": {
+            "Other": 2
+        },
+        "Al Hadror": {
+            "Other": 2
+        },
+        "Al Harajah": {
+            "Other": 2
+        },
+        "Al Hariq": {
+            "Other": 2
+        },
+        "Al Hassa": {
+            "Other": 2
+        },
+        "Al Henakiyah": {
+            "Other": 2
+        },
+        "Al Huwaya": {
+            "Other": 2
+        },
+        "Al Jaradiyah": {
+            "Other": 2
+        },
+        "Al Jarn": {
+            "Other": 2
+        },
+        "Al Jouf": {
+            "Other": 2
+        },
+        "Al Jsh": {
+            "Other": 2
+        },
+        "Al Jumum": {
+            "Other": 2
+        },
+        "Al Juranah": {
+            "Other": 2
+        },
+        "Al Karbus": {
+            "Other": 2
+        },
+        "Al Khurma": {
+            "Al Harthiyah": 1,
+            "Al Hadiqah": 2,
+            "Al Hazm": 3,
+            "Al Khaldiyah": 4,
+            "Ad Daghmiyah": 5,
+            "Ar Rawdah": 6,
+            "As Suq Al Qadim": 7,
+            "Al Faisaliyah": 8,
+            "Al Muhammadiyah": 9,
+            "An Nasiriyah": 10,
+            "An Nuzha": 11,
+            "Al Hijrah": 12,
+            "Other": 13
+        },
+        "Al Khurmah": {
+            "Other": 2
+        },
+        "Al Lith": {
+            "Other": 2
+        },
+        "Al Madaya": {
+            "Other": 2
+        },
+        "Al Majmaah": {
+            "Al Andalus": 1,
+            "Al Jamiyin": 2,
+            "Al Faiha": 3,
+            "Al Marqab": 4,
+            "Al Muruj": 5,
+            "Airport": 6,
+            "King Salman": 7,
+            "King Abdul Aziz": 8,
+            "King Abdullah": 9,
+            "King Fahd": 10,
+            "Al Yarmuk": 11,
+            "Artawiah": 12,
+            "Um Aljamajim": 13,
+            "Jalajel": 14,
+            "Hotat Sudair": 15,
+            "Rowdat Sodair": 16,
+            "Qasab": 17,
+            "Mrat": 18,
+            "Other": 19
+        },
+        "Al Makhwah": {
+            "Other": 2
+        },
+        "Al Matan": {
+            "Other": 2
+        },
+        "Al Midhnab": {
+            "Other": 2
+        },
+        "Al Mithnab": {
+            "Al Bustan": 1,
+            "Al Jadidah": 2,
+            "Al Hazm": 3,
+            "Al Khaldiyah": 4,
+            "Al Khuzami": 5,
+            "Ar Rawdah": 6,
+            "As Salam": 7,
+            "As Salhiyah": 8,
+            "As Safra": 9,
+            "As Sina'Iyah": 10,
+            "Al Qadisiyah": 11,
+            "Al Qifayfah": 12,
+            "Al Muntazah": 13,
+            "An Nakhil": 14,
+            "Al Wurud": 15,
+            "Umm Ushayrah": 16,
+            "Qurtubah": 17,
+            "Other": 18
+        },
+        "Al Mubarakah": {
+            "Other": 2
+        },
+        "Al Mukhwah": {
+            "Other": 2
+        },
+        "Al Namas": {
+            "Other": 2
+        },
+        "Al Nuzha": {
+            "Other": 2
+        },
+        "Al Oyun Hofuf": {
+            "Other": 2
+        },
+        "Al Qarya Al Ulya": {
+            "Other": 2
+        },
+        "Al Qasab": {
+            "Other": 2
+        },
+        "Al Qunfudhah": {
+            "Al Azhar": 1,
+            "Al Khaldiyah": 2,
+            "Ar Ratibah": 3,
+            "Ash Shamiyah": 4,
+            "Ash Sharqiyyah": 5,
+            "Al Gharbi": 6,
+            "An Naimyyah": 7,
+            "Birk": 8,
+            "Ash Shuqaiq": 9,
+            "Laith": 10,
+            "Amaq": 11,
+            "Qahmah": 12,
+            "Muthaleif": 13,
+            "Other": 14
+        },
+        "Al Qurayyat": {
+            "At Tahliyyah": 1,
+            "Al Hamidiyyah": 2,
+            "Al Khaldiyah": 3,
+            "Ad Difa'": 4,
+            "As Sadiriyyah": 5,
+            "Ash Shifa": 6,
+            "As Sina'Iyah": 7,
+            "Al Ulaya": 8,
+            "Al Ghzali": 9,
+            "Al Faisaliyah": 10,
+            "Al Muruj": 11,
+            "Al Matar": 12,
+            "King Fahad": 13,
+            "An Nasim": 14,
+            "Husaydah": 15,
+            "Hadeethah": 16,
+            "Other": 17
+        },
+        "Al Quwayiyah": {
+            "Other": 2
+        },
+        "Al Salamah": {
+            "Other": 2
+        },
+        "Al Shuqaiq": {
+            "Other": 2
+        },
+        "Al Taraf": {
+            "Other": 2
+        },
+        "Al Tuwal": {
+            "Esmeralda": 1,
+            "Baylasun": 2,
+            "Bonded Zone": 3,
+            "Industrial Area Phase 1": 4,
+            "Utilities Zone": 5,
+            "Train Station Area": 6,
+            "Sea Port": 7,
+            "Thuwal": 8,
+            "King Abdullah University Of Science And Technology": 9,
+            "Other": 10
+        },
+        "Al Ula": {
+            "Al Jadidah": 1,
+            "Al Ruzayqiyah": 2,
+            "As Salam": 3,
+            "As Sukhayrat": 4,
+            "Al Aziziyah": 5,
+            "Al Mahash": 6,
+            "Saq": 7,
+            "Sadr Al Gharbaiyah": 8,
+            "Other": 9
+        },
+        "Al Umran": {
+            "Other": 2
+        },
+        "Al Uyaynah": {
+            "Other": 2
+        },
+        "Al Wadeen": {
+            "Other": 2
+        },
+        "Al wozeyh": {
+            "Other": 2
+        },
+        "AlBada": {
+            "Other": 2
+        },
+        "AlDalemya": {
+            "Other": 2
+        },
+        "Algayed": {
+            "Other": 2
+        },
+        "Alghat": {
+            "Other": 2
+        },
+        "Alhada": {
+            "Other": 2
+        },
+        "Almajaridah": {
+            "Al Andalus": 1,
+            "At Taqadom": 2,
+            "Al Khaldiyah": 3,
+            "Al Khalij": 4,
+            "Ar Rabi": 5,
+            "Ar Rawdah": 6,
+            "Ash Sharq": 7,
+            "As Sinaiyyah": 8,
+            "Al Adalah": 9,
+            "Al Faisaliyah": 10,
+            "An Nasim": 11,
+            "An Nahdah": 12,
+            "Other": 13
+        },
+        "Al-Majma'ah": {
+            "Other": 2
+        },
+        "Almandaq": {
+            "Other": 2
+        },
+        "Almuzaylif": {
+            "Other": 2
+        },
+        "AlQaisumah": {
+            "Other": 2
+        },
+        "AlRass": {
+            "Other": 2
+        },
+        "Alsilaa": {
+            "Other": 2
+        },
+        "Amaq": {
+            "Other": 2
+        },
+        "An Nairiyah": {
+            "Other": 2
+        },
+        "An Namas": {
+            "Other": 2
+        },
+        "An Nawwariyyah": {
+            "At Tashalih": 1,
+            "Al Khalij": 2,
+            "Ar Rabi": 3,
+            "As Sinaiyah": 4,
+            "Al Aziziyah": 5,
+            "Al Faisaliyah": 6,
+            "Al Muhammadiyah": 7,
+            "Other": 8
+        },
+        "Aqiq": {
+            "Other": 2
+        },
+        "Ar Rass": {
+            "Al Ihtifalat": 1,
+            "At Talim": 2,
+            "Al Jandal": 3,
+            "Al Hazm": 4,
+            "Al Hutah": 5,
+            "Al Rabwah": 6,
+            "Ar Rawdah": 7,
+            "Az Zahrah": 8,
+            "As Saadah": 9,
+            "Ash Shifa": 10,
+            "As Sinaiyah": 11,
+            "Al Qadisiyah": 12,
+            "Airport": 13,
+            "King Khalid": 14,
+            "King Abdulaziz": 15,
+            "King Fahd": 16,
+            "King Faisal": 17,
+            "Al Yarmuk": 18,
+            "Qasr Ibn Aqil": 19,
+            "Wadi Ar Rimma": 20,
+            "Other": 21
+        },
+        "Ar Rayn": {
+            "Other": 2
+        },
+        "Arar": {
+            "Ahwash Al Aghnam": 51,
+            "Ahwash Ad Daydeeb": 51,
+            "National Guard Land": 51,
+            "Fishing With Falcon Investment Area": 51,
+            "Al Amanah": 51,
+            "Al Basateen": 51,
+            "Al Khalidiyah": 51,
+            "Al Khalij": 51,
+            "Ar Rifa": 51,
+            "Ar Rawabi": 51,
+            "Ar Rawdah": 51,
+            "Ar Rayyan": 51,
+            "Ash Shuruq": 51,
+            "As Salhiyah": 51,
+            "New Industrial Area": 51,
+            "Old Industrial City": 51,
+            "Turaif Road Industrial City": 51,
+            "Ad Dahiyah": 51,
+            "Al Aziziyah": 51,
+            "Al Faisaliyah": 51,
+            "Al Quds": 51,
+            "Al Mabarakiyah": 51,
+            "Al Muhammadiyah": 51,
+            "Al Muruj": 51,
+            "Al Musaidiyah": 51,
+            "Old Airport": 51,
+            "Al Mansuriyah": 51,
+            "An Nasriyah": 51,
+            "An Nakhil": 51,
+            "An Naseem": 51,
+            "Al Wadi": 51,
+            "Ishbiliyah": 51,
+            "Al Badanah": 51,
+            "Boarder Security Force Land": 51,
+            "Talal Arar": 51,
+            "Al Jawharah": 51,
+            "Gharnatah": 51,
+            "Qurtubah": 51,
+            "Istithmari Subdivision": 51,
+            "Al Jadidah Road Rest Area Subdivision": 51,
+            "Turaif Road Rest Area Subdivision": 51,
+            "Al Jadidah Road Iskan Subdivision": 51,
+            "Ar Rabwa Subdivision Block Ab": 51,
+            "Ar Rabwah Subdivision Block C": 51,
+            "Warehouse And Factories Subdivision": 51,
+            "Muntazah Al Am Subdivision": 51,
+            "Vehicle Scrap Subdivision": 51,
+            "Cattle Market Subdivision": 51,
+            "Al Mushrif": 51,
+            "Car Showrooms": 51,
+            "Other": 51
+        },
+        "Artawiah": {
+            "Other": 2
+        },
+        "As Sulayyil": {
+            "Ad Dirah": 1,
+            "Ar Rawdah": 2,
+            "Az Zahrah": 3,
+            "Ash Shifa": 4,
+            "King Abdulaziz": 5,
+            "An Nakhil": 6,
+            "Other": 7
+        },
+        "Asfan": {
+            "Other": 2
+        },
+        "Ash Shuqaiq": {
+            "Other": 2
+        },
+        "Assadawi": {
+            "Other": 2
+        },
+        "Assaffaniyah": {
+            "Other": 2
+        },
+        "Assalmanyah": {
+            "Other": 2
+        },
+        "AsSarrar": {
+            "Other": 2
+        },
+        "At Tuwal": {
+            "Other": 2
+        },
+        "Ath Thaybiyah": {
+            "Other": 2
+        },
+        "Awamiah": {
+            "Other": 2
+        },
+        "Ayn Ibn Fuhayd": {
+            "Other": 2
+        },
+        "Badaya": {
+            "Other": 2
+        },
+        "Bader": {
+            "Other": 2
+        },
+        "Badr": {
+            "Idman": 1,
+            "Al Jadid": 2,
+            "Ar Rawdah": 3,
+            "Ash Shuhada": 4,
+            "Al Adwah": 5,
+            "Al Ghuzlani": 6,
+            "Al Ghazwah": 7,
+            "Other": 8
+        },
+        "Baha": {
+            "Other": 2
+        },
+        "Baish": {
+            "Other": 2
+        },
+        "Balasmar": {
+            "Other": 2
+        },
+        "Baljurashi": {
+            "Other": 2
+        },
+        "Baqayq Hofuf": {
+            "Other": 2
+        },
+        "Bariq": {
+            "Other": 2
+        },
+        "Batha": {
+            "Other": 2
+        },
+        "Baysh": {
+            "Other": 2
+        },
+        "Biljurashi": {
+            "Other": 2
+        },
+        "Billasmar": {
+            "Al Basatin": 1,
+            "Al Khaldiyah": 2,
+            "Ar Rabi": 3,
+            "Ar Rawdah": 4,
+            "As Sarawat": 5,
+            "As Salam": 6,
+            "Ash Shifa": 7,
+            "Al Aziziyah": 8,
+            "Al Muntazah": 9,
+            "An Nuzha": 10,
+            "Al Wurud": 11,
+            "Al Rabwah": 12,
+            "Ar Rayyan": 13,
+            "Az Zaytun": 14,
+            "As Samir": 15,
+            "As Salamah": 16,
+            "Other": 17
+        },
+        "Bisha": {
+            "Al Amir Sultan": 1,
+            "Al Andalus": 2,
+            "Al Bawadi": 3,
+            "Al Tdhamun": 4,
+            "Al Khuzama": 5,
+            "Al Khazzan": 6,
+            "Al Rabwah": 7,
+            "Ar Rabi": 8,
+            "Ar Rimal": 9,
+            "Ar Rawdah": 10,
+            "Ar Rayyan": 11,
+            "Az Zuhur": 12,
+            "Ash Shifa": 13,
+            "As Safa": 14,
+            "As Sinaiyah": 15,
+            "As Sawaer": 16,
+            "Al Fahd": 17,
+            "Al Faiha": 18,
+            "Al Faisaliyah": 19,
+            "Al Muruj": 20,
+            "Airport Dist": 21,
+            "King Abdullah": 22,
+            "An Nakhil": 23,
+            "An Nuzha": 24,
+            "An Nasim": 25,
+            "An Nahdah": 26,
+            "Al Wadi": 27,
+            "Alwurud": 28,
+            "Other": 29
+        },
+        "Bishah": {
+            "Other": 2
+        },
+        "Buraidah": {
+            "Other": 2
+        },
+        "Buraydah": {
+            "Ibn Subayh": 1,
+            "Al Akhdar": 2,
+            "Al Iskan": 3,
+            "Al Amn": 4,
+            "Al Buraykah": 5,
+            "Al Bishr": 6,
+            "Al Basr": 7,
+            "At Tashlih": 8,
+            "Al Taghirah": 9,
+            "At Tawfiq": 10,
+            "Al Jamiyin": 11,
+            "Al Jardah": 12,
+            "Al Hasat": 13,
+            "Al Haql Al Akhdar": 14,
+            "Al Hamr": 15,
+            "Al Huwayqiyah": 16,
+            "Al Khalidiyah": 17,
+            "Al Khubaybiyah": 18,
+            "Al Khadar And Al Wujayan": 19,
+            "Al Khalij": 20,
+            "Ad Duaysah": 21,
+            "Ar Rabwah": 22,
+            "Ar Rafiah": 23,
+            "Ar Rawabi": 24,
+            "Az Zarqa": 25,
+            "As Sadah": 26,
+            "As Salimiyah": 27,
+            "Ash Shifa": 28,
+            "Ash Shammas": 29,
+            "As Sabbakh": 30,
+            "As Subayhiyah": 31,
+            "As Safraa": 32,
+            "As Saqarat": 33,
+            "Ad Dahi": 34,
+            "Al Ujaybah": 35,
+            "Al Uraymdi": 36,
+            "Al Ulaya": 37,
+            "Al Ghamas": 38,
+            "Al Fakhriyah": 39,
+            "Al Fayziyah": 40,
+            "Al Qaa Al Barid": 41,
+            "Al Qusayah": 42,
+            "Al Quwai": 43,
+            "Al Lasib": 44,
+            "Al Muraydisiyah": 45,
+            "Old Airport": 46,
+            "Al Mizallal": 47,
+            "Al Malik": 48,
+            "Al Muntazah": 49,
+            "Al Muntazah Al Janubi": 50,
+            "Al Mawta": 51,
+            "An Naziyah": 52,
+            "An Nasriyah": 53,
+            "An Nasim": 54,
+            "An Nassar": 55,
+            "An Naqa Ash Sharqiyah": 56,
+            "An Naqa Al Gharbiyah": 57,
+            "Al Hilal": 58,
+            "Al Wurash Al Janubiyah": 59,
+            "Al Wusayta": 60,
+            "Jaryat Al Umran And Wakhub Ath Thinayan": 61,
+            "Huwaylan": 62,
+            "Khub Al Buraydi": 63,
+            "Khub Al Jutaybi": 64,
+            "Khub Al Akrash": 65,
+            "Khub Al Ushar": 66,
+            "Khub Al Qabr": 67,
+            "Khub Al Qasba": 68,
+            "Khub Al Kifah": 69,
+            "Khub Rudan": 70,
+            "Khudayra": 71,
+            "Rawaq": 72,
+            "Sultanah": 73,
+            "Diras": 74,
+            "Ayn Adh Dhib": 75,
+            "Al Rawaf Subdivision": 76,
+            "Mishal": 77,
+            "Wasit": 78,
+            "Wahtan": 79,
+            "Other": 80
+        },
+        "Daelim": {
+            "Other": 2
+        },
+        "Damad": {
+            "Other": 2
+        },
+        "Dawmat Al Jandal": {
+            "Other": 2
+        },
+        "Dereiyah": {
+            "Other": 2
+        },
+        "Dere'iyeh": {
+            "Other": 2
+        },
+        "Dhahban": {
+            "Other": 2
+        },
+        "Dhahran Al Janub": {
+            "Other": 2
+        },
+        "Dhahran Aljanoub": {
+            "Other": 2
+        },
+        "Dhurma": {
+            "Al Wurud 1": 1,
+            "Al Badi Ash Sharqi": 2,
+            "Al Badi Al Gharbi": 3,
+            "Al Khaldiyah": 4,
+            "Al Aziziyah": 5,
+            "Al Anqari": 6,
+            "Al Muntazah": 7,
+            "Industrial Area": 8,
+            "An Nahdah": 9,
+            "Al Yamamah": 10,
+            "Other": 11
+        },
+        "Domat Al Jandal": {
+            "Other": 2
+        },
+        "Duba": {
+            "Al Balad": 1,
+            "Al Mazari'": 2,
+            "Al Matar": 3,
+            "Al Muqayti'": 4,
+            "Samdah": 5,
+            "Other": 6
+        },
+        "Dumah Al Jandal": {
+            "Al Edari": 1,
+            "Al Buhayrat": 2,
+            "At Tahkim": 3,
+            "Al Jaraawi": 4,
+            "Al Husiba": 5,
+            "Al Khaldiyah": 6,
+            "Ar Rabwah": 7,
+            "Az Zirae": 8,
+            "As Suq Al Qadim": 9,
+            "As Safah Al Janubi": 10,
+            "As Safah Al Shimali": 11,
+            "As Sinaiyah": 12,
+            "Al Azizyah": 13,
+            "Al Ghadir Al Janubi": 14,
+            "Al Faruq": 15,
+            "Al Faisaliyah": 16,
+            "King Fahd Al Janubi": 17,
+            "King Fahd Al Shimali": 18,
+            "Al Wadi": 19,
+            "Khazma": 20,
+            "Qaratin": 21,
+            "Other": 22
+        },
+        "Farasan Island": {
+            "Other": 2
+        },
+        "Ghtai": {
+            "Other": 2
+        },
+        "Gizan": {
+            "Other": 2
+        },
+        "Hadeethah": {
+            "Other": 2
+        },
+        "Hafer Al Batin": {
+            "Other": 2
+        },
+        "HalatAmmar": {
+            "Other": 2
+        },
+        "Hanakiyah": {
+            "Other": 2
+        },
+        "Haqil": {
+            "Other": 2
+        },
+        "Harad": {
+            "Other": 2
+        },
+        "Hareeq": {
+            "Al Huzaimiyah": 1,
+            "Ar Rukiyah": 2,
+            "As Sinaiyah": 3,
+            "Al Uthmaniyah": 4,
+            "Al Madinah Al Jadidah": 5,
+            "Wasat Al Madinah": 6,
+            "Other": 7
+        },
+        "Hawiyah": {
+            "Other": 2
+        },
+        "Hawtat Bani Tamim": {
+            "Other": 2
+        },
+        "Horaimal": {
+            "Other": 2
+        },
+        "Hotat Sudair": {
+            "Other": 2
+        },
+        "Howtat Bani Tamim": {
+            "Al Batin": 1,
+            "Al Tdhamun": 2,
+            "Al Hilah": 3,
+            "As Salam": 4,
+            "Ash Shuaib": 5,
+            "Al Sadr": 6,
+            "Al Farah": 7,
+            "Al Majd": 8,
+            "Al Muhammadiyah": 9,
+            "Al Masiaf": 10,
+            "Al Manar": 11,
+            "An Nahdah": 12,
+            "Al Wurud": 13,
+            "Khudar": 14,
+            "Ziyad": 15,
+            "Other": 16
+        },
+        "Jafar": {
+            "Other": 2
+        },
+        "Jalajel": {
+            "Other": 2
+        },
+        "Jazan": {
+            "Al Arak": 1,
+            "Al Bashair": 2,
+            "Al Jabal": 3,
+            "Ar Rawabi": 4,
+            "Ar Rawdah": 5,
+            "Az Zuhur": 6,
+            "As Suways": 7,
+            "Ash Shati": 8,
+            "Ash Shamiyah": 9,
+            "As Safa": 10,
+            "Al Qalah": 11,
+            "Airport": 12,
+            "Industrial Area": 13,
+            "An Nasim": 14,
+            "An Nur": 15,
+            "Mizhirah": 16,
+            "Bish": 17,
+            "Khasawyah": 18,
+            "Darb": 19,
+            "Damad": 20,
+            "Thabya": 21,
+            "Farasan": 22,
+            "Karboos": 23,
+            "Other": 24
+        },
+        "Jazan Economic City": {
+            "Other": 2
+        },
+        "Jouf": {
+            "Jouf": 1,
+            "Tabrjal": 2,
+            "Kara": 3,
+            "Other": 4
+        },
+        "Juatha": {
+            "Other": 2
+        },
+        "Judah": {
+            "Other": 2
+        },
+        "Julayjilah": {
+            "Other": 2
+        },
+        "Jumom": {
+            "Other": 2
+        },
+        "Jumum": {
+            "Al Khaldiyah": 1,
+            "As Salamah": 2,
+            "Ash Shuhada'": 3,
+            "As Safa'A": 4,
+            "Al Aziziyah": 5,
+            "Al Faisaliyah": 6,
+            "Al Quraiyat": 7,
+            "An Nakhil": 8,
+            "An Nasim": 9,
+            "An Naqabah": 10,
+            "Abu Shuayb": 11,
+            "Abu Urwah": 12,
+            "Sedr": 13,
+            "Ayn Shams": 14,
+            "Other": 15
+        },
+        "Khafji": {
+            "Aramco": 1,
+            "Al Amal": 2,
+            "Al Amir Fahd Ibn Salman": 3,
+            "Al Amir Naif": 4,
+            "At Taawun": 5,
+            "Al Jawharah": 6,
+            "Al Hamra": 7,
+            "Al Khaldiyah": 8,
+            "Al Khuzama": 9,
+            "Goverment Departments": 10,
+            "Ar Rawdah": 11,
+            "Ar Rayyan": 12,
+            "Az Zuhur": 13,
+            "As Salam": 14,
+            "Ash Shati": 15,
+            "Al Aziziah": 16,
+            "Al Faihaa": 17,
+            "Al Faisaliyyah": 18,
+            "Al Luluah": 19,
+            "Al Muhammadiyah": 20,
+            "Al Muruj": 21,
+            "King Fahd": 22,
+            "Industrial Erea No.1": 23,
+            "Industrial Erea No 2": 24,
+            "An Nuzhah": 25,
+            "Al Nahdah": 26,
+            "Al Yasmin": 27,
+            "Al Yarmuk": 28,
+            "Other": 29
+        },
+        "Khaibar": {
+            "Al Khaldiyah": 1,
+            "Ar Rawdah": 2,
+            "Al Aziziyah": 3,
+            "Al Faisaliyah": 4,
+            "Sultanah": 5,
+            "Other": 6
+        },
+        "Khaybar": {
+            "Other": 2
+        },
+        "Khodaria": {
+            "Other": 2
+        },
+        "Khulais": {
+            "Al Barqa": 1,
+            "Al Humayrat": 2,
+            "Ad Duf": 3,
+            "Ar Ruwaydah": 4,
+            "As Salam": 5,
+            "Ash Shiyukh": 6,
+            "As Sadr": 7,
+            "At Talaah": 8,
+            "Al Aziziyah": 9,
+            "Al Falaj": 10,
+            "Al Faisaliyah": 11,
+            "Al Lubdah": 12,
+            "Al Magharbah": 13,
+            "Faza": 14,
+            "Other": 15
+        },
+        "Khurma": {
+            "Other": 2
+        },
+        "King Khalid Military City": {
+            "Other": 2
+        },
+        "Layla Aflaj": {
+            "Other": 2
+        },
+        "Lith": {
+            "Other": 2
+        },
+        "Mahalah": {
+            "Other": 2
+        },
+        "Mahd Ad Dhahab": {
+            "Other": 2
+        },
+        "Mahd Al Thahab": {
+            "Other": 2
+        },
+        "Majarda": {
+            "Other": 2
+        },
+        "Majardah": {
+            "Other": 2
+        },
+        "Majma": {
+            "Other": 2
+        },
+        "Mandaq": {
+            "Other": 2
+        },
+        "Marat": {
+            "Other": 2
+        },
+        "Mastorah": {
+            "Other": 2
+        },
+        "Midinhab": {
+            "Other": 2
+        },
+        "Mohayel Aseer": {
+            "Other": 2
+        },
+        "Mubaraz": {
+            "Other": 2
+        },
+        "Muhayil": {
+            "Al Basrah": 1,
+            "Al Balad": 2,
+            "Al Janadriyah": 3,
+            "Al Haylah Ash Sharqi": 4,
+            "Al Haylah Al Gharbi": 5,
+            "Al Khaldiyah": 6,
+            "Ar Rawdah": 7,
+            "Az Zahra": 8,
+            "As Salamah": 9,
+            "Ash Shahd": 10,
+            "Ad Dirs": 11,
+            "Adh Dhahrah": 12,
+            "Al Faisaliyah": 13,
+            "Al Maqaiid": 14,
+            "Al Montazah": 15,
+            "An Nuzha": 16,
+            "An Nasim": 17,
+            "Al Waad": 18,
+            "Other": 19
+        },
+        "Muhayyil Assir": {
+            "Other": 2
+        },
+        "Mulayjah": {
+            "Other": 2
+        },
+        "Nabiya": {
+            "Other": 2
+        },
+        "Najran": {
+            "Aba Lasaud": 1,
+            "Al Amlah": 2,
+            "Al Amir Mishal": 3,
+            "Al Jurbah": 4,
+            "Al Hadn": 5,
+            "Al Khalidiyah": 6,
+            "Ad Dubat": 7,
+            "Al Fahd": 8,
+            "Al Faisaliyah": 9,
+            "Al Qabil": 10,
+            "Al Mukhayam": 11,
+            "Dahdah": 12,
+            "Sharq Ad Dubat": 13,
+            "Shamal Ad Dubat": 14,
+            "Shamal Al Fahd": 15,
+            "Ibn Jarullah Residential Subdivision": 16,
+            "Al Athaybah Ash Shamaliyah Agricultural Subdivision": 17,
+            "Al Husayn Agricultural Subdivision": 18,
+            "As Sahban Subdivision": 19,
+            "Al Araysah Al Janubi Subdivision": 20,
+            "Al Araysah Ash Shamali Subdivision": 21,
+            "Rajla Al Janubiyah Agricultural Subdivision": 22,
+            "Rajla Ash Shamaliyah Agricultural Subdivision": 23,
+            "Shaib Rir Residential Subdivision": 24,
+            "Nahufah Agricultural Subdivision": 25,
+            "Nahufah Residential Subdivision": 26,
+            "Al Ghuwayla Agricutural Subdivision": 27,
+            "Najran Regional Airport": 28,
+            "Other": 29
+        },
+        "Nimran": {
+            "Other": 2
+        },
+        "Noweirieh": {
+            "Other": 2
+        },
+        "Oula": {
+            "Other": 2
+        },
+        "Qarah": {
+            "Other": 2
+        },
+        "Qariya Al Olaya": {
+            "Other": 2
+        },
+        "Qlayyb Khedr": {
+            "Other": 2
+        },
+        "Qunfudah": {
+            "Other": 2
+        },
+        "Qurayat": {
+            "Other": 2
+        },
+        "Quweiieh": {
+            "Other": 2
+        },
+        "Quwei'ieh": {
+            "Other": 2
+        },
+        "Rabigh": {
+            "As Suq": 1,
+            "As Sabuh": 2,
+            "As Silayyib Ash Sharqi": 3,
+            "As Silayyib Al Gharbi": 4,
+            "As Samad": 5,
+            "Al Farnisiyyah Ash Sharqiyyah": 6,
+            "Zahban": 7,
+            "Asfan": 8,
+            "Mastura": 9,
+            "Other": 10
+        },
+        "Rafaya Al Gimsh": {
+            "Other": 2
+        },
+        "Rafha": {
+            "Al Idariyah": 1,
+            "Al Iskan At Tanmawi": 2,
+            "Al Jumayma": 3,
+            "Al Khaldiyah Janub": 4,
+            "Al Khaldiyah Shamal": 5,
+            "Ar Rawdah": 6,
+            "Ash Shamali": 7,
+            "As Sinaiyah": 8,
+            "Al Aziziyah": 9,
+            "Al Ummal": 10,
+            "Al Faisaliyah": 11,
+            "Al Qadisiyah": 12,
+            "Al Muhammadiyah": 13,
+            "Al Madinah": 14,
+            "Al Misadiyah": 15,
+            "Al Malaz": 16,
+            "An Namudhajiyah Janub": 17,
+            "An Namudhajiyah Shamal": 18,
+            "Al Yarmuk": 19,
+            "Other": 20
+        },
+        "Rahima": {
+            "Other": 2
+        },
+        "Raj'l Almaa": {
+            "Other": 2
+        },
+        "Ranyah": {
+            "Other": 2
+        },
+        "RaudatSudair": {
+            "Other": 2
+        },
+        "Rejal Almaa": {
+            "Other": 2
+        },
+        "Remah": {
+            "Other": 2
+        },
+        "Riyadh Al Khabra": {
+            "Al Afrah": 1,
+            "Al Andalus": 2,
+            "At Taawun": 3,
+            "Al Hazm": 4,
+            "Al Khabra Ash Shamali": 5,
+            "Al Khazzan": 6,
+            "Al Rabwah": 7,
+            "Ar Rabii": 8,
+            "Ar Rafiah": 9,
+            "Ar Rawdah": 10,
+            "Ar Rayyan": 11,
+            "As Sahabin Al Janubi": 12,
+            "As Sahabin Ash Shamali": 13,
+            "As Silah": 14,
+            "As Sina'Iyah": 15,
+            "Al Qadisiyah": 16,
+            "Al Quds": 18,
+            "Al Majd": 18,
+            "An Nuzhah": 19,
+            "An Nahdah": 20,
+            "Al Yasmin": 21,
+            "Zubaiydah": 22,
+            "Other": 23
+        },
+        "Rowdat Sodair": {
+            "Other": 2
+        },
+        "Rumah": {
+            "Other": 2
+        },
+        "Sabt Al Alaya": {
+            "Other": 2
+        },
+        "Sabt Alalayah": {
+            "Other": 2
+        },
+        "Sabya": {
+            "Al Bahir": 1,
+            "Al Hussaini": 2,
+            "Al Hushaibriyah": 3,
+            "Al Khaldiyah": 4,
+            "Ar Rabii": 5,
+            "Ar Rihab": 6,
+            "Ar Rawdah": 7,
+            "Ar Rawnah": 8,
+            "Ar Rayyan": 9,
+            "As Saadah": 10,
+            "As Safa": 11,
+            "Al Dhabyah": 12,
+            "Al Arish": 13,
+            "Al Aziziyah": 14,
+            "Al Gharraa": 15,
+            "Al Fardus": 16,
+            "Al Falah": 17,
+            "Alfaisaliyah": 18,
+            "Al Majd": 19,
+            "Al Muruj": 20,
+            "Al Muutarid": 21,
+            "King Fahd": 22,
+            "An Nakhil": 23,
+            "An Nuzhah": 24,
+            "An Nahdah": 25,
+            "Al Wahah": 26,
+            "Butishah": 27,
+            "Jukhairah": 28,
+            "Hullat Al Ahwass": 29,
+            "Other": 30
+        },
+        "Safwa": {
+            "Abu Main": 1,
+            "Al Aujam": 2,
+            "Al Budur": 3,
+            "At Talal": 4,
+            "Al Hazm": 5,
+            "Al Khatrashiyah": 6,
+            "Ad Duraydi": 7,
+            "Ar Rabwah": 8,
+            "Ar Rihab": 9,
+            "Ar Rawabi": 10,
+            "Ar Ruwaihah": 11,
+            "Ar Raihan": 12,
+            "Ash Shura": 13,
+            "As Safaa": 14,
+            "Al Urubah": 15,
+            "Al Amal": 16,
+            "Al Faiha": 17,
+            "Al Marwah": 18,
+            "Al Masif": 19,
+            "Al Manar": 20,
+            "An Nahdah": 21,
+            "Umm As Sahik": 22,
+            "Hazm": 23,
+            "Other": 24
+        },
+        "Sajir": {
+            "Other": 2
+        },
+        "Salasil": {
+            "Other": 2
+        },
+        "Salbookh": {
+            "Other": 2
+        },
+        "Salwa": {
+            "Other": 2
+        },
+        "Samtah": {
+            "Al Jaradiyah": 1,
+            "Al Jurdiyyah": 2,
+            "Al Khadra": 3,
+            "Ar Rakubah": 4,
+            "Samtah": 5,
+            "Majaar": 6,
+            "Al Turshiah": 7,
+            "Other": 8
+        },
+        "Sarat Abida": {
+            "Other": 2
+        },
+        "Sarat Abidah": {
+            "Other": 2
+        },
+        "Shaqra": {
+            "Ar Rahbah": 1,
+            "Ar Rawdah": 2,
+            "Ash Shifa": 3,
+            "King Fahd": 4,
+            "Industrial Area": 5,
+            "An Nasim": 6,
+            "Al Washm": 7,
+            "Al Wakf": 8,
+            "Gaslah": 9,
+            "Other": 10
+        },
+        "Sharourah": {
+            "Other": 2
+        },
+        "Sharqiyah": {
+            "Other": 2
+        },
+        "Sharurah": {
+            "Other": 2
+        },
+        "Shefaa": {
+            "Other": 2
+        },
+        "Sulaiyl": {
+            "Other": 2
+        },
+        "Sulayyil": {
+            "Other": 2
+        },
+        "Tabarjal": {
+            "Other": 2
+        },
+        "Taima": {
+            "Other": 2
+        },
+        "Tanomah": {
+            "Other": 2
+        },
+        "Tanumah": {
+            "Other": 2
+        },
+        "Tareeb": {
+            "Other": 2
+        },
+        "Tathleeth": {
+            "At Taawun": 1,
+            "Al Hijaz": 2,
+            "Al Khaldiyah": 3,
+            "Al Khazan": 4,
+            "Az Zuhur": 5,
+            "Al Aziziyah": 6,
+            "Al Ghazalah": 7,
+            "Al Fakhriyah": 8,
+            "Al Madinah": 9,
+            "An Nakhil": 10,
+            "Al Wajh": 11,
+            "Other": 12
+        },
+        "Tatleeth": {
+            "Other": 2
+        },
+        "Tayma": {
+            "At Tijari": 1,
+            "Ar Rabwah": 2,
+            "Ar Rawdah": 3,
+            "As Safa": 4,
+            "Al Qaa": 5,
+            "Al Muntazah": 6,
+            "Haddaj": 7,
+            "Other": 8
+        },
+        "Thadek": {
+            "Other": 2
+        },
+        "Thadiq": {
+            "Al Janadriyah": 1,
+            "Al Khaldiyah": 2,
+            "Ad Dirah Al Qadimah": 3,
+            "Al Aziziyah": 4,
+            "Al Faisaliyah": 5,
+            "Other": 6
+        },
+        "Thoqba": {
+            "Other": 2
+        },
+        "Thumair": {
+            "Al Khalidiyah": 1,
+            "Al Khalij": 2,
+            "Ar Rawdah": 3,
+            "Al Aziziyah": 4,
+            "King Saud": 5,
+            "King Abdullah": 6,
+            "King Fahd": 7,
+            "King Faisal": 8,
+            "An Nahdah": 9,
+            "Al Yasmin": 10,
+            "Thumair Industrial": 11,
+            "Sudair Industrial And Business City": 12,
+            "Muntazah": 13,
+            "Other": 14
+        },
+        "Tubarjal": {
+            "Other": 2
+        },
+        "Turaif": {
+            "Al Khalidiyyah": 11,
+            "Al Khalij": 11,
+            "As Salhiyah": 11,
+            "Al 'Urubah": 11,
+            "Al Aziziyah": 11,
+            "Al Faysaliyah": 11,
+            "Al Misa'Diyah": 11,
+            "Al Wurud": 11,
+            "Al Yarmuk": 11,
+            "Sultanah": 11,
+            "Other": 11
+        },
+        "Turba": {
+            "Other": 2
+        },
+        "Turbah": {
+            "Al Balad": 1,
+            "Al Khaldiyah": 2,
+            "As Salam": 3,
+            "As Suq": 4,
+            "Al Allawah": 5,
+            "Kara As Sardi": 6,
+            "Munif": 7,
+            "Other": 8
+        },
+        "Udhailiyah Hofuf": {
+            "Other": 2
+        },
+        "Um Aljamajim": {
+            "Other": 2
+        },
+        "Um Saad": {
+            "Other": 2
+        },
+        "UmAljamajim": {
+            "Other": 2
+        },
+        "Umm Lajj": {
+            "Other": 2
+        },
+        "Uqlat Al Suqur": {
+            "Other": 2
+        },
+        "Urayrah": {
+            "Other": 2
+        },
+        "Uthmaniyah": {
+            "Other": 2
+        },
+        "Uyun": {
+            "Other": 2
+        },
+        "Uyun Al Jiwa": {
+            "Other": 2
+        },
+        "Wadi Al Dawasir": {
+            "Other": 2
+        },
+        "Wadi El Dwaser": {
+            "Other": 2
+        },
+        "WadiAdDawasir": {
+            "Other": 2
+        },
+        "Wajeh": {
+            "Other": 2
+        },
+        "Wajeh (Al Wajh)": {
+            "Other": 2
+        },
+        "Wajh": {
+            "Other": 2
+        },
+        "Zilfi": {
+            "Other": 2
+        },
+        "Zulfi": {
+            "Other": 2
+        },
+        "Sharorah": {
+            "Al Fahd": 0,
+            "Ar Rawdah Al Janubiyyah": 2,
+            "Ar Rawdah Ash Shamaliyyah": 3,
+            "As Suq": 4,
+            "As Sinaiiyah": 5,
+            "Al Faisaliyah": 6,
+            "Al Mustashfa Al Askari": 7,
+            "Janub Al Mustashfa Al Askari": 8,
+            "Sultanah": 9,
+            "Subdivision A": 10,
+            "Subdivision B": 11,
+            "Other": 12
+        },
+        "Wadi ad-Dawasir": {
+            "Aflaj": 0,
+            "Khamaseen": 2,
+            "Wadi El Dwaser": 3,
+            "Other": 4
+        },
+        "Ad Dilam": {
+            "Al Khalidiyyah": 0,
+            "Ad Dirah": 2,
+            "As Saydan": 3,
+            "As Sulaymaniyah": 4,
+            "As Samari": 5,
+            "Ash Shifa": 6,
+            "Al Sahnah": 7,
+            "Al Adhra": 8,
+            "Al Uwaymiriyah": 9,
+            "An Nasariyah": 10,
+            "Sudayr": 11,
+            "Other": 12
+        },
+        "Ad Diriyah": {
+            "Al Bujayri": 0,
+            "Al Khalidiyah": 2,
+            "Ad Diriyah": 4,
+            "Ad Diriyah Al Jadidah": 4,
+            "Ar Ruqiyah": 5,
+            "At Tarif": 6,
+            "At Tarif Al Jadid": 7,
+            "Al Faisaliyah": 8,
+            "Al Marih": 9,
+            "Samhan": 10,
+            "Other": 11
+        },
+        "Huraymila": {
+            "Al Hazm": 0,
+            "Ad Dirah": 2,
+            "Ar Rawdah": 3,
+            "As Sad": 4,
+            "An Nakhil": 5,
+            "An Nahdah": 6,
+            "Other": 7
+        },
+        "Az Zulfi": {
+            "Uhd": 0,
+            "Al Andalus": 2,
+            "Al Khalidiyyah": 3,
+            "Al Deriyah": 4,
+            "Al Rabwah": 5,
+            "Ar Rawdah": 6,
+            "Ar Riyan": 7,
+            "As Salam": 8,
+            "As Sieh": 9,
+            "As Sediq": 10,
+            "As Sanaiyyah": 11,
+            "Al Aziziyyah": 12,
+            "Al Farouq": 13,
+            "Al Falih": 14,
+            "Al Faysaliyyah": 15,
+            "Al Quds": 16,
+            "Al Muntazah": 17,
+            "An Nahdah": 18,
+            "Al Yarmok": 19,
+            "Al Yamamah": 20,
+            "Badr": 21,
+            "Hitien": 22,
+            "Semnan": 23,
+            "Tuwik": 24,
+            "Urierah": 25,
+            "Alkah": 26,
+            "Qurtubah": 27,
+            "Margh": 28,
+            "Other": 29
+        },
+        "Buqayq": {
+            "Ojam": 0,
+            "Ain Dar": 2,
+            "Mulaija": 3,
+            "Al Andalus": 4,
+            "Al Basatin": 5,
+            "Al Rabwah": 6,
+            "Ar Rawdah": 7,
+            "As Sinaiyyah": 8,
+            "Al Fardus": 9,
+            "Al Madinah": 10,
+            "Al Matar": 11,
+            "An Nakhil": 12,
+            "An Nuzha": 13,
+            "Ishbiliyah": 14,
+            "Ghirnatah": 15,
+            "Qurtubah": 16,
+            "HARADH 160 KM": 17,
+            "Batha 250 KM": 18,
+            "Salwa 160 KM": 19,
+            "Other": 20
+        },
+        "Al Mubarraz": {
+            "Iskan Al Haras Al Watani": 0,
+            "Al Andalus": 2,
+            "Al Hazm": 3,
+            "Al Khars": 4,
+            "Ar Rashidiyah": 5,
+            "Ash Shurufiyah": 6,
+            "Ash Shuabah": 7,
+            "Ash Shuabi": 8,
+            "Al Utban": 9,
+            "Al Qadisiyah": 10,
+            "Al Qudaymat": 11,
+            "An Nuzhah": 12,
+            "Al Yahya": 13,
+            "Bu Sahbal": 14,
+            "Mahasin Aramco": 15,
+            "Mahasin Al Baladiyah": 16,
+            "Al Rajihi Subdivision": 17,
+            "Ali Al Khars And Ahmad Ash Shihab Subdivision": 18,
+            "Madinat Al Mubarraz": 19,
+            "Down Town": 20,
+            "Other": 21
+        },
+        "Qaryat Al Ulya": {
+            "Al Andalus": 0,
+            "Al Khaldiyah": 2,
+            "Ar Rabwah": 3,
+            "Ar Rabi": 4,
+            "Ar Rifaa": 5,
+            "Ar Rawdah": 6,
+            "Az Zuhur": 7,
+            "As Salam": 8,
+            "As Sinaiyah": 9,
+            "Al Muruj": 10,
+            "An Nuzha": 11,
+            "Al Wahah": 12,
+            "Ghirnatah": 13,
+            "Qurtubah": 14,
+            "Qasr Aali": 15,
+            "Other": 16
+        },
+        "Saihat": {
+            "Nabiya": 0,
+            "Al Khisab": 2,
+            "Al Khalij": 3,
+            "Ad Dirah": 4,
+            "Az Zuhur": 5,
+            "As Salam": 6,
+            "Industrial": 7,
+            "At Tif": 8,
+            "Al Ghadir": 9,
+            "Al Firdaws": 10,
+            "Al Kawthar": 11,
+            "Al Muntazah": 12,
+            "An Nabiyah": 13,
+            "An Nasim": 14,
+            "An Naqa": 15,
+            "An Nur": 16,
+            "Gharb An Nabiyah": 17,
+            "Ghirnatah": 18,
+            "Qurtubah": 19,
+            "Other": 20
+        },
+        "Macca": {
+            "Ajyad": 0,
+            "Al Andalus": 2,
+            "Al Buhayrat": 3,
+            "Al Bibyan": 4,
+            "At Taqwa": 5,
+            "At Tanim": 6,
+            "At Taysir": 7,
+            "Al Jamiah": 8,
+            "Al Jummayzah": 9,
+            "Al Hujun": 10,
+            "Al Haram": 11,
+            "Al Hamra Umm Al Jud": 12,
+            "Al Khalidiyah": 13,
+            "Al Khadra": 14,
+            "Al Khansa": 15,
+            "Ar Rashidiyah": 16,
+            "Ar Rusayfah": 17,
+            "Ar Rawabi": 18,
+            "Ar Rawdah": 19,
+            "Az Zahir": 20,
+            "Az Zahra": 21,
+            "As Salamah": 22,
+            "As Sulimaniyah": 23,
+            "Ash Shubaikah": 24,
+            "Asharai": 25,
+            "Ash Shuhada": 26,
+            "Ash Shawqiyah": 27,
+            "Ad Diyafah": 28,
+            "At Tandabawi": 29,
+            "Al Utaybiyah": 30,
+            "Al Adl": 31,
+            "Al Aziziyah": 32,
+            "Al Usaylah": 33,
+            "Al Ukayshiyah": 34,
+            "Al Umrah Al Jadidah": 35,
+            "Al Awali": 36,
+            "Al Qararah And An Naqa": 37,
+            "Al Kakiyah": 38,
+            "Al Mursalat": 39,
+            "Al Misfalah": 40,
+            "Al Mashair": 41,
+            "Al Maabdah": 42,
+            "King Fahd": 43,
+            "Al Mansur": 44,
+            "An Nuzhah": 45,
+            "An Nasim": 46,
+            "An Nawwariyah": 47,
+            "Al Hijrah": 48,
+            "Al Hajlah": 49,
+            "Al Hindawiyah": 50,
+            "Batha Quraysh": 51,
+            "Jabal An Nur": 52,
+            "Jarham": 53,
+            "Jarwal": 54,
+            "Harat Al Bab And Ash Shamiyah": 55,
+            "Ray Zakhir": 56,
+            "Sharai Al Mujahidin": 57,
+            "Shaib Amir And Shaib Ali": 58,
+            "Kudy": 59,
+            "Wadi Jalil": 60,
+            "Waly Al Ahd": 61,
+            "Ja'Araneh": 62,
+            "Shraie'E": 63,
+            "Shumeisi": 64,
+            "Bahrat Al Moujoud": 65,
+            "Nwariah": 66,
+            "Wadi Fatmah": 67,
+            "Other": 68
+        },
+        "Al Wajh": {
+            "Al Balad": 0,
+            "Al Khaldiyah": 2,
+            "As Safa": 3,
+            "Al Aziziah": 4,
+            "An Nahdah": 5,
+            "Other": 6
+        },
+        "Al Quwaiiyah": {
+            "Abu Salim": 0,
+            "Al Basatin": 2,
+            "Al Jazirah": 3,
+            "Al Jaffuniyyah": 4,
+            "Al Hazm": 5,
+            "Al Khalij": 6,
+            "Ad Dirah": 7,
+            "Ar Rabwah": 8,
+            "Az Zuhur": 9,
+            "As Salam": 10,
+            "As Sanaiyyah": 11,
+            "Ad Darib": 12,
+            "Al Muruj": 13,
+            "Al Wahah": 14,
+            "Al Wurud": 15,
+            "Other": 16
+        },
+        "Haql": {
+            "Al Balda Al Qadimah": 0,
+            "As Sabkhah": 2,
+            "Adh Dhahrah": 3,
+            "Al Yarmuk": 4,
+            "Other": 5
+        }
+    },
+    "EM": {
+        "Abu Dhabi": {
+            "Other": 1,
+            "Al Nahda west": 2,
+            "Al Wathba Cycle Track": 3,
+            "Al Wathba north": 4,
+            "Al Wathba South": 5,
+            "New Al Nahda": 6,
+            "Al Shawamekh": 7,
+            "ADNOC": 8,
+            "Al Muzoon": 9,
+            "Al Safarat": 10,
+            "Al Karamah": 11,
+            "Sheikh Khalifa Medical City": 12,
+            "Hamdan street, Al Hosn, Markaziya West": 13,
+            "Abu Dhabi City Zone 1": 14,
+            "Abu Dhabi City Zone 2": 15,
+            "Abu Dhabi City Zone 2A": 16,
+            "Mohammed Bin Zayed City, Shabia": 17,
+            "Al Mena - 2": 18,
+            "Al Mina": 19,
+            "Saadiyat Island": 20,
+            "Al Nahyan": 21,
+            "Qasr Al Bahr": 22,
+            "Al Bateen - 1": 23,
+            "Al Bateen - Abu Dhabi": 24,
+            "Al Bateen Beach": 25,
+            "Al Adla": 26,
+            "Al Falah City": 27,
+            "Al Falah-AbuDhabi": 28,
+            "Baniyas West": 29,
+            "Jebel Dhanna - Remote": 30,
+            "Al Mushrif - 1": 31,
+            "Abu Dhabi Golf Club Outer": 32,
+            "Al Madina Al Riyadiya": 33,
+            "Sas Al Nakhl Village": 34,
+            "Sheikh Zayed Grand Mosque": 35,
+            "Musaffah Shabiya 11, 12": 36,
+            "Mussafah Shabiya": 37,
+            "Ghayathi - Remote": 38,
+            "Abu Dhabi City Zone 3": 39,
+            "Abu Dhabi City Zone 5": 40,
+            "Al Rowdah 2": 41,
+            "Al Rowdah Al Zaab": 42,
+            "Al Zaab": 43,
+            "Al Zaab 2": 44,
+            "Etihad rail, Umm Al Ashtan - Remote": 45,
+            "Al Bandar": 46,
+            "Al Raha Beach": 47,
+            "Al Rumaila": 48,
+            "Al Zeina": 49,
+            "Khor Al Raha": 50,
+            "Yas Island East": 51,
+            "Yas Island West": 52,
+            "Yas Marina Circuit": 53,
+            "Abu Dhabi Country Club": 54,
+            "Al Bateen Palace": 55,
+            "Al Wahdah": 56,
+            "Mahawi": 57,
+            "Al Dhafra Air Base": 58,
+            "Mafraq Industrial Area": 59,
+            "Mafraq workers City": 60,
+            "Al Mushrif Mall": 61,
+            "Abu Dhabi City Zone 6": 62,
+            "Khalifa City": 63,
+            "Watani Residential Compound": 64,
+            "Al Shahama": 65,
+            "Rawadat Al Reef": 66,
+            "Al Mushrif": 67,
+            "Rabdan Academy": 68,
+            "Al Shamkha": 69,
+            "Al Shamkha - 1": 70,
+            "Al Shamkha South": 71,
+            "Motor World": 72,
+            "Electra Park": 73,
+            "Abu Dhabi Gate City": 74,
+            "Al Maqta": 75,
+            "Mangrove Village": 76,
+            "Al Maryah Island": 77,
+            "Al Reem Island": 78,
+            "Al Shamkha East": 79,
+            "Al Khubeirah": 80,
+            "Al Ras Al Akhdar": 81,
+            "Break Water": 82,
+            "Corniche Beach": 83,
+            "Musaffah 1": 84,
+            "MUSSAFAH_2": 85,
+            "Al Mafraq": 86,
+            "Baniyas East": 87,
+            "Shakhbout City": 88,
+            "Zayed City": 89,
+            "Al Samha": 90,
+            "Abu Dhabi City Zone 2B": 91,
+            "Mussafah_3": 92,
+            "Abu Dhabi Northeast, Twazun,Warsan farms": 93,
+            "Al Shahama Old": 94,
+            "Al Matar-AbuDhabi": 95,
+            "Rowdhat": 96,
+            "Tourist Club - Salam Street": 97,
+            "Tourist club area, Abu Dhabi Mall": 98,
+            "Al Khalidiya": 99,
+            "Al Manhal": 100,
+            "Abu Dhabi City Zone 4": 101,
+            "Al Nahyan 2": 102,
+            "Building Materials City": 103,
+            "Mazayed Village": 104,
+            "Al Forsan Village": 105,
+            "Al Rayyana": 106,
+            "Sheikh Zayed Cricket Stadium": 107,
+            "Ruwais - Remote": 108,
+            "Abu Dhabi International Airport": 109,
+            "Al Reef": 110,
+            "Masdar City": 111,
+            "ICAD 1 & Residential City": 112,
+            "ICAD 2": 113,
+            "ICAD 3": 114,
+            "MUSSAFAH_4": 115,
+            "Gheweifat, Batha - Remote": 116,
+            "Sila - Remote": 117,
+            "Al Bahia": 118
+        },
+        "Ajman": {
+            "Other": 1,
+            "Al Zawrah": 2,
+            "Al Rashidiya - Ajman": 3,
+            "Al Rashidiya - Ajman 2": 4,
+            "Al Rashidiya 3 - Ajman": 5,
+            "Al Amera": 6,
+            "Al Helio 1": 7,
+            "Al Humaideya 1": 8,
+            "Al Humaideya 2": 9,
+            "Al Raqaib 1": 10,
+            "Al Raqaib 2": 11,
+            "Al Jurf 1": 12,
+            "Al Jurf 2": 13,
+            "Al Safia": 14,
+            "Musheirif": 15,
+            "Al nuaiemiya": 16,
+            "Al Jurf Industrial Area 1": 17,
+            "Al Jurf Industrial Area 2": 18,
+            "Al Jurf Industrial Area 3": 19,
+            "AjMan Industrial Area 1": 20,
+            "AjMan Industrial Area 2": 21,
+            "Al Muwaihat 1": 22,
+            "Al Muwaihat 2": 23,
+            "Al Muwaihat 3": 24,
+            "Al Tallah 2": 25,
+            "Al rawdha 1": 26,
+            "Al rawdha 2": 27,
+            "Al Rawdha 3": 28,
+            "Al Numaimia - 2": 29,
+            "Al Rumailah": 30,
+            "Al Sawan": 31,
+            "Rumailah - 3 Ajman": 32,
+            "Al Bahya": 33,
+            "Ajman Free Zone": 34,
+            "Al bustan-Ajman": 35,
+            "Al Nakheel - Ajman": 36,
+            "Al Nakhil 2": 37,
+            "Al Manama": 38
+        },
+        "Al Ain": {
+            "Other": 1,
+            "Al Ain International Airport": 2,
+            "Al Bateen - Al Ain": 3,
+            "Al Khabisi": 4,
+            "Al Markhaniya": 5,
+            "Al Andulus Compound, Al Ain Mall": 6,
+            "Al Jahili": 7,
+            "Central District": 8,
+            "Khatm-Al-Shikla": 9,
+            "Al Qua - Remote": 10,
+            "Al Ain Outer 1 - Remote": 11,
+            "Al Ain outer 3 - Remote": 12,
+            "Al Khatim - Remote": 13,
+            "Al Khaznah - Remote": 14,
+            "Al Ain outer City 2": 15,
+            "Al Foaa": 16,
+            "Al hayer": 17,
+            "Al Shuwaib": 18,
+            "Defence": 19,
+            "Al Khrair": 20,
+            "Al Sarooj-New": 21,
+            "Al Sarooj-Old": 22,
+            "Al Salamat": 23,
+            "Al Salamat District": 24,
+            "Al Towayya": 25,
+            "Al Dhahir": 26,
+            "Ummghafa": 27,
+            "Al Ain Hospital": 28,
+            "Al Jimi": 29,
+            "Al Masoudi": 30,
+            "Al Qattara": 31,
+            "Al Sweihan": 32,
+            "Nahel": 33,
+            "Zakher": 34,
+            "Al Yahar North": 35,
+            "Al Yahar South": 36,
+            "Al Hili": 37,
+            "Al Maqam": 38,
+            "Al Ain Industrial Area - Falaj Hazzaa Mnaizla": 39,
+            "Al Ain Industrial Area - Sanaiya, Saniya": 40,
+            "Falaj Hazzaa Muroor": 41,
+            "Al Mnaizfah": 42,
+            "Al Mutaredh": 43,
+            "Al Mutaredh Oasis": 44,
+            "Al Muwaiji": 45,
+            "Al Muwaiji - Al Ruwaikah": 46,
+            "Asherj": 47,
+            "Al Aqabiya": 48,
+            "Al Shaaibah": 49,
+            "Gharebah": 50,
+            "Al dahra - Remote": 51,
+            "jabel Hafeet": 52,
+            "Al Waqan - Remote": 53
+        },
+        "Dubai": {
+            "Other": 1,
+            "Al Thanyah 4 - Springs": 2,
+            "Al Thanyah 5, Jumeirah Park, Meadows 1,2": 3,
+            "Al Barsha 1": 4,
+            "Warsan 2": 5,
+            "Al Barsha South 4, Jumeirah Village Circle": 6,
+            "Al Barsha South 5": 7,
+            "Al Safa 2": 8,
+            "Jumeirah 3": 9,
+            "Umm Suqeim 1": 10,
+            "Umm Suqeim 2": 11,
+            "Al Twar 1": 12,
+            "Al Twar 2": 13,
+            "Dubai International Airport Terminal 2": 14,
+            "Al Quasis 1": 15,
+            "Al Quasis Ind. 1": 16,
+            "Al Quasis Ind. 2": 17,
+            "Al Quasis Ind. 3": 18,
+            "Al Quasis Ind. 4": 19,
+            "Al Quasis Ind. 5": 20,
+            "Al Quoz Ind. Area 2": 21,
+            "Al Thanyah 1- Tecom": 22,
+            "Al Thanyah 3": 23,
+            "Dubai marina": 24,
+            "Dubai Maritime City": 25,
+            "DIFC - Trade centre 2": 26,
+            "Al Mizhar 1": 27,
+            "Al Mizhar 2": 28,
+            "Al Barsha South 2 & 3, Dubai land": 29,
+            "Al Barsha South1": 30,
+            "Al Quoz Industrial Area 3": 31,
+            "Al Quoz Industrial Area 4": 32,
+            "Hadeq Mohammed Bin Rashid": 33,
+            "Nadd Hessa (Silicon Oasis)": 34,
+            "Al Garhoud": 35,
+            "Dubai International Airport Terminal 1": 36,
+            "Umm Ramoul": 37,
+            "Al lisaili": 38,
+            "Dubai outlet mall, Minhad Ab": 39,
+            "marghan": 40,
+            "Murqquab, Al Faqa": 41,
+            "Wadi Al Safa 5": 42,
+            "Al hebiah 2, Dubai Studio City": 43,
+            "Al Hebiah 3": 44,
+            "Wadi Al Safa 7": 45,
+            "Dubai Design District": 46,
+            "Zaabeel 1": 47,
+            "Zaabeel 2": 48,
+            "Al Quoz 1": 49,
+            "Al Quoz 3": 50,
+            "Al Quoz Industrial Area 1": 51,
+            "Al Jadaf": 52,
+            "Oud Mehta": 53,
+            "Sama Al jadaf": 54,
+            "Umm Hurair 1": 55,
+            "Umm Hurair 2": 56,
+            "Umm Hurair 2 - Dubai Health Care city": 57,
+            "Muhaisanah 1": 58,
+            "Al Hebiah 4, Dubai Sports City": 59,
+            "Al bada": 60,
+            "Hudaiba": 61,
+            "Hor Al Anz East": 62,
+            "Dubai Mall": 63,
+            "Nadd Al Shiba 3": 64,
+            "Al hebiah 5, Golf City": 65,
+            "Al Yalayis 1": 66,
+            "Al Yalayis 2": 67,
+            "Al Yalayis 3": 68,
+            "Bab Al Shams": 69,
+            "Al Nahda 1 - Dubai": 70,
+            "Al Nahda 2 - Dubai": 71,
+            "Corniche Deira": 72,
+            "Dubai International City, Warsan 1": 73,
+            "Deira City Centre": 74,
+            "Al Kheeran 2": 75,
+            "Al Rashidiya - Dubai": 76,
+            "Dubai Festival City": 77,
+            "Marsa Al Khor": 78,
+            "Al Kheeran": 79,
+            "Al Kheeran 1": 80,
+            "Al Quasis 2": 81,
+            "Al Quasis 3": 82,
+            "Al Twar 3": 83,
+            "Al Kifaf": 84,
+            "Trade centre 1": 85,
+            "Falcon City": 86,
+            "Global Village": 87,
+            "Wadi Al Safa 2": 88,
+            "Wadi Al Safa 4": 89,
+            "Al Karama": 90,
+            "Al Safa 1": 91,
+            "Al Wasl": 92,
+            "Mirdif": 93,
+            "Jumeirah 1, Pearl Jumeirah": 94,
+            "Jumeirah 2": 95,
+            "Al Mankhool": 96,
+            "Al raffa": 97,
+            "Hamriya": 98,
+            "JBR": 99,
+            "Al Barari": 100,
+            "Al Merkadh": 101,
+            "Living Legends": 102,
+            "Majan": 103,
+            "Meydan": 104,
+            "Millenium Villas": 105,
+            "Nadd Al Shiba 1": 106,
+            "Nadd Al Shiba 2": 107,
+            "Nadd Al Shiba 4": 108,
+            "Wadi Al Safa 3": 109,
+            "AL SOUK AL KABEER, Port Rashid": 110,
+            "Riggat Al Buteen": 111,
+            "Al Warqa'a 1": 112,
+            "Al Warqa'a 2": 113,
+            "Al Warqa'a 3": 114,
+            "Al Warqa'a 4": 115,
+            "Al Warqa'a 5": 116,
+            "Dubai Investment park 2": 117,
+            "Al Manara": 118,
+            "umm Al Sheif": 119,
+            "Umm Suqeim 3": 120,
+            "Hor Al Anz": 121,
+            "Dubai World Central": 122,
+            "DWC Golf City": 123,
+            "Emirates City": 124,
+            "Jabal Ali Ind. 3": 125,
+            "Jebal Ali Techno Park": 126,
+            "Saih Shuaib 2": 127,
+            "Saih Shuaib 3 - Dubai Industrial City": 128,
+            "Saih Shuaib 4": 129,
+            "Al Quoz 2": 130,
+            "Al Quoz 4 - Al Khail Mall": 131,
+            "Downtown Jabal Ali zone 1": 132,
+            "Downtown Jabal Ali zone 2": 133,
+            "Jabal Ali Industrial Area 2": 134,
+            "Jebel Ali free zone - Mina Jabal Ali": 135,
+            "Business Bay": 136,
+            "Al barsha 2": 137,
+            "Al Barsha 3": 138,
+            "Muraqqabat": 139,
+            "Downtown Jabal Ali - Zone 4": 140,
+            "Hessyan 1": 141,
+            "Hessyan 2": 142,
+            "Jabal Ali Industrial Area 1": 143,
+            "Oud Al Muteena 1": 144,
+            "Oud Al Muteena 2": 145,
+            "Al Jafiliya": 146,
+            "Al Baraha": 147,
+            "Al Corniche": 148,
+            "Al Hamriya Port": 149,
+            "Al Wuheida": 150,
+            "Al Hebiah 1, Motor City": 151,
+            "Wadi Al Safa 6": 152,
+            "Jumeirah lake towers -1": 153,
+            "Dubai Investment park 1": 154,
+            "Discovery Gardens": 155,
+            "Al Satwa": 156,
+            "Al Khawaneej 1": 157,
+            "Al Khawaneej 2": 158,
+            "Wadi Al Amardi": 159,
+            "Ducamz": 160,
+            "Fruit & Vegetable Market": 161,
+            "Ras Al Khor": 162,
+            "Ras Al Khor Ind. 1": 163,
+            "Ras Al Khor Ind. 2": 164,
+            "Ras Al Khor Ind. 3": 165,
+            "Al Rigga": 166,
+            "Abu Hail": 167,
+            "Muhaisanah 4": 168,
+            "Al Khaibaisi": 169,
+            "Al Muteena": 170,
+            "Dubai Outer 2": 171,
+            "Madam - 1": 172,
+            "Palm Jumeira": 173,
+            "Jumeirah lake towers -2": 174,
+            "Al Daghaya": 175,
+            "Al Ras": 176,
+            "Al Sabkha - Dubai": 177,
+            "Muhaisanah 2": 178,
+            "Muhaisanah 3": 179,
+            "Al Mamzar": 180,
+            "Al mamzar - 1": 181,
+            "Ghantoot Outer": 182,
+            "Hatta - 1": 183,
+            "Al Thanyah 2": 184,
+            "Mazaya Business center": 185,
+            "Nadd Al Hamar": 186,
+            "Academic City": 187,
+            "Al Awir": 188,
+            "International City 2, Warsan 4": 189,
+            "Warsan 3": 190,
+            "Al Furjan, Jabal Ali Village, Gardens": 191,
+            "Jebel Ali free zone - Jabal Ali 2": 192,
+            "Jebel Ali free zone - Jabal Ali 3": 193,
+            "Al Murar": 194,
+            "Ayal Nasir": 195,
+            "Naif": 196,
+            "Al Sufouh 1": 197,
+            "Knowledge Village, Internet City": 198,
+            "media city": 199
+        },
+        "Fujairah": {
+            "Other": 1,
+            "Al Mahatta": 2,
+            "Al Owaid": 3,
+            "Fujairah City Outer 2": 4,
+            "Merashid": 5,
+            "Al Bithnah": 6,
+            "Al Bithnah Outer": 7,
+            "Al Ittihad": 8,
+            "Anajaimat": 9,
+            "Fujairah City Center": 10,
+            "Fujairah Hospital": 11,
+            "Fujairah Municipality,EId Mussalla Rd": 12,
+            "Industrial Area - Fujairah": 13,
+            "Madhab": 14,
+            "Old Fujairah City": 15,
+            "Town Centre": 16,
+            "Habsab": 17,
+            "Al Halah , Abadilah, Dahir": 18,
+            "Dibba Al Fujairah": 19,
+            "Fujairah Outer Montains": 20,
+            "Ghub, Cement Factory": 21,
+            "Al Aqah, Adqat": 22,
+            "Al badiya": 23,
+            "Dadna": 24,
+            "Sharm": 25,
+            "Zubara Beach": 26,
+            "Al Qadssia": 27,
+            "Murbah beach": 28,
+            "Al Mudifi": 29,
+            "Al Yarmouk - FUJ": 30,
+            "Fujairah City Outer": 31,
+            "Fujairah Outer area": 32,
+            "Hateen": 33,
+            "Hayawa": 34,
+            "Luluyah Beach": 35,
+            "Al Gurfa": 36,
+            "Al Hayl - Fujairah": 37,
+            "Al Shabur": 38,
+            "Kalba - 2": 39,
+            "Mafraq Kalba": 40,
+            "Safad": 41,
+            "siji,showka": 42,
+            "Sour Kalba": 43,
+            "Suhaila Kalba": 44,
+            "Dibba Al Hisn": 45,
+            "Industrial Area, karsha, Sambraid Beach": 46,
+            "Adhan, idhn": 47,
+            "International Qarries & Cement": 48,
+            "Al Faseel": 49,
+            "Al Qurayyah": 50,
+            "Fujairah Free Trade Zone": 51,
+            "Sakamkam 1": 52,
+            "Sakamkam 2 - Al Hilal City (U\/C)": 53,
+            "Baraha Kalba": 54,
+            "Kalba Club": 55,
+            "Kalba Hospital": 56,
+            "Al Dhaid, Masafa, Al Manama": 57,
+            "Fayyad Minaz": 58,
+            "Kalba - Fujairah": 59,
+            "Khawr Kalba": 60,
+            "Wahla": 61
+        },
+        "Ras Al Khaimah": {
+            "Other": 1,
+            "Al Hamra village": 2,
+            "Industrial Area & Free Zone": 3,
+            "Marjan Island": 4,
+            "Al Ghubb": 5,
+            "Al Juwais": 6,
+            "Al Qusaidat": 7,
+            "Al Soor - RAK": 8,
+            "Liwa badr, Al Zahra": 9,
+            "Sai Outer": 10,
+            "Seih Al hudaibah": 11,
+            "Seih Al Urabi": 12,
+            "Seih Shihyar,Seih Al Burairat, Al Qusaidat": 13,
+            "Shamal Haqueel": 14,
+            "Shamal Zulphar": 15,
+            "Wadi bih area": 16,
+            "Wadi Safiney": 17,
+            "Al Darbi Janiyah": 18,
+            "Al MAirid": 19,
+            "Al Manmourah": 20,
+            "Al nudood, Wadi Ammar": 21,
+            "Al Sall": 22,
+            "Camel Race Track": 23,
+            "Khatt": 24,
+            "RAK International Airport": 25,
+            "Sheikh Khalifa Hospital": 26,
+            "Al Turfah": 27,
+            "Dafan Al Khor": 28,
+            "Dahan": 29,
+            "Rak City": 30,
+            "Sidroh 1": 31,
+            "Sidroh 2": 32,
+            "Suhaim": 33,
+            "Al Hudaibah": 34,
+            "Al Seer": 35,
+            "Ras Al Selaab": 36,
+            "Al Mataf": 37,
+            "Al Sharisha, AL Mataf": 38,
+            "Al Dhait North - RAK": 39,
+            "Al Fahlain": 40,
+            "Al Kharran": 41,
+            "Khuzam - RAK": 42,
+            "Sai": 43,
+            "Al Dhait South 2": 44,
+            "Al Hamra": 45,
+            "Al Riffa - RAK": 46,
+            "Jazirat Al Hamra - Old": 47,
+            "Mina Al Arab": 48,
+            "Al Nakheel - RAK": 49,
+            "Al Qurm - RAK": 50,
+            "Al Uraibi, Al Manara Mall": 51,
+            "Al Jeer": 52,
+            "Ghalilah,Wadi Ghalilah": 53,
+            "Jas Mountain": 54,
+            "Al Rafaah- UAQ": 55,
+            "AL Rams": 56,
+            "Al Rams - Outer": 57,
+            "Ras Al Khaima City Outer": 58,
+            "Al Ghail Youth Center": 59,
+            "Batiyah South": 60,
+            "Maghribiyah": 61,
+            "Shawka": 62,
+            "Al Dhait South - RAK": 63
+        },
+        "Sharjah": {
+            "Other": 1,
+            "Al Majaz 2": 2,
+            "Central Souq": 3,
+            "Flag Island": 4,
+            "Al Jurainah 2": 5,
+            "Mowaileh Camp": 6,
+            "Muwaileh Commercial": 7,
+            "Old Muwaileh": 8,
+            "School Zone": 9,
+            "Skyline University": 10,
+            "University City": 11,
+            "Al Bataeh": 12,
+            "Al Manazel": 13,
+            "Al Saja Industrial": 14,
+            "Al Zubair Orchards": 15,
+            "Al Fisht": 16,
+            "Al Mirgab": 17,
+            "Al Qulayaa": 18,
+            "Al Seef - Sharjah": 19,
+            "Sharqan": 20,
+            "Al Tawun - Al Tawun road": 21,
+            "Mumzar - Sharjah": 22,
+            "Al Yasmeen": 23,
+            "Saif Zone": 24,
+            "Sharjah Airport": 25,
+            "Al Ramaqiya": 26,
+            "Al Sweihat": 27,
+            "Eliash": 28,
+            "Muwafjah": 29,
+            "Wasit Lake Resort": 30,
+            "Al Gharb": 31,
+            "Al Ghuwair": 32,
+            "Al Majarrah": 33,
+            "Al Mareija": 34,
+            "Al Musalla": 35,
+            "Al Shuwaihean": 36,
+            "Butina": 37,
+            "Um Altaraffa": 38,
+            "Al Gharayen 1": 39,
+            "Al Gharayen 2": 40,
+            "Al Gharayen 3": 41,
+            "Al Gharayen 4": 42,
+            "Al Gharayen 5": 43,
+            "AL juraina 1": 44,
+            "AL juraina 2": 44,
+            "Al Juraina 3": 45,
+            "Al Jurainah 4": 46,
+            "Al Noof 1": 47,
+            "Al Noof 3": 48,
+            "Al Hazana": 49,
+            "Al Nasserya": 50,
+            "Al Nekhailat": 51,
+            "Al Qadisia": 52,
+            "Al Sabkha - Sharjah": 53,
+            "Maysaloon": 54,
+            "Al Darari": 55,
+            "Al Khezamia": 56,
+            "Al Shahba": 57,
+            "Al Tarfana": 58,
+            "Al Bu Daniq": 59,
+            "Al Ghubaiba - Sharjah": 60,
+            "Al Qasimia": 61,
+            "Al Yarmook - Sharjah": 62,
+            "Al Khaledia": 63,
+            "Al Khan": 64,
+            "Al Qasba": 65,
+            "Al Qasba Tower": 66,
+            "Al Majaz 1": 67,
+            "Al Majaz Bank": 68,
+            "Al Soor - Sharjah": 69,
+            "Al Abar": 70,
+            "Al Goaz": 71,
+            "Al Mansura": 72,
+            "Al Ramla East": 73,
+            "Al Ramla West": 74,
+            "Al Ramtha": 75,
+            "Dasman": 76,
+            "Samnan": 77,
+            "Agricultural Falah": 78,
+            "Al Bdaia": 79,
+            "Al Falah Suburb": 80,
+            "Al Noof 2": 81,
+            "Al Noof 4": 82,
+            "Al Suyoh - Sharjah": 83,
+            "Barashi": 84,
+            "Juwaizaa Suburb": 85,
+            "Masafi": 86,
+            "Abu Shagara": 87,
+            "Al Nud": 88,
+            "Al Rahmaniya 1": 89,
+            "Al Rahmaniya 2": 90,
+            "Al Rahmaniya 3": 91,
+            "Al Rahmaniya 4": 92,
+            "Al Rahmaniya 5": 93,
+            "Al Rahmaniya 6": 94,
+            "Al Rahmaniya 7": 95,
+            "Al Rahmaniya 8": 96,
+            "Muzairah": 97,
+            "Um Fannain": 98,
+            "Sharjah Industrial Area 1": 99,
+            "Sharjah Industrial Area 2": 100,
+            "Sharjah Industrial Area 3": 101,
+            "Sharjah Industrial Area 4": 102,
+            "Sharjah Industrial Area 5": 103,
+            "Sharjah Industrial Area 6": 104,
+            "Sharjah Industrial Area 7": 105,
+            "Sharjah Sports Club": 106,
+            "Al Azra": 107,
+            "Al Azra School Area": 108,
+            "Al Falaj": 109,
+            "Al Ghaphia": 110,
+            "Al Jazzat": 111,
+            "Al hamriya Free Zone": 112,
+            "Al hamriya Free Zone 2": 113,
+            "Al hamriyah": 114,
+            "New Hamariya": 115,
+            "Al Mailaiha": 116,
+            "Camel Race, Police Academy": 117,
+            "Al Shola Private School": 118,
+            "Sharjah Industrial Area - 18": 119,
+            "Sharjah Industrial Area 10": 120,
+            "Sharjah Industrial Area 11": 121,
+            "Sharjah Industrial Area 12": 122,
+            "Sharjah Industrial Area 13, National Paints": 123,
+            "Sharjah Industrial Area 15": 124,
+            "Sharjah Industrial Area 17": 125,
+            "Al Fayha": 126,
+            "Al Jubail": 127,
+            "Al Manakh": 128,
+            "Al Dhaid Hospital": 129,
+            "Dhaid": 130,
+            "Al Layyah": 131,
+            "Al Majaz 3": 132,
+            "Port Khalid": 133,
+            "Sharjah Industrial Area 9": 134,
+            "Al Nahda - Sharjah, Sahara Centre": 135,
+            "Al Tawun - North": 136,
+            "Jazirat al Hibab": 137
+        },
+        "Umm Al Quwain": {
+            "Other": 1,
+            "Al Abrab": 2,
+            "Al Salamah - A": 3,
+            "Green Belt - Umm Al Quwain": 4,
+            "Industrial Area": 5,
+            "Salameh": 6,
+            "Al Ramlah - B": 7,
+            "Al Ramlah - C": 8,
+            "Al Salamah - B": 9,
+            "Al Salamah - C": 10,
+            "Emirates Modern Industrial Area": 11,
+            "Fallaj Al Muwallah": 12,
+            "Sheikh Khalifa General Hospital": 13,
+            "Umm Al Quwain Airport": 14,
+            "Al Rashidiya - UAQ": 15,
+            "Falaj Al Mulla": 16,
+            "Libsa, Bayatha": 17,
+            "Al Haditha": 18,
+            "Al Hawiyah": 19,
+            "Al Humrah - A": 20,
+            "Al Humrah - B": 21,
+            "Al Humrah - C": 22,
+            "Al Humrah - D": 23,
+            "Al Maidan": 24,
+            "Al Raas - A": 25,
+            "Al Raudah": 26,
+            "Al Riqqah": 27,
+            "Masjid Al Mazroui": 28,
+            "Old Town Area": 29,
+            "Umm Al Quwain Marina": 30
+        }
+    },
+    "KW": {
+        "HAWALLI": {
+            "Other": 1
+        },
+        "MUBARAK AL KABEER": {
+            "Other": 1
+        },
+        "FARAWANIYAH": {
+            "Other": 1
+        },
+        "AHMADI CITY": {
+            "Other": 1
+        },
+        "JAHRA": {
+            "Other": 1
+        },
+        "ABDALI": {
+            "Other": 1
+        },
+        "ABDULLA AL SALEM": {
+            "Other": 1
+        },
+        "ABDULLA HARBOUR": {
+            "Other": 1
+        },
+        "ABDULLAH MUBARAK WEST JLEEB SHYOOKH": {
+            "Other": 1
+        },
+        "ABU FATEERA": {
+            "Other": 1
+        },
+        "ABU HALEEFA": {
+            "Other": 1
+        },
+        "ABU HASSANIYA": {
+            "Other": 1
+        },
+        "ADDAN": {
+            "Other": 1
+        },
+        "AIRPORT": {
+            "Other": 1
+        },
+        "AL MSEILAH": {
+            "Other": 1
+        },
+        "AL NAEEM": {
+            "Other": 1
+        },
+        "AL NAHDA (EAST SULAIBIKHAT)": {
+            "Other": 1
+        },
+        "AL NASEEM": {
+            "Other": 1
+        },
+        "AL OYOUN": {
+            "Other": 1
+        },
+        "AL QASER": {
+            "Other": 1
+        },
+        "AL QUSOOR": {
+            "Other": 1
+        },
+        "AL RAI": {
+            "Other": 1
+        },
+        "AL SALEM": {
+            "Other": 1
+        },
+        "AL WAHA": {
+            "Other": 1
+        },
+        "AL WOSTA": {
+            "Other": 1
+        },
+        "AMGHARA": {
+            "Other": 1
+        },
+        "ANDALUS": {
+            "Other": 1
+        },
+        "AQEELAH": {
+            "Other": 1
+        },
+        "ARDIYAH": {
+            "Other": 1
+        },
+        "ARDIYAH 5": {
+            "Other": 1
+        },
+        "ARDIYAH 6": {
+            "Other": 1
+        },
+        "BAYAN": {
+            "Other": 1
+        },
+        "BIDAA": {
+            "Other": 1
+        },
+        "BNEID EL GAR": {
+            "Other": 1
+        },
+        "CEMETARY": {
+            "Other": 1
+        },
+        "COLLECTION DAJEEJ": {
+            "Other": 1
+        },
+        "COST LINE A": {
+            "Other": 1
+        },
+        "COST LINE B": {
+            "Other": 1
+        },
+        "COST LINE C": {
+            "Other": 1
+        },
+        "DAHER": {
+            "Other": 1
+        },
+        "DAIYA": {
+            "Other": 1
+        },
+        "DAJEEJ": {
+            "Other": 1
+        },
+        "DASMA": {
+            "Other": 1
+        },
+        "DASMAN": {
+            "Other": 1
+        },
+        "DOHA": {
+            "Other": 1
+        },
+        "FAHED AL AHMAD": {
+            "Other": 1
+        },
+        "FARDOS": {
+            "Other": 1
+        },
+        "FAYHA": {
+            "Other": 1
+        },
+        "FINTAS": {
+            "Other": 1
+        },
+        "FNAITEES": {
+            "Other": 1
+        },
+        "FUHAIHEEL": {
+            "Other": 1
+        },
+        "GERNATA": {
+            "Other": 1
+        },
+        "GREEN BELT": {
+            "Other": 1
+        },
+        "HADIYAH": {
+            "Other": 1
+        },
+        "HITTEEN": {
+            "Other": 1
+        },
+        "IDAILIYAH": {
+            "Other": 1
+        },
+        "ISHBEELYAH": {
+            "Other": 1
+        },
+        "JABER AL AHMED": {
+            "Other": 1
+        },
+        "JABER AL ALI": {
+            "Other": 1
+        },
+        "JABRIYAH": {
+            "Other": 1
+        },
+        "JAHRA INDUSTRIAL": {
+            "Other": 1
+        },
+        "JAHRA MILITARY CAMPS": {
+            "Other": 1
+        },
+        "JLEEB AL SHYOOKH": {
+            "Other": 1
+        },
+        "KABD": {
+            "Other": 1
+        },
+        "KAIFAN": {
+            "Other": 1
+        },
+        "KAZMAH": {
+            "Other": 1
+        },
+        "KHAIRAN": {
+            "Other": 1
+        },
+        "KHAITAN": {
+            "Other": 1
+        },
+        "KHALDIYAH": {
+            "Other": 1
+        },
+        "MAHBOULA": {
+            "Other": 1
+        },
+        "MAIDAN HAWALLI": {
+            "Other": 1
+        },
+        "MANQAF": {
+            "Other": 1
+        },
+        "MANSOORIYAH": {
+            "Other": 1
+        },
+        "MASSAEL": {
+            "Other": 1
+        },
+        "MINA AL ZOUR": {
+            "Other": 1
+        },
+        "MIRQAB": {
+            "Other": 1
+        },
+        "MISHREF": {
+            "Other": 1
+        },
+        "MUBARAK ABDULLA": {
+            "Other": 1
+        },
+        "MUQUWE": {
+            "Other": 1
+        },
+        "NORTH SHUAIBAH": {
+            "Other": 1
+        },
+        "NUWAISEB": {
+            "Other": 1
+        },
+        "NUZHA": {
+            "Other": 1
+        },
+        "OMARIYAH": {
+            "Other": 1
+        },
+        "QADISIYAH": {
+            "Other": 1
+        },
+        "QAYRAWAN (SOUTH DOHA)": {
+            "Other": 1
+        },
+        "QIBLEH": {
+            "Other": 1
+        },
+        "QORTUBA": {
+            "Other": 1
+        },
+        "QRAIN": {
+            "Other": 1
+        },
+        "RABYAH": {
+            "Other": 1
+        },
+        "RAWDA": {
+            "Other": 1
+        },
+        "RAWDATAIN": {
+            "Other": 1
+        },
+        "RIHAB": {
+            "Other": 1
+        },
+        "RIQI": {
+            "Other": 1
+        },
+        "RIQQA": {
+            "Other": 1
+        },
+        "RMAITHIYA": {
+            "Other": 1
+        },
+        "SAAD AL ABDULLAH": {
+            "Other": 1
+        },
+        "SABAH AL AHMAD": {
+            "Other": 1
+        },
+        "SABAH AL NASER": {
+            "Other": 1
+        },
+        "SABAH AL SALEM": {
+            "Other": 1
+        },
+        "SABAHIYYAH": {
+            "Other": 1
+        },
+        "SABHAN": {
+            "Other": 1
+        },
+        "SALAM": {
+            "Other": 1
+        },
+        "SALEEBIYAH": {
+            "Other": 1
+        },
+        "SALEEBIYAH AGRICULTURAL": {
+            "Other": 1
+        },
+        "SALEEBIYAH INDUSTRIAL 1": {
+            "Other": 1
+        },
+        "SALEEBIYAH INDUSTRIAL 2": {
+            "Other": 1
+        },
+        "SALMI": {
+            "Other": 1
+        },
+        "SALMIYAH": {
+            "Other": 1
+        },
+        "SALWA": {
+            "Other": 1
+        },
+        "SCRAP": {
+            "Other": 1
+        },
+        "SHAMIYAH": {
+            "Other": 1
+        },
+        "SHARQ": {
+            "Other": 1
+        },
+        "SHIEB": {
+            "Other": 1
+        },
+        "SHIKAH SAAD AIRPORT": {
+            "Other": 1
+        },
+        "SHOHADA": {
+            "Other": 1
+        },
+        "SHUAIBAH": {
+            "Other": 1
+        },
+        "SHWEIKH (B-RESIDENTIAL)": {
+            "Other": 1
+        },
+        "SHWEIKH COMMERCIAL": {
+            "Other": 1
+        },
+        "SHWEIKH EDUCATIONAL": {
+            "Other": 1
+        },
+        "SHWEIKH HEALTH": {
+            "Other": 1
+        },
+        "SHWEIKH INDUSTRIAL 1": {
+            "Other": 1
+        },
+        "SHWEIKH INDUSTRIAL 2": {
+            "Other": 1
+        },
+        "SHWEIKH INDUSTRIAL 3": {
+            "Other": 1
+        },
+        "SHWEIKH SEA FRONT": {
+            "Other": 1
+        },
+        "SIDEEQ": {
+            "Other": 1
+        },
+        "SORRA": {
+            "Other": 1
+        },
+        "SOUTH AL WOSTA": {
+            "Other": 1
+        },
+        "SOUTH DOHA": {
+            "Other": 1
+        },
+        "SOUTH EAST JAHRA": {
+            "Other": 1
+        },
+        "SOUTH JAHRA": {
+            "Other": 1
+        },
+        "SOUTH SABAHIYA": {
+            "Other": 1
+        },
+        "SOUTH SHUAIBAH": {
+            "Other": 1
+        },
+        "SULEIBIKHAT": {
+            "Other": 1
+        },
+        "TAYMA": {
+            "Other": 1
+        },
+        "THOHOR": {
+            "Other": 1
+        },
+        "UM AL HAIMAN - ALI SABAH AL SALEM": {
+            "Other": 1
+        },
+        "WAFRA": {
+            "Other": 1
+        },
+        "WEST JAHRA": {
+            "Other": 1
+        },
+        "YARMOUK": {
+            "Other": 1
+        },
+        "ZAHRA": {
+            "Other": 1
+        }
+    }
+}

@@ -15,8 +15,11 @@ const getData = {
     // 分类
     // return axios.post(`${base.jd}/api/pcate?pid+${parmes}`, qs.stringify(parmes))
     pcate(parmes) {
-        console.log(parmes);
         return axios.get(`${base.jd}/api/pcate?pid=${parmes}`)
+    },
+    // 获取国家地区信息
+    getCountry() {
+        return axios.get("../../static/json/country.json");
     }
 }
 
