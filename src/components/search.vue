@@ -1,5 +1,6 @@
 <template>
   <div class="search">
+    <div style="height: 56px"></div>
     <div class="tabbar_box">
       <div class="searchHead">
         <van-icon name="arrow-left" @click="goBack()"/>
@@ -7,7 +8,7 @@
         <van-icon name="search" @click="searchFlag = false" />
       </div>
     </div>
-    <div class="fenge zhushi" v-if="searchFlag"></div>
+    <div class="fenge" v-if="searchFlag"></div>
     <div class="searchcardtitle" v-if="searchFlag">
       Search history
       <van-icon name="delete" @click="del()" />
@@ -20,7 +21,7 @@
         <van-button round type="info">Round</van-button>
       </li>
     </ul>
-
+    <div style="height: 48px"></div>
     <!-- 展示搜索商品内容 -->
     <div class="proTyle" v-if="!searchFlag">
       <van-dropdown-menu active-color="#ee0a24">
@@ -115,9 +116,6 @@ export default {
   .fenge {
     height: 0.1rem;
     background: #eee;
-  }
-  .zhushi {
-    margin-top: 56px;
   }
   .searchcardtitle {
     font-size: 0.25rem;

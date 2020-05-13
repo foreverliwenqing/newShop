@@ -16,6 +16,7 @@
     "axios": "^0.19.2",
     "jquery": "^3.5.1",
     "qs": "^6.9.4",
+    "svg-sprite-loader": "^5.0.0",
     "vant": "^2.8.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
@@ -63,6 +64,7 @@
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "style-loader": "^1.2.1",
+    "stylus-loader": "^3.0.2",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",

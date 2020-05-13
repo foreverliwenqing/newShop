@@ -44,7 +44,15 @@ module.exports = {
       {
         　test: /\.sass$/,
        　 loaders: ['style', 'css', 'sass']
-       },
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: [resolve('src/assets/icons')],
+        options: {
+          symbolId: 'icon-[name]'
+        }
+      },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',

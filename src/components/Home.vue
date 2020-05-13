@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <van-search v-model="value" readonly placeholder="Please enter a keyword" shape="round" background="#dcdcdc" @click="goBack()"/>
-
+    <div style="height: 1rem"></div>
     <div class="headBanner">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item v-for="(image, index) in swiper" :key="index" @click="goProduct()">
@@ -40,45 +40,14 @@
         />
       </van-list>
     </van-pull-refresh>
+    <div style="height: 50px"></div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      a: 123,
       value: "",
-      imgs: [
-        "https://img.yzcdn.cn/vant/apple-1.jpg",
-        "https://img.yzcdn.cn/vant/apple-2.jpg",
-        "https://img.yzcdn.cn/vant/apple-3.jpg",
-        "https://img.yzcdn.cn/vant/apple-4.jpg",
-        "https://img.yzcdn.cn/vant/apple-5.jpg",
-        "https://img.yzcdn.cn/vant/apple-6.jpg",
-        "http://jd.itying.com/public/upload/Zh8EP9HOasV28ynDSp8TaGwd.png"
-      ],
-      title: [
-        "极致放松的助眠曲库，解锁假期健康睡眠",
-        "疗愈 |养生音乐，调养身体各个器官",
-        "音乐陪你过春天|20位音乐家100首名曲免费听",
-        "音乐陪你过春天|20位音乐家100首名曲免费听",
-        "极致放松的助眠曲库，解锁假期健康睡眠",
-        "疗愈 |养生音乐，调养身体各个器官",
-        "极致放松的助眠曲库，解锁假期健康睡眠",
-        "疗愈 |养生音乐，调养身体各个器官",
-        "音乐陪你过春天|20位音乐家100首名曲免费听",
-        "音乐陪你过春天|20位音乐家100首名曲免费听",
-        "极致放松的助眠曲库，解锁假期健康睡眠",
-        "疗愈 |养生音乐，调养身体各个器官",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131",
-        "131313131313131313131313131313131313131"
-      ],
       swiper: [],
       plist: [],
       classList: [],
@@ -99,18 +68,9 @@ export default {
     onLoad() {
       setTimeout(() => {
         if (this.refreshing) {
-          this.title = [];
           this.refreshing = false;
         }
-
-        for (let i = 0; i < 10; i++) {
-          this.title.push("2222222222222");
-        }
         this.loading = false;
-
-        if (this.title.length >= 80) {
-          this.finished = true;
-        }
       }, 1000);
     },
     onRefresh() {
@@ -156,7 +116,7 @@ export default {
     }
   }
   .headBanner {
-    margin: 1.1rem 0.1rem 0.1rem 0.1rem;
+    margin: .1rem 0.1rem 0.1rem 0.1rem;
     height: auto;
     border-radius: 0.2rem;
     box-shadow: 0 0 0.12rem 0 rgba(0, 0, 0, 0.2);

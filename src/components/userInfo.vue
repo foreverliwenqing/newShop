@@ -101,7 +101,7 @@ export default {
       }
     },
     onClickLeft() {
-      this.$router.go(-1);
+      this.$router.push("/addressList");
     },
     onClickRight() {
       Toast("按钮");

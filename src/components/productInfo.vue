@@ -11,6 +11,7 @@
             <i class="iconfont iconshenglvehao"></i>
         </div>
     </header>
+    <div style="height: 50px"></div>
     <div class="infoContent">
       <section>
         <van-swipe @change="onChange">
@@ -451,7 +452,6 @@ export default {
 <style lang="scss">
 .info-3 {
   background-color: #f5f5f5;
-
   header {
     width: 7.5rem;
     height: 50px;
@@ -468,11 +468,11 @@ export default {
         height: 25px;
         border-radius: 50%;
         font-weight: 700;
-        color: white;
         text-align: center;
         background-color: #666;
         justify-content: center;
         margin-left: 5px;
+        color: white;
     }
     .heContent {
         flex: 1;
@@ -480,7 +480,7 @@ export default {
         display: flex;
         justify-content: space-around;
         font-size: 15px;
-        padding: 0 1.4rem;
+        padding: 0 1rem;
         li {
             height: 50px;
             display: flex;
@@ -505,7 +505,6 @@ export default {
   }
   section {
     .van-swipe {
-      margin-top: 50px;
       .van-swipe-item {
         img {
           width: 7.5rem;
