@@ -36,6 +36,10 @@ export default new Router({
     {
       path: '/search',
       component: resolve => require(['@/components/search'], resolve)
+    },
+    {
+      path: '/login',
+      component: resolve => require(['@/components/Login'], resolve)
     }
   ]
 })

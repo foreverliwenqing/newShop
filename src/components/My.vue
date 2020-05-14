@@ -2,7 +2,7 @@
   <div class="center-view">
     <div class="avatar">
       <img src="@/assets/img/login.png" alt class="avator-icon" />
-      <div class="nick-name">立即登录</div>
+      <div class="nick-name" @click="login()">立即登录</div>
     </div>
     <div style="height: 10px"></div>
     <div class="myCard">

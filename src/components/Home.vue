@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <van-search v-model="value" readonly placeholder="Please enter a keyword" shape="round" background="#dcdcdc" @click="goBack()"/>
-    <div style="height: 1rem"></div>
+    <div style="height: 62px"></div>
     <div class="headBanner">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item v-for="(image, index) in swiper" :key="index" @click="goProduct()">
@@ -110,7 +110,7 @@ export default {
     top: 0;
     z-index: 10;
     width: 7.5rem;
-    height: 1rem;
+    height: 62px;
     .van-search__content {
       background: #ededed;
     }

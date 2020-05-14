@@ -6,13 +6,16 @@
         <span>AddressList</span>
       </div>
     </header>
-    <van-address-list
-      v-model="chosenAddressId"
-      :list="list"
-      default-tag-text="默认"
-      @add="onAdd"
-      @edit="onEdit"
-    />
+    <div class="list">
+      <van-address-list
+        v-model="chosenAddressId"
+        :list="addresList"
+        default-tag-text="默认"
+        @add="onAdd"
+        @edit="onEdit"
+      />
+      <van-empty description="描述文字" v-if="!addressFlag" />
+    </div>
   </div>
 </template>
 <script>
@@ -20,29 +23,22 @@ export default {
   data() {
     return {
       chosenAddressId: "1",
-      list: [
-        {
-          id: "1",
-          name: "张三",
-          tel: "13000000000",
-          address: "浙江省杭州市西湖区文三路 138 号东方通信大厦 7 楼 501 室",
-          isDefault: true
-        },
-        {
-          id: "2",
-          name: "李四",
-          tel: "1310000000",
-          address: "浙江省杭州市拱墅区莫干山路 50 号"
-        }
-      ]
+      addresList: [],
+      addressFlag: false,
     };
   },
   methods: {
     onAdd() {
-        this.$router.push("/addressAdd")
+      console.log(1);
+      this.$router.push("/addressAdd");
     },
     onEdit(item, index) {
+      this.$router.push({ path: "/addressAdd", query: item });
     }
+  },
+  mounted() {
+    this.addresList.push(JSON.parse(localStorage.getItem("list"))[0]);
+    this.addressFlag = true;
   }
 };
 </script>
@@ -50,13 +46,15 @@ export default {
 .addressList {
   header {
     position: fixed;
-    height: 44px;
+    height: 55px;
     top: 0;
     width: 7.5rem;
+    border-bottom: 1px solid #e4e4e4;
     .headerBox {
-      height: 44px;
       display: flex;
       align-items: center;
+      height: 55px;
+      background: white;
       span {
         flex: 1;
         text-align: center;
@@ -74,12 +72,14 @@ export default {
       }
     }
   }
-  .van-address-list {
-    margin-top: 44px;
-    background: #efefef;
-    .van-address-list__bottom {
-        bottom: 15px;
-    }
+  .list {
+    box-sizing: border-box;
+    min-height: calc(100vh - 56px);
+    padding-bottom: 20px;
+    background: #f7f8fa;
+    margin-top: 55px;
+  }
+  .addAress {
   }
 }
 </style>
