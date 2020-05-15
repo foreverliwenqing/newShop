@@ -1,15 +1,20 @@
 <template>
   <div class="info-3">
     <header>
-        <div class="heLeft" @click="goBack()">
-            <i class="iconfont iconleft"></i>
-        </div>
-        <div class="heContent">
-            <li class="liS" v-for="(item, index) in headTitle" :key="index" @click="getBotton(index)">{{item}}</li>
-        </div>
-        <div class="heRight">
-            <i class="iconfont iconshenglvehao"></i>
-        </div>
+      <div class="heLeft" @click="goBack()">
+        <i class="iconfont iconzuobian"></i>
+      </div>
+      <div class="heContent">
+        <li
+          class="liS"
+          v-for="(item, index) in headTitle"
+          :key="index"
+          @click="getBotton(index)"
+        >{{item}}</li>
+      </div>
+      <div class="heRight">
+        <i class="iconfont iconshenglvehao"></i>
+      </div>
     </header>
     <div style="height: 50px"></div>
     <div class="infoContent">
@@ -110,10 +115,8 @@
           <br />
           <br />
         </div>
-        <!-- 商品数据展示结束 -->
       </div>
       <div style="height: 100px"></div>
-      <!-- 底部弹出框开始 -->
       <van-popup
         class="bottomPup"
         :lazy-render="false"
@@ -122,7 +125,7 @@
         closeable
         close-icon="close"
         position="bottom"
-      >
+        >
         <div class="content">
           <div class="head">
             <!-- 展示图片 -->
@@ -133,7 +136,7 @@
             <!-- 展示图片 -->
             <div class="select-info">
               <!-- 产品名 -->
-              <div class="title">Portable USB Electric Juicer Cup</div>
+              <div class="van-ellipsis">这是一段最多显示一行的文字，多余的内容会被省略</div>
               <!-- 产品名 -->
               <div class="selected-attr">
                 <span>selected:</span>
@@ -148,7 +151,6 @@
                   <span>SAR</span>
                 </span>
                 <!-- 现价 -->
-                <!-- 原价 -->
                 <del>
                   <span class="allpricenodis oldPrice"></span>
                   <span class="allpricenodis">SAR</span>
@@ -159,7 +161,6 @@
           </div>
           <div class="van-sku-body">
             <div class="van-sku-group-container">
-              <!-- product -->
               <div class="van-sku-row van-hairline--bottom">
                 <div class="van-sku-row__title productText">product</div>
                 <span
@@ -176,32 +177,22 @@
                   <span class="van-sku-row__item-name typeName">type</span>
                 </span>
               </div>
-              <!-- color -->
+            </div>
+            <div class="van-sku-group-container">
               <div class="van-sku-row van-hairline--bottom">
-                <div class="van-sku-row__title colorText">color</div>
+                <div class="van-sku-row__title productText">product</div>
                 <span
-                  class="van-sku-row__item colorId"
-                  v-for="(item, index) in 5"
+                  class="van-sku-row__item typeId"
+                  v-for="(item, index) in 3"
                   :key="index"
-                  @click="productFun(index, 1)"
+                  price="53.00"
+                  @click="productFun(index, 0)"
                 >
                   <img
-                    src="https://img.yzcdn.cn/upload_files/2017/03/16/Fs_OMbSFPa183sBwvG_94llUYiLa.jpeg?imageView2/2/w/100/h/100/q/75/format/jpg"
+                    src="https://img.yzcdn.cn/upload_files/2017/02/21/FjKTOxjVgnUuPmHJRdunvYky9OHP.jpg!100x100.jpg"
                     class="van-sku-row__item-img"
                   />
-                  <span class="van-sku-row__item-name colorName">blue</span>
-                </span>
-              </div>
-              <!-- size -->
-              <div class="van-sku-row van-hairline--bottom">
-                <div class="van-sku-row__title sizeText">Size</div>
-                <span
-                  class="van-sku-row__item sizeId"
-                  v-for="(item, index) in 5"
-                  :key="index"
-                  @click="productFun(index, 2)"
-                >
-                  <span class="van-sku-row__item-name sizeName">1</span>
+                  <span class="van-sku-row__item-name typeName">type</span>
                 </span>
               </div>
             </div>
@@ -218,17 +209,13 @@
           </div>
           <!-- 提交按钮开始 -->
           <div class="commitBtn">
-            <van-button type="danger" class="button-confirm" @click="goAddress">To Card</van-button>
-            <van-button type="danger" class="button-confirm" @click="goAddress">Confirm</van-button>
+            <van-goods-action-button type="warning" text="加入购物车" @click="goCard" />
+            <van-goods-action-button type="danger" text="立即购买" @click="goBuy" />
           </div>
           <!-- 提交按钮结束 -->
         </div>
       </van-popup>
-      <!-- 底部弹出框结束 -->
-      <!-- 回顶部开始 -->
       <img v-if="btnFlag" @click="backTop" class="go-top" src="@/assets/img/timg.jpg" />
-      <!-- 回顶部结束 -->
-      <!-- 图片点击弹出框结束 -->
       <van-overlay :show="showImgFlag" @click="showImgFlag = false" class="overlayImg">
         <div class="wrapper">
           <img :src="itemImg" alt />
@@ -238,7 +225,7 @@
     <footer>
       <van-goods-action>
         <van-goods-action-icon icon="chat-o" text="客服" />
-        <van-goods-action-icon icon="cart-o" text="购物车" />
+        <van-goods-action-icon icon="cart-o" text="购物车" :badge="productNum" />
         <van-goods-action-button type="warning" text="加入购物车" @click="show = true" />
         <van-goods-action-button type="danger" text="立即购买" @click="show = true" />
       </van-goods-action>
@@ -267,14 +254,13 @@ export default {
       btnFlag: false,
       itemImg:
         "//s4.forcloudcdn.com/merchant/upload/a3b0474768f19d435e6c0ee95e0fcc48.jpg_220.jpg",
-      headTitle: [
-        "商品", "评价", "详情", "推荐"
-      ]
+      headTitle: ["商品", "评价", "详情", "推荐"],
+      productNum: 0
     };
   },
   methods: {
     goBack() {
-      this.$router.push('/');
+      this.$router.push("/");
     },
     backTop() {
       const that = this;
@@ -288,126 +274,17 @@ export default {
       }, 16);
     },
     reduce() {
-      if (this.num > 1) {
-        this.num--;
-        var price = (this.num * this.nowPrice).toFixed(2);
-        var oldPrice = (this.num * this.oldPrice).toFixed(2);
-        $(".nowPrice").html(price);
-        $(".oldPrice").html(oldPrice);
-      } else {
-        this.num = 1;
-      }
+      this.num--;
     },
     addNum() {
-      if (this.num < 999) {
-        this.num++;
-        var price = (this.num * this.nowPrice).toFixed(2);
-        var oldPrice = (this.num * this.oldPrice).toFixed(2);
-        $(".nowPrice").html(price);
-        $(".oldPrice").html(oldPrice);
-      } else {
-        this.num = 999;
-      }
+      this.num++;
     },
 
-    onscroll() {
-      const that = this;
-      let scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
-      that.scrollTop = scrollTop;
-      if (that.scrollTop > 340) {
-        this.btnFlag = true;
-      } else {
-        this.btnFlag = false;
-      }
-      let falg = scrollTop / 100;
-      $("header").css("background-color", `rgba(255, 255, 255, ${falg})`);
-      $(".center").css("opacity", `${falg}`);
-      var objArr = [$(".wrap"), $(".cart"), $(".account")];
-      if (scrollTop > $("header").height()) {
-        for (var i = 0; i < objArr.length; i++) {
-          objArr[i].css("background-color", "transparent");
-          $(".icon")
-            .eq(i)
-            .css("color", "#000");
-        }
-      } else {
-        for (var i = 0; i < objArr.length; i++) {
-          objArr[i].css("background-color", "#d1d1d1");
-          $(".icon")
-            .eq(i)
-            .css("color", "white");
-        }
-      }
-    },
+    onscroll() {},
     onChange(index) {
       this.current = index;
     },
-    productFun(index, item) {
-      if (item == 0) {
-        $(".typeId")
-          .eq(index)
-          .addClass("van-sku-row__item--active")
-          .siblings()
-          .removeClass("van-sku-row__item--active");
-        this.typeTitle = $(".typeName")
-          .eq(index)
-          .text();
-        this.typeFlag = true;
-        if ($(".head img").length) {
-          $(".head img").attr(
-            "src",
-            $(".typeId")
-              .eq(index)
-              .find("img")
-              .attr("src")
-          );
-          this.itemImg = $(".typeId")
-            .eq(index)
-            .find("img")
-            .attr("src");
-        }
-        $(".nowPrice").html(($(".typeId").attr("price") * this.num).toFixed(2));
-        this.nowPrice = $(".typeId").attr("price");
-        let i = 0;
-        i++;
-      } else if (item == 1) {
-        $(".colorId")
-          .eq(index)
-          .addClass("van-sku-row__item--active")
-          .siblings()
-          .removeClass("van-sku-row__item--active");
-        this.colorTitle = $(".colorName")
-          .eq(index)
-          .text();
-        this.colorFlag = true;
-        if ($(".head img").length) {
-          $(".head img").attr(
-            "src",
-            $(".colorId")
-              .eq(index)
-              .find("img")
-              .attr("src")
-          );
-          this.itemImg = $(".colorId")
-            .eq(index)
-            .find("img")
-            .attr("src");
-        }
-      } else if (item == 2) {
-        $(".sizeId")
-          .eq(index)
-          .addClass("van-sku-row__item--active")
-          .siblings()
-          .removeClass("van-sku-row__item--active");
-        this.sizeTitle = $(".sizeName")
-          .eq(index)
-          .text();
-        this.sizeFlag = true;
-      }
-    },
+    productFun(index, item) {},
 
     Post(URL, params) {
       var temp_form = document.createElement("form");
@@ -438,13 +315,24 @@ export default {
       }
     },
     getBotton(index) {
-      $(".liS").eq(index).addClass("red").siblings().removeClass("red");
-    }
+      $(".liS")
+        .eq(index)
+        .addClass("red")
+        .siblings()
+        .removeClass("red");
+    },
+
+    goCard() {
+      this.show = false;
+      this.productNum++;
+    },
+    goBuy() {}
   },
   mounted() {
     let that = this;
-    $(".liS").eq(0).addClass("red");
-    console.log($(".liS"));
+    $(".liS")
+      .eq(0)
+      .addClass("red");
     window.addEventListener("scroll", this.onscroll);
   }
 };
@@ -461,46 +349,47 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: white;
     .heLeft {
-        display: flex;
-        align-items: center;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        font-weight: 700;
-        text-align: center;
-        background-color: #666;
-        justify-content: center;
-        margin-left: 5px;
-        color: white;
+      display: flex;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      font-weight: 700;
+      text-align: center;
+      background-color: #666;
+      justify-content: center;
+      margin-left: 5px;
+      color: white;
     }
     .heContent {
-        flex: 1;
-        list-style: none;
+      flex: 1;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      font-size: 15px;
+      padding: 0 1rem;
+      li {
+        height: 50px;
         display: flex;
-        justify-content: space-around;
-        font-size: 15px;
-        padding: 0 1rem;
-        li {
-            height: 50px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .red {
-            border-bottom: 2px solid red;
-        }
+        align-items: center;
+      }
+
+      .red {
+        border-bottom: 2px solid red;
+      }
     }
     .heRight {
-        display: flex;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        background-color: #666;
-        color: white;
-        margin-right: 5px;
+      display: flex;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      background-color: #666;
+      color: white;
+      margin-right: 5px;
     }
   }
   section {
@@ -524,7 +413,6 @@ export default {
         width: 100px;
         height: 0.6rem;
         line-height: 0.6rem;
-        border-radius: 0.8533333333rem;
       }
     }
   }
@@ -544,15 +432,12 @@ export default {
         justify-items: center;
         align-items: center;
         font-size: 0.32rem;
-        font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
         font-weight: 500;
         color: #ff4443;
-
         .original-price {
           line-height: 0.66rem;
           height: 0.66rem;
           font-size: 0.3rem;
-          font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
           font-weight: 400;
           color: #999;
           margin: 0 0.14rem;
@@ -560,65 +445,21 @@ export default {
 
         .tax-title {
           font-size: 0.26rem;
-          font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
           font-weight: 400;
           color: #999;
           line-height: 0.66rem;
         }
       }
-
-      .btn-share {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        top: 0.4rem;
-        right: 0;
-        width: 1.44rem;
-        padding: 0.12rem 0.2rem;
-        background: #f5f5f5;
-        vertical-align: middle;
-        font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        color: #999;
-        right: 0;
-        border-top-left-radius: 0.5rem;
-        border-bottom-left-radius: 0.5rem;
-        border: none;
-        font-size: 0.24rem;
-
-        i {
-          font-size: 0.24rem;
-        }
-      }
-
-      .item-title {
-        font-size: 0.3rem;
-        font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        color: #999;
-        line-height: 0.5rem;
-      }
-
       .item-ship-info {
-        position: relative;
-        background-color: #fff;
         margin-top: 0.24rem;
-        padding: 0;
-
         .block1 {
-          position: relative;
-          display: flex;
-          flex-direction: column;
           line-height: 0.5rem;
-
           .flash-line {
             display: flex;
             align-items: center;
 
             .line1 {
               font-size: 0.3rem;
-              font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
               font-weight: 600;
               color: #333;
             }
@@ -633,6 +474,7 @@ export default {
       }
     }
   }
+
   .active {
     height: 48px;
     background: white;
@@ -687,78 +529,6 @@ export default {
       padding-bottom: 26px;
     }
   }
-
-  .imgContainer {
-    img {
-      width: 100%;
-    }
-  }
-
-  footer {
-    .van-goods-action {
-      width: 7.5rem;
-      left: calc(50% - 3.75rem);
-    }
-    .page-bottom {
-      width: 100%;
-      position: fixed;
-      bottom: 0;
-      margin: 0 auto;
-      max-width: 7.5rem;
-      background: white;
-
-      .wrapper {
-        width: 100%;
-        background-color: #fff;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-
-        .item {
-          position: relative;
-          width: 1.57rem;
-          border-right: 0.01rem solid #e6e6e6;
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding-bottom: 10px;
-
-          .iconfont {
-            width: 0.52rem;
-            height: 0.52rem;
-            font-size: 0.45rem;
-            line-height: 0.45rem;
-            color: #999;
-            margin-top: 0.16rem;
-          }
-
-          span {
-            text-align: center;
-            font-size: 0.22rem;
-            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            color: #666;
-            display: block;
-            width: 100%;
-            text-align: center;
-          }
-        }
-
-        .item-add2cart {
-          flex-basis: 4.3rem;
-          background: #fedb43;
-          font-size: 0.28rem;
-          font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
-          font-weight: 400;
-          color: #333;
-          border: none;
-        }
-      }
-    }
-  }
-
   .bottomPup {
     width: 7.5rem;
     left: calc(50% - 3.75rem);
@@ -771,12 +541,12 @@ export default {
 
     .head {
       display: flex;
-      padding: 0.24rem 0.24rem 0;
-
+      padding: 12px 12px 0;
+      font-size: 0.3rem;
       img {
         margin: 0 0.15rem 0 0.15rem;
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
 
       .select-info {
@@ -785,33 +555,27 @@ export default {
         vertical-align: top;
         line-height: 0.42rem;
 
-        .title {
-          font-size: 0.28rem;
+        .van-ellipsis {
           font-family: SFProText-Semibold;
-          width: 4rem;
+          width: 5rem;
         }
 
         .selected-sku-stock,
         .selected-attr {
-          font-size: 0.32rem;
           font-family: SFProText-Regular;
           font-weight: 400;
           color: #666;
-          line-height: 0.9rem;
+          line-height: 0.7rem;
         }
 
         .option-price {
-          font-size: 0.4rem;
           color: #fa2653;
           height: 0.5rem;
-          line-height: 0.4rem;
-
           .infoPrice {
             display: inline-block;
           }
 
           del {
-            font-size: 0.24rem;
             color: #666;
           }
         }
@@ -821,39 +585,14 @@ export default {
     .van-sku-body {
       font-size: 0.24rem;
       max-height: 440px;
-
-      .van-sku-group-container {
-        margin: 0 16px;
-
-        .van-sku-row {
-          .van-sku-row__title {
-            line-height: 0.4rem;
-          }
-
-          .van-sku-row__item {
-            padding: 0.1rem 0.12rem;
-            cursor: pointer;
-
-            span {
-              font-size: 0.24rem;
-            }
-          }
-        }
-      }
-
       .van-sku-stepper-stock {
         .van-sku-stepper-container {
           height: 1.7rem;
-
-          p {
-            line-height: 0.6rem;
-          }
-
           .manuplator___3-16blr2 {
             .btn,
             input {
               width: 0.64rem;
-              height: 0.64rem;
+              height: 0.44rem;
               border: none;
               background-color: #f5f5f5;
               text-align: center;
@@ -866,10 +605,6 @@ export default {
     }
     .commitBtn {
       display: flex;
-        .button-confirm {
-            width: 100%;
-            border-radius: 21px;
-        }
     }
   }
 
@@ -887,70 +622,6 @@ export default {
     bottom: 1.5rem;
     right: 0.3rem;
   }
-
-  .changeStyle {
-    width: 6rem;
-    right: calc(50% - 3.75rem);
-
-    .van-collapse {
-      margin-top: 50px;
-      direction: ltr !important;
-
-      .van-collapse-item {
-        padding: 0 0.24rem;
-
-        ul {
-          li {
-            line-height: 0.8rem;
-            font-size: 0.28rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-
-            .iconziyuan {
-              color: red;
-            }
-          }
-
-          .countryIcon {
-            // background: url("../../img/sprite_gj.png") no-repeat;
-            background-position: 0px -7616px;
-            height: 35px;
-            line-height: 35px;
-            margin: 0.26rem 0 0.26rem 0;
-
-            a {
-              display: flex;
-              width: 100%;
-              justify-content: end;
-              span {
-                float: left;
-                margin-left: 40px;
-                text-align: left;
-                font-size: 0.24rem;
-              }
-
-              .changeIcon {
-                margin-inline-start: auto;
-                -webkit-margin-inline-start: auto;
-              }
-            }
-          }
-
-          .countryIcon:last-child {
-            margin-bottom: 0;
-          }
-        }
-
-        .van-cell {
-          font-size: 0.28rem;
-          font-weight: 400;
-          padding: 0.26rem 0;
-        }
-      }
-    }
-  }
-
   .overlayImg {
     z-index: 2020 !important;
     background-color: #000;
@@ -962,6 +633,13 @@ export default {
       img {
         width: 7.5rem;
       }
+    }
+  }
+
+  footer {
+    .van-goods-action {
+      width: 7.5rem;
+      margin-left: calc(50% - 3.75rem);
     }
   }
 }

@@ -36,6 +36,7 @@
           price="2.00"
           :title="tit.title"
           desc="Description"
+          lazy-load
           :thumb="prefix + tit.pic"
         />
       </van-list>
@@ -96,10 +97,7 @@ export default {
     });
   },
   created() {
-    console.log(1)
-    fbq('track', 'Purchase',{value:this.price,currency:'USD'});
-    console.log(2)
-    console.log(this.price)
+    
   }
 };
 </script>

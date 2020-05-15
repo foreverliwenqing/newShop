@@ -1,8 +1,13 @@
 <template>
   <div class="home">
-    <!-- <transition name="fade"> -->
+    <transition
+      mode="out-in"
+      appear
+      enter-active-class="animated bounceInUp"
+      leave-active-class="animated bounceOutDown"
+    >
       <router-view></router-view>
-    <!-- </transition> -->
+    </transition>
     <NavBar></NavBar>
   </div>
 </template>
@@ -18,11 +23,4 @@ export default {
 };
 </script>
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 2s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
 </style>

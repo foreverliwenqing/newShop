@@ -2,10 +2,10 @@
   <div class="center-view">
     <div class="avatar">
       <img src="@/assets/img/login.png" alt class="avator-icon" />
-      <div class="nick-name" @click="login()">立即登录</div>
+      <div class="nick-name" @click="login()">{{loginText}}</div>
     </div>
     <div style="height: 10px"></div>
-    <div class="myCard">
+    <div class="myCard" @click="goAllorder()">
       <i class="iconfont icondingdan"></i>
       <span>所有订单</span>
       <i class="iconfont iconyoubian"></i>
@@ -31,6 +31,11 @@
 <script>
 export default {
   name: "Center",
+  data(){
+    return {
+      loginText: "立即登录"
+    }
+  },
   methods: {
     login() {
       this.$router.push({
@@ -41,8 +46,19 @@ export default {
       this.$router.push({
         path: "/user/card"
       });
+    },
+    goAllorder() {
+      this.$router.push({
+        path: "/allorder"
+      })
+    }
+  },
+  mounted() {
+    if(localStorage.getItem("login")) {
+      this.loginText = localStorage.getItem("login");
     }
   }
+
 };
 </script>
 

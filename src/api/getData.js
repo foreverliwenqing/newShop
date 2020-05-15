@@ -20,6 +20,10 @@ const getData = {
     // 获取国家地区信息
     getCountry() {
         return axios.get("../../static/json/country.json");
+    },
+    // 获取手机验证码
+    getTelCode(parmes) {
+        return axios.post(`${base.jd}/api/sendCode`, qs.stringify(parmes));
     }
 }
 

@@ -5,6 +5,7 @@
         <span>购物车</span>
       </div>
     </header>
+    <div style="height: 44px"></div>
     <!-- 购物车内容添加 -->
     <div class="productList">
       <div class="list">
@@ -27,12 +28,35 @@
         </div>
       </div>
     </div>
+    <!-- <van-contact-card class="addressContent" add-text v-if="addressFlag" @click="onClickEditAddress()"/> -->
+    <div
+      role="button"
+      tabindex="0"
+      class="addressContent van-cell van-cell--clickable van-cell--center van-cell--borderless van-contact-card van-contact-card--add"
+      @click="onClickEditAddress()"
+      v-if="!addressFlag"
+    >
+      <i class="van-icon van-icon-add-square van-cell__left-icon"></i>
+      <div class="van-cell__value van-cell__value--alone van-contact-card__value">Address</div>
+      <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
+    </div>
+
+    <div
+      role="button"
+      tabindex="0"
+      class="addressContent van-cell van-cell--clickable van-cell--center van-cell--borderless van-contact-card van-contact-card--edit"
+      v-if="addressFlag"
+      @click="onClickEditAddress()"
+    >
+      <van-icon name="location-o" />
+      <div class="van-cell__value van-cell__value--alone van-contact-card__value">
+        <div>Street：{{ choiceAddress.address }}</div>
+        <div>Phone：{{ choiceAddress.tel }}</div>
+      </div>
+      <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
+    </div>
     <van-submit-bar :loading="isLoading" :price="3050" button-text="提交订单" @submit="onSubmit">
       <van-checkbox v-model="checkedAll" @click="toggleAll" ref="checkboxGroup">全选</van-checkbox>
-      <template #tip>
-        你的收货地址不支持同城送,
-        <span @click="onClickEditAddress">修改地址</span>
-      </template>
     </van-submit-bar>
   </div>
 </template>
@@ -41,17 +65,20 @@ export default {
   data() {
     return {
       checkedAll: false,
-      all: [{ checked: false }, { checked: false }, { checked: false }],
+      all: [{ checked: false }, { checked: false }, { checked: false },{ checked: false }, { checked: false }, { checked: false },{ checked: false }, { checked: false }, { checked: false },{ checked: false }, { checked: false }, { checked: false }],
       Num: 1,
-      isLoading: false
+      isLoading: false,
+      addressFlag: false,
+      choiceAddress: ""
     };
   },
   methods: {
     onSubmit() {
       this.isLoading = true;
-      setTimeout(function() {
+      let time = setTimeout(() => {
         this.isLoading = false;
-      }, 100);
+        clearInterval(time);
+      }, 1000);
     },
     // 复选框
     toggleAll() {
@@ -79,6 +106,7 @@ export default {
     },
 
     onClickEditAddress() {
+      console.log(1);
       this.$router.push("/addressList");
     },
     reduce() {
@@ -101,16 +129,25 @@ export default {
     addNum() {
       this.Num++;
     }
+  },
+  mounted() {
+    this.choiceAddress = JSON.parse(localStorage.getItem("list"))[0];
+    if (this.choiceAddress) {
+      this.addressFlag = true;
+    }
   }
 };
 </script>
 <style lang="scss">
 .car {
+  height: 100vh;
   header {
     position: fixed;
     height: 44px;
     top: 0;
     width: 7.5rem;
+    background: white;
+    z-index: 10;
     .headerBox {
       height: 44px;
       display: flex;
@@ -133,13 +170,17 @@ export default {
     }
   }
   .productList {
-    margin-top: 44px;
+    padding: 10px;
+    height: calc(100vh - 235px);
+    overflow: auto;
     .list {
       .listCard {
         display: flex;
         padding-left: 10px;
         position: relative;
         padding-bottom: 10px;
+        box-shadow: 1px 11px 12px rgba(100, 101, 102, 0.08);
+        border-radius: 10px;
         .shopImg {
           width: 60px;
           height: 60px;
@@ -189,6 +230,23 @@ export default {
           left: 13px;
         }
       }
+    }
+  }
+  .addressContent {
+    cursor: pointer;
+    position: fixed;
+    border: 2px dashed #b8c0cc;
+    border-radius: 4px;
+    transition: border 0.2s ease;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 0.2rem;
+    color: #b8c0cc;
+    width: 7.5rem;
+    bottom: 100px;
+    height: 70px;
+    i {
+      font-size: 23px;
     }
   }
   .van-submit-bar {

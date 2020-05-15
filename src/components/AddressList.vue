@@ -2,7 +2,7 @@
   <div class="addressList">
     <header>
       <div class="headerBox">
-        <i class="iconfont iconzuobian"></i>
+        <i class="iconfont iconzuobian" @click="goCart()"></i>
         <span>AddressList</span>
       </div>
     </header>
@@ -13,6 +13,7 @@
         default-tag-text="默认"
         @add="onAdd"
         @edit="onEdit"
+        @select="choice"
       />
       <van-empty description="描述文字" v-if="!addressFlag" />
     </div>
@@ -34,6 +35,13 @@ export default {
     },
     onEdit(item, index) {
       this.$router.push({ path: "/addressAdd", query: item });
+    },
+    choice(item, index) {
+      console.log(index);
+      this.$router.push("/car");
+    },
+    goCart() {
+      this.$router.push("/car");
     }
   },
   mounted() {
@@ -78,6 +86,10 @@ export default {
     padding-bottom: 20px;
     background: #f7f8fa;
     margin-top: 55px;
+    .van-address-list__bottom {
+      width: 7.5rem;
+      margin-left: calc(50% - 3.75rem);
+    }
   }
   .addAress {
   }

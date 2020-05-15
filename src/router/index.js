@@ -40,6 +40,10 @@ export default new Router({
     {
       path: '/login',
       component: resolve => require(['@/components/Login'], resolve)
+    },
+    {
+      path: '/allorder',
+      component: resolve => require(['@/components/allOrder'], resolve)
     }
   ]
 })

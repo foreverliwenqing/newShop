@@ -3,7 +3,7 @@
     <div style="height: 56px"></div>
     <div class="tabbar_box">
       <div class="searchHead">
-        <van-icon name="arrow-left" @click="goBack()"/>
+        <van-icon name="arrow-left" @click="goBack()" />
         <van-search v-model="searchVal" placeholder="请输入搜索关键词" />
         <van-icon name="search" @click="searchFlag = false" />
       </div>
@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     goBack() {
-        this.$router.go(-1);
+      this.$router.go(-1);
     },
     del() {
       this.$dialog
@@ -114,11 +114,11 @@ export default {
     }
   }
   .fenge {
-    height: 0.1rem;
+    height: 10px;
     background: #eee;
   }
   .searchcardtitle {
-    font-size: 0.25rem;
+    font-size: 16px;
     padding: 0.2rem 0.15rem;
     font-weight: 800;
     display: flex;
@@ -150,11 +150,15 @@ export default {
     z-index: 10;
     top: 55px;
     width: 7.5rem;
-    .van-dropdown-menu__bar {
-      box-shadow: 0 0px 0px rgba(100, 101, 102, 0.08);
+    .van-dropdown-menu {
+      .van-dropdown-menu__bar {
+        box-shadow: 0 0px 0px rgba(100, 101, 102, 0.08);
+      }
     }
   }
   .proList {
+    height: calc(100vh - 114px);
+    overflow: auto;
     .van-card {
       background: white;
       color: #000;
