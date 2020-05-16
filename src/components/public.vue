@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="public">
     <transition
       mode="out-in"
       appear
@@ -16,7 +16,7 @@
 // 引入NavBar组件
 import NavBar from "@/features/NavBar.vue";
 export default {
-  name: "Home",
+  name: "public",
   components: {
     NavBar
   }

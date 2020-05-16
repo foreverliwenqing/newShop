@@ -24,6 +24,10 @@ const getData = {
     // 获取手机验证码
     getTelCode(parmes) {
         return axios.post(`${base.jd}/api/sendCode`, qs.stringify(parmes));
+    },
+    // 返回商品详情
+    getProductInfo(params) {
+        return axios.get(`${base.jd}/api/pcontent?id=${params}`);
     }
 }
 

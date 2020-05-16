@@ -1,10 +1,25 @@
 <template>
   <div class="home">
-    <van-search v-model="value" readonly placeholder="Please enter a keyword" shape="round" background="#dcdcdc" @click="goBack()"/>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=545668369490850&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <van-search
+      v-model="value"
+      readonly
+      placeholder="Please enter a keyword"
+      shape="round"
+      background="#dcdcdc"
+      @click="goBack()"
+    />
     <div style="height: 62px"></div>
     <div class="headBanner">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-        <van-swipe-item v-for="(image, index) in swiper" :key="index" @click="goProduct()">
+        <van-swipe-item v-for="(image, index) in swiper" :key="index">
           <img v-lazy="prefix + image.pic" />
         </van-swipe-item>
       </van-swipe>
@@ -38,6 +53,7 @@
           desc="Description"
           lazy-load
           :thumb="prefix + tit.pic"
+          @click="goProduct(tit._id)"
         />
       </van-list>
     </van-pull-refresh>
@@ -57,14 +73,16 @@ export default {
       refreshing: false,
       prefix: "http://jd.itying.com/",
       price: 100,
+
+      faceBookCode: "545668369490850"
     };
   },
   methods: {
     goBack() {
       this.$router.push("/search");
     },
-    goProduct() {
-      this.$router.push("/product");
+    goProduct(id) {
+      this.$router.push({ path: "/product", query: { id: id } });
     },
     onLoad() {
       setTimeout(() => {
@@ -97,7 +115,31 @@ export default {
     });
   },
   created() {
-    
+    !(function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", this.faceBookCode);
+    fbq("track", "PageView");
   }
 };
 </script>
@@ -114,7 +156,7 @@ export default {
     }
   }
   .headBanner {
-    margin: .1rem 0.1rem 0.1rem 0.1rem;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
     height: auto;
     border-radius: 0.2rem;
     box-shadow: 0 0 0.12rem 0 rgba(0, 0, 0, 0.2);

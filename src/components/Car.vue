@@ -65,7 +65,20 @@ export default {
   data() {
     return {
       checkedAll: false,
-      all: [{ checked: false }, { checked: false }, { checked: false },{ checked: false }, { checked: false }, { checked: false },{ checked: false }, { checked: false }, { checked: false },{ checked: false }, { checked: false }, { checked: false }],
+      all: [
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false }
+      ],
       Num: 1,
       isLoading: false,
       addressFlag: false,

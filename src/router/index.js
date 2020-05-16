@@ -44,6 +44,10 @@ export default new Router({
     {
       path: '/allorder',
       component: resolve => require(['@/components/allOrder'], resolve)
+    },
+    {
+      path: '/fullorder', 
+      component: resolve => require(['@/components/fullorder'], resolve)
     }
   ]
 })
