@@ -3,9 +3,9 @@
     <div style="height: 56px"></div>
     <div class="tabbar_box">
       <div class="searchHead">
-        <van-icon name="arrow-left" @click="goBack()" />
+        <van-icon name="arrow-left" @click="$router.back(-1)" />
         <van-search v-model="searchVal" placeholder="请输入搜索关键词" />
-        <van-icon name="search" @click="searchFlag = false" />
+        <van-icon name="search" @click="searchFun(searchVal)" />
       </div>
     </div>
     <div class="fenge" v-if="searchFlag"></div>
@@ -13,7 +13,7 @@
       Search history
       <van-icon name="delete" @click="del()" />
     </div>
-    <ul class="history-list" v-if="searchFlag">
+    <ul class="history-list">
       <li>
         <van-button round type="info">Round</van-button>
       </li>
@@ -21,7 +21,6 @@
         <van-button round type="info">Round</van-button>
       </li>
     </ul>
-    <div style="height: 48px"></div>
     <!-- 展示搜索商品内容 -->
     <div class="proTyle" v-if="!searchFlag">
       <van-dropdown-menu active-color="#ee0a24">
@@ -32,14 +31,15 @@
     <div class="fenge" v-if="!searchFlag"></div>
     <div class="proList" v-if="!searchFlag">
       <van-card
-        v-for="item in 10"
-        :key="item"
+        v-for="(item,index) in searchList"
+        :key="index"
         num="2"
         price="2.00"
-        desc="小米Note3全网通6GB + 64GB黑色移动联通电信4G手机双卡双待"
+        :desc="item.title"
         title
-        thumb="http://jd.itying.com/public\upload\wxywaZd4RyKXXAP_cLa1OQaZ.jpg_200x200.jpg"
+        :thumb="Prefix + item.pic"
       />
+      <van-empty image="search" description="没有搜索内容" v-if="empty" />
     </div>
   </div>
 </template>
@@ -49,6 +49,7 @@ export default {
     return {
       searchVal: "",
       searchFlag: true,
+      empty: false,
       value1: 0,
       value2: "a",
       option1: [
@@ -60,13 +61,12 @@ export default {
         { text: "默认排序", value: "a" },
         { text: "好评排序", value: "b" },
         { text: "销量排序", value: "c" }
-      ]
+      ],
+      Prefix: "http://jd.itying.com/",
+      searchList: []
     };
   },
   methods: {
-    goBack() {
-      this.$router.go(-1);
-    },
     del() {
       this.$dialog
         .alert({
@@ -81,7 +81,18 @@ export default {
           console.log("点击了取消按钮噢");
         });
     },
-    searchFun() {}
+    searchFun(val) {
+      this.searchFlag = false;
+      this.$api.getData.getSearch(val).then(res => {
+        this.searchList = res.result;
+        if (!res.result.length) {
+          this.empty = true;
+          this.searchFlag = false;
+        } else {
+          this.empty = false;
+        }
+      });
+    }
   }
 };
 </script>

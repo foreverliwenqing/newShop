@@ -9,9 +9,12 @@ export default {
   name: "App",
   data() {
     return {
-      imgurl: ""
+
     };
-  },
+  },  
+  created() {
+
+  }
 };
 </script>
 

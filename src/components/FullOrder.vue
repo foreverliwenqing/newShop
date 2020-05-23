@@ -7,35 +7,31 @@
       <van-button round type="info">One more order</van-button>
     </div>
     <article>
-      <div
-        role="button"
-        tabindex="0"
-        class="addressContent van-cell van-cell--center"
-        >
+      <div role="button" tabindex="0" class="addressContent van-cell van-cell--center">
         <van-icon name="location-o" />
         <div class="van-cell__value van-cell__value--alone van-contact-card__value">
           <div>Street：{{ choiceAddress.address }}</div>
           <div>Phone：{{ choiceAddress.tel }}</div>
         </div>
       </div>
-      <div class="order">
+      <div class="order" v-for="(item, index) in fullorder" :key="index">
         <div class="orderTitle">
           <span>订单编号:</span>
           <span>214124214 (12421421)</span>
         </div>
         <div class="orderContent">
           <div class="proimg">
-            <img src="http://jd.itying.com/public\upload\RinsvExKu7Ed-ocs_7W1DxYO.png" />
+            <img :src="proFix + item.pro_pic" />
           </div>
           <div class="protitle">
-            <p class="proname">磨砂牛皮男休闲鞋-有属性</p>
+            <p class="proname">{{item.pro_title}}</p>
             <p class="proattr">牛皮 /系带/白色</p>
           </div>
           <div class="pronum">
-            <span>x 1</span>
+            <span>x {{item.pro_count}}</span>
           </div>
           <div class="proprice">
-            <span>￥688</span>
+            <span>￥{{item.pro_price}}</span>
           </div>
         </div>
         <div class="ordersum">
@@ -58,13 +54,29 @@
 export default {
   data() {
     return {
-      choiceAddress: { address: "123", tel: "123213213" }
+      choiceAddress: { address: "123", tel: "123213213" },
+      proFix: "http://jd.itying.com/",
+      fullorder: ""
     };
   },
   methods: {
     onClickLeft() {
-        this.$router.push("/");
+      this.$router.push("/");
     }
+  },
+  mounted() {
+    let that = this;
+    let fullorder = JSON.parse(localStorage.getItem("allOrder"));
+    that.fullorder = fullorder;
+
+    fbq("track", 
+        "Purchase", {
+      content_type: "product",
+      content_ids: "1321321323",
+      value: "12.00",
+      currency: "USD"
+    });
+    console.log(2);
   }
 };
 </script>

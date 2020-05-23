@@ -1,13 +1,5 @@
 <template>
   <div class="home">
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display:none"
-        src="https://www.facebook.com/tr?id=545668369490850&ev=PageView&noscript=1"
-      />
-    </noscript>
     <van-search
       v-model="value"
       readonly
@@ -47,10 +39,8 @@
         <van-card
           v-for="(tit,index) in plist"
           :key="index"
-          num="2"
-          price="2.00"
+          :price="tit.price"
           :title="tit.title"
-          desc="Description"
           lazy-load
           :thumb="prefix + tit.pic"
           @click="goProduct(tit._id)"
@@ -73,8 +63,6 @@ export default {
       refreshing: false,
       prefix: "http://jd.itying.com/",
       price: 100,
-
-      faceBookCode: "545668369490850"
     };
   },
   methods: {
@@ -114,33 +102,6 @@ export default {
       this.plist = res.result;
     });
   },
-  created() {
-    !(function(f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod
-          ? n.callMethod.apply(n, arguments)
-          : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = "2.0";
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(
-      window,
-      document,
-      "script",
-      "https://connect.facebook.net/en_US/fbevents.js"
-    );
-    fbq("init", this.faceBookCode);
-    fbq("track", "PageView");
-  }
 };
 </script>
 <style lang="scss">
@@ -215,8 +176,12 @@ export default {
     }
   }
   .van-pull-refresh {
+    .van-list {
+      padding: .2rem;
+    }
     .van-card {
       background: white;
+      position: relative;
       .van-card__header {
         font-size: 0.22rem;
       }
@@ -229,6 +194,15 @@ export default {
         }
       }
     }
+    .van-card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid #e5e3e3;
+        transform-origin: 50% 100%;
+      }
   }
 }
 </style>

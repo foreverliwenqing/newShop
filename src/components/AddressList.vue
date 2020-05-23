@@ -2,7 +2,7 @@
   <div class="addressList">
     <header>
       <div class="headerBox">
-        <i class="iconfont iconzuobian" @click="goCart()"></i>
+        <i class="iconfont iconzuobian" @click="$router.back(-1)"></i>
         <span>AddressList</span>
       </div>
     </header>
@@ -15,7 +15,6 @@
         @edit="onEdit"
         @select="choice"
       />
-      <van-empty description="描述文字" v-if="!addressFlag" />
     </div>
   </div>
 </template>
@@ -25,28 +24,26 @@ export default {
     return {
       chosenAddressId: "1",
       addresList: [],
-      addressFlag: false,
+      addressFlag: false
     };
   },
   methods: {
     onAdd() {
-      console.log(1);
       this.$router.push("/addressAdd");
     },
     onEdit(item, index) {
+      item["index"] = index;
       this.$router.push({ path: "/addressAdd", query: item });
     },
     choice(item, index) {
-      console.log(index);
-      this.$router.push("/car");
-    },
-    goCart() {
-      this.$router.push("/car");
+      this.$router.push({ path: "/cart", query: item });
     }
   },
   mounted() {
-    this.addresList.push(JSON.parse(localStorage.getItem("list"))[0]);
-    this.addressFlag = true;
+    let flag = JSON.parse(localStorage.getItem("addList"));
+    if (flag && flag.length) {
+      this.addresList = JSON.parse(localStorage.getItem("addList"));
+    }
   }
 };
 </script>
@@ -58,6 +55,7 @@ export default {
     top: 0;
     width: 7.5rem;
     border-bottom: 1px solid #e4e4e4;
+    z-index: 10;
     .headerBox {
       display: flex;
       align-items: center;
@@ -90,8 +88,6 @@ export default {
       width: 7.5rem;
       margin-left: calc(50% - 3.75rem);
     }
-  }
-  .addAress {
   }
 }
 </style>

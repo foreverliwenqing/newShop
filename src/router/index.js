@@ -16,8 +16,8 @@ export default new Router({
           component: resolve => require(['@/components/my'], resolve)
         },
         {
-          path: '/car',
-          component: resolve => require(['@/components/car'], resolve)
+          path: '/cart',
+          component: resolve => require(['@/components/cart'], resolve)
         }
       ]
     },

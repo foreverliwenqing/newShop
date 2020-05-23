@@ -31,7 +31,7 @@ export default {
           id: "product",
           name: "购物车",
           icon: "iconfont icongouwuche",
-          path: '/car'
+          path: '/cart'
         },
         {
           id: "userinfo",

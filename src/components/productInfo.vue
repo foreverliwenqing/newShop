@@ -1,27 +1,27 @@
 <template>
   <div class="info-3">
     <header>
-      <van-icon name="arrow-left" />
+      <van-icon name="arrow-left" @click="$router.back(-1)" />
       <div class="topTitle">
         <li
           v-for="(item, index) in headTitle"
           :key="index"
           ref="topS"
           @click="getIndex(index)"
-        >{{ item }}</li>
+        >{{ item.title }}</li>
       </div>
       <van-icon name="ellipsis" />
     </header>
     <div class="infoContent">
-      <section>
-        <van-swipe @change="onChange">
+      <section id="now">
+        <van-swipe>
           <van-swipe-item v-for="(item, index) in 4" :key="index">
             <img
               src="//img.alicdn.com/imgextra/i4/299331521/TB2CR0ddmOI.eBjy1zkXXadxFXa_!!299331521.jpg_640x640q80_.webp"
               alt
             />
           </van-swipe-item>
-          <div class="custom-indicator" slot="indicator">{{ current + 1 }}/3</div>
+          <div class="custom-indicator" slot="indicator">1/1</div>
         </van-swipe>
       </section>
 
@@ -46,6 +46,27 @@
           </div>
         </div>
       </article>
+      <br />
+      <br />
+      <div class="activeS">
+        <span class="select">活动</span>
+        <van-icon name="ellipsis" class="select" />
+      </div>
+      <!-- 已经选中，配送费 -->
+      <div class="features">
+        <div class="selectS" id="search">
+          <span class="select">已选</span>
+          <span class="selContent">已选内容</span>
+          <van-icon name="ellipsis" class="select" @click="show = true" />
+        </div>
+        <div class="free">
+          <span class="select">运费</span>
+          <span class="freeTitle">包邮</span>
+          <van-icon name="ellipsis" class="select" @click="show = true" />
+        </div>
+      </div>
+
+      <div ref="proContent" class="proContent" id="content"></div>
       <van-popup
         class="bottomPup"
         :lazy-render="false"
@@ -54,7 +75,7 @@
         closeable
         close-icon="close"
         position="bottom"
-      >
+        >
         <div class="content">
           <div class="head">
             <!-- 展示图片 -->
@@ -94,24 +115,7 @@
                 <div class="van-sku-row__title productText">product</div>
                 <span
                   class="van-sku-row__item typeId"
-                  v-for="(item, index) in 3"
-                  :key="index"
-                  price="53.00"
-                  @click="productFun(index, 0)"
-                >
-                  <img
-                    src="https://img.yzcdn.cn/upload_files/2017/02/21/FjKTOxjVgnUuPmHJRdunvYky9OHP.jpg!100x100.jpg"
-                    class="van-sku-row__item-img"
-                  />
-                  <span class="van-sku-row__item-name typeName">type</span>
-                </span>
-              </div>
-            </div>
-            <div class="van-sku-group-container">
-              <div class="van-sku-row van-hairline--bottom">
-                <div class="van-sku-row__title productText">product</div>
-                <span
-                  class="van-sku-row__item typeId"
+                  ref="typeId"
                   v-for="(item, index) in 3"
                   :key="index"
                   price="53.00"
@@ -138,8 +142,7 @@
           </div>
           <!-- 提交按钮开始 -->
           <div class="commitBtn">
-            <van-goods-action-button type="warning" text="加入购物车" @click="goCard" />
-            <van-goods-action-button type="danger" text="立即购买" />
+            <van-goods-action-button type="warning" text="ADD TO BAG" @click="addCard" />
           </div>
           <!-- 提交按钮结束 -->
         </div>
@@ -150,25 +153,22 @@
         </div>
       </van-overlay>
     </div>
-    <div style="height: 1000px"></div>
+    <!-- 回顶部 -->
+    <div class="go-top" @click="goTop()" v-if="topShow">
+      <img src="../assets/img/timg.jpg" alt />
+    </div>
     <footer>
       <van-goods-action>
-        <van-goods-action-icon icon="chat-o" text="客服" />
-        <van-goods-action-icon icon="cart-o" text="购物车" :badge="productNum" />
-        <van-goods-action-button type="warning" text="加入购物车" @click="show = true" />
-        <van-goods-action-button type="danger" text="立即购买" @click="show = true" />
+        <van-goods-action-icon icon="cart-o" text="Cart" :badge="productNum" @click="goCar()" />
+        <van-goods-action-button type="warning" text="ADD TO BAG" @click="show = true" />
       </van-goods-action>
     </footer>
   </div>
 </template>
 <script>
-// import $ from "jquery";
 export default {
   data() {
     return {
-      nowPrice: "",
-      oldPrice: "",
-      current: 0,
       show: false,
       showImgFlag: false,
       typeTitle: "",
@@ -178,12 +178,20 @@ export default {
       colorFlag: "",
       sizeFlag: "",
       num: 1,
-      btnFlag: false,
+      topShow: false,
+      headTitle: [
+        {
+          title: "Goods"
+        },
+        {
+          title: "Recommend"
+        }
+      ],
       itemImg:
         "//s4.forcloudcdn.com/merchant/upload/a3b0474768f19d435e6c0ee95e0fcc48.jpg_220.jpg",
-      headTitle: ["商品", "评价", "详情"],
       productNum: 0,
-      productInfo: ""
+      productInfo: "",
+      cartList: []
     };
   },
   methods: {
@@ -193,23 +201,81 @@ export default {
     addNum() {
       this.num++;
     },
-
-    onChange(index) {
-      this.current = index;
+    changeType(id, index) {
+      let flag = this.$refs[id];
+      for (var i = 0; i < flag.length; i++) {
+        flag[i].classList.remove("van-sku-row__item--active");
+      }
+      flag[index].classList.add("van-sku-row__item--active");
     },
-    Post(URL, params) {
-      var temp_form = document.createElement("form");
-      temp_form.action = URL;
-      temp_form.target = "_self";
-      temp_form.method = "post";
-      temp_form.style.display = "none";
-
-      document.body.appendChild(temp_form);
-      temp_form.submit();
+    // 选择样式
+    productFun(index, item) {
+      if (item == 0) {
+        this.changeType("typeId", index);
+      } else if (item == 1) {
+        this.changeType("colorId", index);
+      } else if (item == 2) {
+        this.changeType("sizeId", index);
+      }
     },
-    goCard() {
+    onscroll() {
+      let scroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      if (scroll >= 300) {
+        this.topShow = true;
+      } else {
+        this.topShow = false;
+      }
+    },
+    goTop() {
+      let scroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      document.documentElement.scrollTop = 0;
+    },
+    addCard() {
       this.show = false;
-      this.productNum++;
+      // 保存当前产品的数据
+      let pro_title = this.productInfo["title"],
+        pro_id = this.productInfo["_id"],
+        pro_pic = this.productInfo["pic"],
+        pro_price = this.productInfo["price"];
+
+      // 变成缓存对象
+      let cartJson = {
+        pro_title: pro_title,
+        pro_id: pro_id,
+        pro_pic: pro_pic,
+        pro_price: pro_price,
+        pro_count: this.num
+      };
+      let cartList = JSON.parse(localStorage.getItem("cartList"));
+
+      if (cartList && cartList.length > 0) {
+        //购物车有数据
+        if (this.Fun.hasData(cartList, cartJson)) {
+          //已存在当前产品
+          for (var i = 0; i < cartList.length; i++) {
+            if (cartList[i].pro_id == cartJson.pro_id) {
+              cartList[i].pro_count += cartJson.pro_count;
+            }
+          }
+        } else {
+          //不存在当前产品
+          cartList.push(cartJson);
+        }
+        localStorage.setItem("cartList", JSON.stringify(cartList));
+      } else {
+        //购物车无数据
+        var tempArr = [];
+        tempArr.push(cartJson);
+        localStorage.setItem("cartList", JSON.stringify(tempArr));
+        cartList = tempArr;
+      }
+
+      this.productNum = this.Fun.getCartNum(cartList);
+    },
+    goCar() {
+      this.$router.push("/cart");
     },
     getIndex(index) {
       let item = this.$refs.topS;
@@ -217,20 +283,35 @@ export default {
         item[i].style.borderBottom = "1px solid white";
       }
       item[index].style.borderBottom = "1px solid red";
+      if (index == 0) {
+        document.querySelector("#now").scrollIntoView(true);
+      } else if (index == 1) {
+        document.querySelector("#search").scrollIntoView(true);
+      } else {
+        document.querySelector("#content").scrollIntoView(true);
+      }
     }
   },
   mounted() {
     let that = this;
     window.addEventListener("scroll", this.onscroll);
 
-    console.log(this.$refs);
-
     this.$api.getData
       .getProductInfo(this.$route.query.id)
       .then(res => {
-        this.productInfo = res.result;
+        // 单个产品信息
+        that.productInfo = res.result;
+        this.$refs.proContent.innerHTML = that.productInfo.content;
       })
       .catch(err => {});
+
+    let carts = JSON.parse(localStorage.getItem("cartList"));
+
+    if (carts && carts.length > 0) {
+      this.productNum = this.Fun.getCartNum(carts);
+    } else {
+      this.productNum = 0;
+    }
   }
 };
 </script>
@@ -265,6 +346,10 @@ export default {
         height: 43px;
         line-height: 43px;
         cursor: pointer;
+        a {
+          text-decoration: none;
+          color: #333;
+        }
       }
       li:nth-child(1) {
         border-bottom: 1px solid red;
@@ -273,6 +358,24 @@ export default {
   }
   .infoContent {
     margin-top: 44px;
+    .activeS {
+      border-radius: 5px 5px 0 0;
+      background: #fff;
+      padding: 12px 0.24rem;
+      font-size: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 15px;
+      .select {
+        font-size: 0.25rem;
+        font-weight: 500;
+        margin-right: 10px;
+      }
+      .selContent {
+        flex: 1;
+      }
+    }
     section {
       .van-swipe {
         .van-swipe-item {
@@ -296,124 +399,178 @@ export default {
         }
       }
     }
-  }
-  article {
-    background: white;
-    .item-detail-info {
-      background-color: #fff;
-      padding: 0.3rem 0.24rem 0.32rem;
-      .title {
-        font-size: 0.32rem;
-        font-weight: 500;
-        color: #ff4443;
+    article {
+      background: white;
+      .item-detail-info {
+        background-color: #fff;
+        padding: 0.3rem 0.24rem 0.32rem;
+        .title {
+          font-size: 0.32rem;
+          font-weight: 500;
+          color: #ff4443;
+          display: flex;
+          line-height: 2;
+          .original-price {
+            color: #999;
+            margin: 0 0.14rem;
+          }
+        }
+        .item-ship-info {
+          margin-top: 0.24rem;
+          .line1 {
+            font-size: 0.3rem;
+            font-weight: 600;
+            color: #333;
+          }
+        }
+      }
+    }
+    .proContent {
+      margin-bottom: 50px;
+      width: 7.5rem;
+      overflow: hidden;
+      .ssd-module {
+        width: 7.5rem !important;
+      }
+      .activity_header {
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .bottomPup {
+      width: 7.5rem;
+      left: calc(50% - 3.75rem);
+      overflow-y: visible;
+
+      .van-icon-close {
+        font-size: 0.4rem;
+        right: 16px;
+      }
+
+      .head {
         display: flex;
-        line-height: 2;
-        .original-price {
-          color: #999;
-          margin: 0 0.14rem;
-        }
-      }
-      .item-ship-info {
-        margin-top: 0.24rem;
-        .line1 {
-          font-size: 0.3rem;
-          font-weight: 600;
-          color: #333;
-        }
-      }
-    }
-  }
-
-  .bottomPup {
-    width: 7.5rem;
-    left: calc(50% - 3.75rem);
-    overflow-y: visible;
-
-    .van-icon-close {
-      font-size: 0.4rem;
-      right: 16px;
-    }
-
-    .head {
-      display: flex;
-      padding: 12px 12px 0;
-      font-size: 0.3rem;
-      img {
-        margin: 0 0.15rem 0 0.15rem;
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-
-      .select-info {
-        display: inline-block;
-        position: relative;
-        vertical-align: top;
-        line-height: 0.42rem;
-
-        .van-ellipsis {
-          width: 5rem;
+        padding: 12px 12px 0;
+        font-size: 0.3rem;
+        img {
+          margin: 0 0.15rem 0 0.15rem;
+          width: 1.5rem;
+          height: 1.5rem;
         }
 
-        .selected-sku-stock,
-        .selected-attr {
-          font-weight: 400;
-          color: #666;
-          line-height: 0.7rem;
-        }
+        .select-info {
+          display: inline-block;
+          position: relative;
+          vertical-align: top;
+          line-height: 0.42rem;
 
-        .option-price {
-          color: #fa2653;
-          height: 0.5rem;
-          .infoPrice {
-            display: inline-block;
+          .van-ellipsis {
+            width: 5rem;
           }
 
-          del {
+          .selected-sku-stock,
+          .selected-attr {
+            font-weight: 400;
             color: #666;
+            line-height: 0.7rem;
           }
-        }
-      }
-    }
 
-    .van-sku-body {
-      font-size: 0.24rem;
-      max-height: 440px;
-      .van-sku-stepper-stock {
-        .van-sku-stepper-container {
-          height: 1.7rem;
-          .manuplator___3-16blr2 {
-            .btn,
-            input {
-              width: 0.64rem;
-              height: 0.44rem;
-              border: none;
-              background-color: #f5f5f5;
-              text-align: center;
-              font-size: 0.3rem;
-              cursor: pointer;
+          .option-price {
+            color: #fa2653;
+            height: 0.5rem;
+            .infoPrice {
+              display: inline-block;
+            }
+
+            del {
+              color: #666;
             }
           }
         }
       }
+
+      .van-sku-body {
+        font-size: 0.24rem;
+        max-height: 540px;
+        min-height: 400px;
+        .van-sku-stepper-stock {
+          .van-sku-stepper-container {
+            height: 1.7rem;
+            .manuplator___3-16blr2 {
+              .btn,
+              input {
+                width: 0.64rem;
+                height: 0.44rem;
+                border: none;
+                background-color: #f5f5f5;
+                text-align: center;
+                font-size: 0.3rem;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .commitBtn {
+        display: flex;
+      }
     }
-    .commitBtn {
-      display: flex;
+
+    .features {
+      background: white;
+      border-radius: 5px 5px 0 0;
+      padding: 0 0.24rem;
+      .selectS,
+      .free {
+        padding: 12px 0;
+        font-size: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .select {
+          font-size: 0.25rem;
+          font-weight: 500;
+          margin-right: 10px;
+        }
+        .selContent {
+          flex: 1;
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 7.02rem;
+          border: 1px solid #f2f2f2;
+        }
+      }
+      .free {
+        .freeTitle {
+          color: red;
+          flex: 1;
+        }
+      }
     }
   }
-
   .van-overlay {
     width: 7.5rem;
     left: calc(50% - 3.75rem);
   }
-
   // 回顶部
   .go-top {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
     position: fixed;
     bottom: 1.5rem;
     right: 0.3rem;
+    img {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+    }
   }
   .overlayImg {
     z-index: 2020 !important;
@@ -424,7 +581,7 @@ export default {
 
     .wrapper {
       img {
-        width: 7.5rem;
+        width: 5.5rem;
       }
     }
   }
@@ -433,6 +590,12 @@ export default {
     .van-goods-action {
       width: 7.5rem;
       margin-left: calc(50% - 3.75rem);
+      .van-goods-action-icon {
+        width: 1rem;
+      }
+      .van-button {
+        border-radius: 0;
+      }
     }
   }
 }

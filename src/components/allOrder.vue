@@ -1,85 +1,23 @@
 <template>
   <div class="allOrder">
     <header>
-      <van-nav-bar title="Order" left-arrow />
+      <van-nav-bar title="Order" left-arrow @click-left="$router.back(-1)" />
     </header>
     <div class="content">
-      <article>
-        <div class="order" @click="showOrder">
+      <article v-if="!empty">
+        <div class="order" @click="showOrder" v-for="(item, index) in orderAll" :key="index">
           <div class="orderTitle">
             <span>214124214 (12421421)</span>
-            <span @click="delOrder($event)">
+            <span @click="delOrder($event, index)">
               <van-icon name="delete" />
             </span>
           </div>
           <div class="orderContent">
             <div class="proimg">
-              <img src="http://jd.itying.com/public\upload\RinsvExKu7Ed-ocs_7W1DxYO.png" />
+              <img :src="prefix + item.pro_pic" />
             </div>
             <div class="protitle">
-              <p class="proname">磨砂牛皮男休闲鞋-有属性</p>
-              <p class="proattr">牛皮 /系带/白色</p>
-            </div>
-            <div class="pronum">
-              <span>x 1</span>
-            </div>
-          </div>
-          <div class="ordersum">
-            <span class="orderTime">2020/10/9 10:00:00</span>
-            <span class="ordersumtip">
-              共2件商品 合计:
-              <p class="ordersums">￥688.00</p>
-            </span>
-          </div>
-          <!-- 再来一单 -->
-          <div class="orderAgain">
-            <van-button round type="info" @click="oneMore">再来一单</van-button>
-          </div>
-        </div>
-        <div class="order" @click="showOrder">
-          <div class="orderTitle">
-            <span>214124214 (12421421)</span>
-            <span @click="delOrder($event)">
-              <van-icon name="delete" />
-            </span>
-          </div>
-          <div class="orderContent">
-            <div class="proimg">
-              <img src="http://jd.itying.com/public\upload\RinsvExKu7Ed-ocs_7W1DxYO.png" />
-            </div>
-            <div class="protitle">
-              <p class="proname">磨砂牛皮男休闲鞋-有属性</p>
-              <p class="proattr">牛皮 /系带/白色</p>
-            </div>
-            <div class="pronum">
-              <span>x 1</span>
-            </div>
-          </div>
-          <div class="ordersum">
-            <span class="orderTime">2020/10/9 10:00:00</span>
-            <span class="ordersumtip">
-              共2件商品 合计:
-              <p class="ordersums">￥688.00</p>
-            </span>
-          </div>
-          <!-- 再来一单 -->
-          <div class="orderAgain">
-            <van-button round type="info" @click="oneMore">再来一单</van-button>
-          </div>
-        </div>
-        <div class="order" @click="showOrder">
-          <div class="orderTitle">
-            <span>214124214 (12421421)</span>
-            <span @click="delOrder($event)">
-              <van-icon name="delete" />
-            </span>
-          </div>
-          <div class="orderContent">
-            <div class="proimg">
-              <img src="http://jd.itying.com/public\upload\RinsvExKu7Ed-ocs_7W1DxYO.png" />
-            </div>
-            <div class="protitle">
-              <p class="proname">磨砂牛皮男休闲鞋-有属性</p>
+              <p class="proname">{{item.pro_title}}</p>
               <p class="proattr">牛皮 /系带/白色</p>
             </div>
             <div class="pronum">
@@ -99,16 +37,21 @@
           </div>
         </div>
       </article>
+      <van-empty description="Description" v-if="empty" />
     </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      orderAll: [],
+      prefix: "http://jd.itying.com/",
+      empty: true
+    };
   },
   methods: {
-    delOrder(event) {
+    delOrder(event, index) {
       event.stopPropagation
         ? event.stopPropagation()
         : (event.cancelBubble = true);
@@ -118,17 +61,36 @@ export default {
           message: ""
         })
         .then(() => {
-          console.log("已经成功删除了");
+          this.empty = true;
+          if (this.orderAll.length != 0) {
+            this.orderAll.splice(index, 1);
+            localStorage.setItem("allOrder", this.orderAll);
+          }
         })
         .catch(() => {
           console.log("还没有删除");
+          this.empty = false;
         });
     },
-    oneMore() {
+    oneMore(e) {
+      window.event? window.event.cancelBubble = true : e.stopPropagation();
       this.$router.push("/");
     },
     showOrder() {
       this.$router.push("/fullorder");
+    }
+  },
+  mounted() {
+    let that = this;
+    if (localStorage.getItem("allOrder") != "") {
+      let orderAll = JSON.parse(localStorage.getItem("allOrder"));
+      if (orderAll && orderAll.length > 0) {
+        that.empty = false;
+        that.orderAll = orderAll;
+      } else {
+        that.empty = true;
+        that.orderAll = [];
+      }
     }
   }
 };
@@ -161,6 +123,7 @@ export default {
           display: flex;
           .proimg {
             flex: 1;
+            margin-right: 10px;
             img {
               width: 50px;
               height: 50px;

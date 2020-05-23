@@ -6,7 +6,6 @@
       right-text
       left-arrow
       @click-left="onClickLeft"
-      @click-right="onClickRight"
     />
     <div class="editContent">
       <div class="addressList">
@@ -33,7 +32,7 @@
           <span>设为默认收货地址</span>
         </div>
         <div class="van-cell__value">
-          <van-switch v-model="checked" @input="onInput" />
+          <van-switch v-model="user.isDefault" @input="onInput" />
         </div>
       </div>
     </div>
@@ -94,13 +93,7 @@
 export default {
   data() {
     return {
-      searchResult: [],
-      user: {
-        name: "",
-        tel: "",
-        address: "",
-        isDefault: true
-      },
+      user: {},
       stateShow: false,
       areaShow: false,
       indexList: [],
@@ -108,59 +101,44 @@ export default {
       list: [],
       areaList: [],
       delFlag: false,
-      checked: true,
-      localList: [],    //localhost中缓存的值
-
+      checked: false,
+      localList: [],    //获取地址
     };
   },
   methods: {
     onSave() {
-      let falgList = [];
       if (!this.delFlag) {
         // 添加地址
+        console.log(2);
         for (var i in this.user) {
           if (!this.user[i] && i != "isDefault") {
             return false;
           }
         }
-        falgList.push(this.user);
-        localStorage.setItem("list", JSON.stringify(falgList));
+        this.localList.push(this.user);
+        localStorage.setItem("addList", JSON.stringify(this.localList));
         this.$router.push("/addressList");
       } else {
         // 编辑地址
-        for (var i in this.user) {
-          if (!this.user[i] && i != "isDefault") {
-            return false;
-          }
-        }
-        falgList.push(this.user);
-        localStorage.setItem("list", JSON.stringify(falgList));
+        // for (var i in this.user) {
+        //   if (!this.user[i] && i != "isDefault") {
+        //     return false;
+        //   }
+        // }
+        console.log(this.user.index);
+        this.localList.splice(this.user.index, 1, this.user);
+        localStorage.setItem("addList", JSON.stringify(this.localList));
         this.$router.push("/addressList");
       }
     },
-    onInput() {
-      this.user.isDefault = !this.user.isDefault;
+    onInput(checked) {
+      this.user.isDefault = checked;
     },
     onDel() {
       console.log(1);
     },
-    onChangeDetail(val) {
-      if (val) {
-        this.searchResult = [
-          {
-            name: "黄龙万科中心",
-            address: "杭州市西湖区"
-          }
-        ];
-      } else {
-        this.searchResult = [];
-      }
-    },
     onClickLeft() {
       this.$router.push("/addressList");
-    },
-    onClickRight() {
-      Toast("按钮");
     },
     changeCity() {
       this.stateShow = true;
@@ -224,8 +202,16 @@ export default {
       that.list = that.getState(that.stateList).arr2;
     });
     if (JSON.stringify(this.$route.query) != "{}") {
-      this.delFlag = true;
-      this.user = this.$route.query;
+      that.delFlag = true;
+      that.user = this.$route.query;
+    }
+
+    // 获取地址
+    let falg = JSON.parse(localStorage.getItem("addList"));
+    if( falg && falg.length > 0 ) {
+      that.localList = JSON.parse(localStorage.getItem("addList"));
+    } else {
+      falg = []
     }
   }
 };

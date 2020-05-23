@@ -14,6 +14,9 @@ import $ from 'jquery'
 import api from "@/api"
 Vue.prototype.$api = api; //将api挂载到vue的原型上
 
+import Fun from "../static/js/public";
+Vue.prototype.Fun = Fun;
+
 // Vue.use(Search).use(Swipe).use(SwipeItem).user(VanImage).use(Lazyload).use(Grid).use(GridItem);
 Vue.use(Vant).use(Lazyload);
 /* eslint-disable no-new */

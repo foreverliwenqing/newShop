@@ -28,6 +28,11 @@ const getData = {
     // 返回商品详情
     getProductInfo(params) {
         return axios.get(`${base.jd}/api/pcontent?id=${params}`);
+    },
+    // 关键词搜索
+    getSearch(params) {
+        console.log(params)
+        return axios.get(`${base.jd}/api/plist?search=${params}`);
     }
 }
 

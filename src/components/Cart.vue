@@ -9,26 +9,25 @@
     <!-- 购物车内容添加 -->
     <div class="productList">
       <div class="list">
-        <div class="listCard" v-for="(item, index) in all" :key="index">
-          <van-checkbox v-model="item.checked" @change="changeOne"></van-checkbox>
+        <div class="listCard" v-for="(item, index) in cartList" :key="index">
+          <van-checkbox v-model="item.checked" @change="onChange(index)"></van-checkbox>
           <div class="shopImg">
-            <img src="https://img.yzcdn.cn/vant/ipad.jpeg" alt />
+            <img :src="proFix + item.pro_pic" alt />
           </div>
           <div class="shopsright">
-            <h4>磨砂牛皮男休闲鞋-有属性</h4>
+            <h4>{{item.pro_title}}</h4>
             <div class="shoprightbot">
-              <span>￥120.50</span>
+              <span>￥{{item.pro_price}}</span>
               <div class="shopradd">
-                <button class="NumBtn" @click="reduce()">-</button>
-                <input type="text" :value="Num" class="van-stepper__input" />
-                <button class="NumBtn" @click="addNum()">+</button>
+                <button class="NumBtn" @click="reduce(index)">-</button>
+                <input type="text" :value="item.pro_count" class="van-stepper__input" />
+                <button class="NumBtn" @click="addNum(index)">+</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <van-contact-card class="addressContent" add-text v-if="addressFlag" @click="onClickEditAddress()"/> -->
     <div
       role="button"
       tabindex="0"
@@ -55,7 +54,12 @@
       </div>
       <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
     </div>
-    <van-submit-bar :loading="isLoading" :price="3050" button-text="提交订单" @submit="onSubmit">
+    <van-submit-bar
+      :loading="isLoading"
+      :price="priceTotal*100"
+      button-text="提交订单"
+      @submit="onSubmit"
+    >
       <van-checkbox v-model="checkedAll" @click="toggleAll" ref="checkboxGroup">全选</van-checkbox>
     </van-submit-bar>
   </div>
@@ -65,44 +69,42 @@ export default {
   data() {
     return {
       checkedAll: false,
-      all: [
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false },
-        { checked: false }
-      ],
+      cartList: [],
       Num: 1,
       isLoading: false,
       addressFlag: false,
-      choiceAddress: ""
+      choiceAddress: "",
+      proFix: "http://jd.itying.com/",
+      priceTotal: 0
     };
   },
   methods: {
     onSubmit() {
       this.isLoading = true;
       let time = setTimeout(() => {
+        if (this.priceTotal) {
+          localStorage.setItem("allOrder", JSON.stringify(this.cartList));
+          localStorage.removeItem("cartList");
+          fbq('track', 'AddToCart');
+          this.$router.push("/fullorder");
+        } else {
+          alert("没有数据不能提交")
+        }
         this.isLoading = false;
         clearInterval(time);
       }, 1000);
     },
     // 复选框
     toggleAll() {
-      for (var i = 0; i < this.all.length; i++) {
-        this.all[i].checked = this.checkedAll;
+      for (var i = 0; i < this.cartList.length; i++) {
+        this.cartList[i].checked = this.checkedAll;
       }
     },
     // 选择单个
-    changeOne(item) {
-      !item.checked;
-      if (this.all.length == this.reCheck()) {
+    onChange(index) {
+      this.priceTotal = this.Fun.getCartSum(this.cartList);
+
+      if (this.cartList.length == this.reCheck()) {
         this.checkedAll = true;
       } else {
         this.checkedAll = false;
@@ -110,8 +112,8 @@ export default {
     },
     reCheck() {
       let number = 0;
-      for (let i = 0; i < this.all.length; i++) {
-        if (this.all[i].checked) {
+      for (let i = 0; i < this.cartList.length; i++) {
+        if (this.cartList[i].checked) {
           number++;
         }
       }
@@ -119,35 +121,45 @@ export default {
     },
 
     onClickEditAddress() {
-      console.log(1);
       this.$router.push("/addressList");
     },
-    reduce() {
-      if (this.Num <= 1) {
+    reduce(index) {
+      if (this.cartList[index].pro_count <= 1) {
         this.$dialog
           .confirm({
             title: "是否确认删除",
             message: ""
           })
           .then(() => {
-            console.log("已经成功删除了");
+            this.cartList.splice(index, 1);
+            localStorage.setItem("cartList", JSON.stringify(this.cartList));
           })
           .catch(() => {
             console.log("还没有删除");
           });
       } else {
-        this.Num--;
+        this.cartList[index].pro_count--;
+        this.priceTotal = this.Fun.getCartSum(this.cartList);
       }
     },
-    addNum() {
-      this.Num++;
+    addNum(index) {
+      this.cartList[index].pro_count++;
+      this.priceTotal = this.Fun.getCartSum(this.cartList);
     }
   },
   mounted() {
-    this.choiceAddress = JSON.parse(localStorage.getItem("list"))[0];
-    if (this.choiceAddress) {
-      this.addressFlag = true;
+    let that = this;
+
+    if (this.$route.query) {
+      that.choiceAddress = this.$route.query;
     }
+    if (that.choiceAddress) {
+      that.addressFlag = true;
+    }
+    that.cartList = JSON.parse(localStorage.getItem("cartList"));
+  },
+  created() {
+    fbq('track', 'AddToCart');
   }
 };
 </script>
