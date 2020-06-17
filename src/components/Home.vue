@@ -5,7 +5,6 @@
       readonly
       placeholder="Please enter a keyword"
       shape="round"
-      background="#dcdcdc"
       @click="goBack()"
     />
     <div style="height: 62px"></div>

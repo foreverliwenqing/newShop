@@ -8,6 +8,8 @@ import Vant from 'vant'
 import { Lazyload } from 'vant'
 import 'vant/lib/index.css'
 
+import store from './store.js'
+
 Vue.config.productionTip = false
 import $ from 'jquery'
 // 导入api接口
@@ -23,6 +25,7 @@ Vue.use(Vant).use(Lazyload);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

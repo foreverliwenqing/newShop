@@ -10,7 +10,7 @@
     <div class="productList">
       <div class="list">
         <div class="listCard" v-for="(item, index) in cartList" :key="index">
-          <van-checkbox v-model="item.checked" @change="onChange(index)"></van-checkbox>
+          <van-checkbox v-model="item.selected" @change="onChange(item.productId)"></van-checkbox>
           <div class="shopImg">
             <img :src="proFix + item.pro_pic" alt />
           </div>
@@ -19,9 +19,9 @@
             <div class="shoprightbot">
               <span>￥{{item.pro_price}}</span>
               <div class="shopradd">
-                <button class="NumBtn" @click="reduce(index)">-</button>
+                <button class="NumBtn" @click="onNum('reduce', item.productId)">-</button>
                 <input type="text" :value="item.pro_count" class="van-stepper__input" />
-                <button class="NumBtn" @click="addNum(index)">+</button>
+                <button class="NumBtn" @click="onNum('add', item.productId)">+</button>
               </div>
             </div>
           </div>
@@ -60,15 +60,16 @@
       button-text="提交订单"
       @submit="onSubmit"
     >
-      <van-checkbox v-model="checkedAll" @click="toggleAll" ref="checkboxGroup">全选</van-checkbox>
+      <van-checkbox v-model="selectedAll" @click="toggleAll" ref="checkboxGroup">全选</van-checkbox>
     </van-submit-bar>
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
 export default {
   data() {
     return {
-      checkedAll: false,
+      selectedAll: false,
       cartList: [],
       Num: 1,
       isLoading: false,
@@ -79,87 +80,51 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['addNum', 'jianNum', 'select', 'selectAll', 'del', 'submit']),
+
     onSubmit() {
       this.isLoading = true;
       let time = setTimeout(() => {
         if (this.priceTotal) {
-          localStorage.setItem("allOrder", JSON.stringify(this.cartList));
-          localStorage.removeItem("cartList");
-          fbq('track', 'AddToCart');
+          this.submit();
           this.$router.push("/fullorder");
         } else {
           alert("没有数据不能提交")
         }
+
         this.isLoading = false;
         clearInterval(time);
       }, 1000);
     },
+
     // 复选框
     toggleAll() {
-      for (var i = 0; i < this.cartList.length; i++) {
-        this.cartList[i].checked = this.checkedAll;
-      }
+      this.selectAll()
     },
     // 选择单个
     onChange(index) {
-      this.priceTotal = this.Fun.getCartSum(this.cartList);
-
-      if (this.cartList.length == this.reCheck()) {
-        this.checkedAll = true;
-      } else {
-        this.checkedAll = false;
-      }
+      this.select(index);
+      this.selectedAll = this.$store.state.all_selsect;
+      this.priceTotal = this.$store.getters.allMoney;
     },
-    reCheck() {
-      let number = 0;
-      for (let i = 0; i < this.cartList.length; i++) {
-        if (this.cartList[i].checked) {
-          number++;
-        }
-      }
-      return number;
-    },
-
     onClickEditAddress() {
       this.$router.push("/addressList");
     },
-    reduce(index) {
-      if (this.cartList[index].pro_count <= 1) {
-        this.$dialog
-          .confirm({
-            title: "是否确认删除",
-            message: ""
-          })
-          .then(() => {
-            this.cartList.splice(index, 1);
-            localStorage.setItem("cartList", JSON.stringify(this.cartList));
-          })
-          .catch(() => {
-            console.log("还没有删除");
-          });
+    onNum(index, id) {
+      if(index == 'add') {
+        this.addNum(id)
       } else {
-        this.cartList[index].pro_count--;
-        this.priceTotal = this.Fun.getCartSum(this.cartList);
+        this.jianNum(id);
       }
-    },
-    addNum(index) {
-      this.cartList[index].pro_count++;
-      this.priceTotal = this.Fun.getCartSum(this.cartList);
+      this.priceTotal = this.$store.getters.allMoney;
     }
   },
   mounted() {
     let that = this;
+    that.cartList = that.$store.getters.cartList;
+    that.selectedAll = that.$store.state.all_selsect;
 
-    if (this.$route.query) {
-      that.choiceAddress = this.$route.query;
-    }
-    if (that.choiceAddress) {
-      that.addressFlag = true;
-    }
-    that.cartList = JSON.parse(localStorage.getItem("cartList"));
-  },
-  created() {
-    fbq('track', 'AddToCart');
+    that.priceTotal = that.$store.getters.allMoney;   
   }
 };
 </script>

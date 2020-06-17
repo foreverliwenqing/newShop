@@ -166,6 +166,9 @@
   </div>
 </template>
 <script>
+// 
+import { mapActions } from "vuex";
+
 export default {
   data() {
     return {
@@ -195,6 +198,8 @@ export default {
     };
   },
   methods: {
+
+    ...mapActions(['addGoods']),
     reduce() {
       this.num--;
     },
@@ -234,6 +239,7 @@ export default {
     },
     addCard() {
       this.show = false;
+
       // 保存当前产品的数据
       let pro_title = this.productInfo["title"],
         pro_id = this.productInfo["_id"],
@@ -242,37 +248,17 @@ export default {
 
       // 变成缓存对象
       let cartJson = {
-        pro_title: pro_title,
-        pro_id: pro_id,
-        pro_pic: pro_pic,
-        pro_price: pro_price,
-        pro_count: this.num
+        title: pro_title,
+        productId: pro_id,
+        picture: pro_pic,
+        sellPrice: pro_price,
+        pro_count: this.num,
+        selected: true,
       };
-      let cartList = JSON.parse(localStorage.getItem("cartList"));
 
-      if (cartList && cartList.length > 0) {
-        //购物车有数据
-        if (this.Fun.hasData(cartList, cartJson)) {
-          //已存在当前产品
-          for (var i = 0; i < cartList.length; i++) {
-            if (cartList[i].pro_id == cartJson.pro_id) {
-              cartList[i].pro_count += cartJson.pro_count;
-            }
-          }
-        } else {
-          //不存在当前产品
-          cartList.push(cartJson);
-        }
-        localStorage.setItem("cartList", JSON.stringify(cartList));
-      } else {
-        //购物车无数据
-        var tempArr = [];
-        tempArr.push(cartJson);
-        localStorage.setItem("cartList", JSON.stringify(tempArr));
-        cartList = tempArr;
-      }
+      this.addGoods(cartJson) 
 
-      this.productNum = this.Fun.getCartNum(cartList);
+      this.productNum = this.$store.state.car.length;
     },
     goCar() {
       this.$router.push("/cart");
@@ -294,6 +280,9 @@ export default {
   },
   mounted() {
     let that = this;
+    that.productNum = that.$store.state.car.length;
+
+    console.log(that.$store.state.car.length);
     window.addEventListener("scroll", this.onscroll);
 
     this.$api.getData
@@ -304,14 +293,6 @@ export default {
         this.$refs.proContent.innerHTML = that.productInfo.content;
       })
       .catch(err => {});
-
-    let carts = JSON.parse(localStorage.getItem("cartList"));
-
-    if (carts && carts.length > 0) {
-      this.productNum = this.Fun.getCartNum(carts);
-    } else {
-      this.productNum = 0;
-    }
   }
 };
 </script>

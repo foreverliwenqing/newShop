@@ -21,14 +21,14 @@
               <p class="proattr">牛皮 /系带/白色</p>
             </div>
             <div class="pronum">
-              <span>x 1</span>
+              <span>x <span v-text="item.pro_count"></span></span>
             </div>
           </div>
           <div class="ordersum">
             <span class="orderTime">2020/10/9 10:00:00</span>
             <span class="ordersumtip">
-              共2件商品 合计:
-              <p class="ordersums">￥688.00</p>
+              共<span v-text="item.pro_count"></span>件商品 合计:
+              <p class="ordersums">￥<span v-text="item.total"></span></p>
             </span>
           </div>
           <!-- 再来一单 -->
@@ -61,15 +61,10 @@ export default {
           message: ""
         })
         .then(() => {
-          this.empty = true;
-          if (this.orderAll.length != 0) {
-            this.orderAll.splice(index, 1);
-            localStorage.setItem("allOrder", this.orderAll);
-          }
+          console.log(index);
         })
         .catch(() => {
           console.log("还没有删除");
-          this.empty = false;
         });
     },
     oneMore(e) {
@@ -82,15 +77,17 @@ export default {
   },
   mounted() {
     let that = this;
-    if (localStorage.getItem("allOrder") != "") {
-      let orderAll = JSON.parse(localStorage.getItem("allOrder"));
-      if (orderAll && orderAll.length > 0) {
-        that.empty = false;
-        that.orderAll = orderAll;
-      } else {
-        that.empty = true;
-        that.orderAll = [];
-      }
+    let list =  that.$store.state.all_order;
+
+    if(list != [] && list != "") {
+      that.orderAll = list;
+      that.orderAll.forEach((item, index) => {
+
+        item["total"] = (item.pro_price * item.pro_count).toFixed(2);
+      })
+      that.empty = false;
+    } else {
+      that.empty = true;
     }
   }
 };

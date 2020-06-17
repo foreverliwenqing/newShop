@@ -119,12 +119,6 @@ export default {
         localStorage.setItem("addList", JSON.stringify(this.localList));
         this.$router.push("/addressList");
       } else {
-        // 编辑地址
-        // for (var i in this.user) {
-        //   if (!this.user[i] && i != "isDefault") {
-        //     return false;
-        //   }
-        // }
         console.log(this.user.index);
         this.localList.splice(this.user.index, 1, this.user);
         localStorage.setItem("addList", JSON.stringify(this.localList));
@@ -137,7 +131,7 @@ export default {
     onDel() {
       console.log(1);
     },
-    onClickLeft() {
+    onClickLeft() { 
       this.$router.push("/addressList");
     },
     changeCity() {
