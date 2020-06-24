@@ -10,8 +10,8 @@
       <div role="button" tabindex="0" class="addressContent van-cell van-cell--center">
         <van-icon name="location-o" />
         <div class="van-cell__value van-cell__value--alone van-contact-card__value">
-          <div>Street：{{ choiceAddress.address }}</div>
-          <div>Phone：{{ choiceAddress.tel }}</div>
+          <div>Street：{{ choiceAddress.province + "·" + choiceAddress.addtime }}</div>
+          <div>Phone：{{ choiceAddress.phone }}</div>
         </div>
       </div>
       <div class="order" v-for="(item, index) in fullorder" :key="index">
@@ -54,7 +54,7 @@
 export default {
   data() {
     return {
-      choiceAddress: { address: "123", tel: "123213213" },
+      choiceAddress: {},
       proFix: "http://jd.itying.com/",
       fullorder: ""
     };
@@ -69,25 +69,28 @@ export default {
     let fullorder = JSON.parse(localStorage.getItem("allOrder"));
     that.fullorder = fullorder;
 
-    fbq("track", 
-        "Purchase", {
-      content_type: "product",
-      content_ids: "1321321323",
-      value: "12.00",
-      currency: "USD"
-    });
-    console.log(2);
+    let choiceId = that.Fun.get("choiceId");
+
+    let addressS = that.Fun.get("address") ? that.Fun.get("address") : [];
+
+    if (choiceId != undefined) {
+      that.addressFlag = true;
+      addressS.forEach(item => {
+        if (item._id == choiceId) {
+          that.choiceAddress = item;
+        }
+      });
+    }
   }
 };
 </script>
 <style lang="scss">
 .fullorder {
-  height: 100vh;
   background: rgb(244, 244, 244);
   .buyagain {
     display: flex;
     justify-content: center;
-    padding: 36px 0 20px 0;
+    margin: 30px 0 20px 0;
     .van-button {
       background: #3dc2ff;
       border: none;
@@ -96,7 +99,8 @@ export default {
   }
   article {
     padding: 0.2rem;
-    width: 7.1rem;
+    height: calc(100vh - 126px);
+    overflow: scroll;
     .addressContent {
       border-radius: 10px;
       cursor: pointer;

@@ -52,8 +52,7 @@ export default {
   },
   methods: {
     delOrder(event, index) {
-      event.stopPropagation
-        ? event.stopPropagation()
+      event.stopPropagation ? event.stopPropagation()
         : (event.cancelBubble = true);
       this.$dialog
         .confirm({

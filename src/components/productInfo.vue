@@ -10,163 +10,163 @@
           @click="getIndex(index)"
         >{{ item.title }}</li>
       </div>
-      <van-icon name="ellipsis" />
+      <van-icon name="ellipsis" @click="presentActionSheet()" />
     </header>
-    <div class="infoContent">
-      <section id="now">
-        <van-swipe>
-          <van-swipe-item v-for="(item, index) in 4" :key="index">
-            <img
-              src="//img.alicdn.com/imgextra/i4/299331521/TB2CR0ddmOI.eBjy1zkXXadxFXa_!!299331521.jpg_640x640q80_.webp"
-              alt
-            />
-          </van-swipe-item>
-          <div class="custom-indicator" slot="indicator">1/1</div>
-        </van-swipe>
-      </section>
+    <ion-content class="ionContent">
+      <div class="infoContent">
+        <section id="now">
+          <van-swipe>
+            <van-swipe-item v-for="(item, index) in 4" :key="index">
+              <img
+                src="//img.alicdn.com/imgextra/i4/299331521/TB2CR0ddmOI.eBjy1zkXXadxFXa_!!299331521.jpg_640x640q80_.webp"
+                alt
+              />
+            </van-swipe-item>
+            <div class="custom-indicator" slot="indicator">1/1</div>
+          </van-swipe>
+        </section>
 
-      <article>
-        <div class="item-detail-info">
-          <div class="productInfo">
-            <div class="title">
-              <div>
-                <span>CNY</span>
-                <span>{{productInfo.price}}</span>
-              </div>
-              <del class="original-price">
-                <span>CNY</span>
-                <span>{{productInfo.old_price}}</span>
-              </del>
-            </div>
-          </div>
-          <div class="item-ship-info">
-            <div class="block1">
-              <span class="line1">{{productInfo.sub_title}}</span>
-            </div>
-          </div>
-        </div>
-      </article>
-      <br />
-      <br />
-      <div class="activeS">
-        <span class="select">活动</span>
-        <van-icon name="ellipsis" class="select" />
-      </div>
-      <!-- 已经选中，配送费 -->
-      <div class="features">
-        <div class="selectS" id="search">
-          <span class="select">已选</span>
-          <span class="selContent">已选内容</span>
-          <van-icon name="ellipsis" class="select" @click="show = true" />
-        </div>
-        <div class="free">
-          <span class="select">运费</span>
-          <span class="freeTitle">包邮</span>
-          <van-icon name="ellipsis" class="select" @click="show = true" />
-        </div>
-      </div>
-
-      <div ref="proContent" class="proContent" id="content"></div>
-      <van-popup
-        class="bottomPup"
-        :lazy-render="false"
-        round
-        v-model="show"
-        closeable
-        close-icon="close"
-        position="bottom"
-        >
-        <div class="content">
-          <div class="head">
-            <!-- 展示图片 -->
-            <img
-              src="//s4.forcloudcdn.com/merchant/upload/a3b0474768f19d435e6c0ee95e0fcc48.jpg_220.jpg"
-              @click="showImgFlag = true"
-            />
-            <!-- 展示图片 -->
-            <div class="select-info">
-              <!-- 产品名 -->
-              <div class="van-ellipsis">这是一段最多显示一行的文字，多余的内容会被省略</div>
-              <!-- 产品名 -->
-              <div class="selected-attr">
-                <span>selected:</span>
-                <span v-text="typeTitle"></span>
-                <span v-text="colorTitle"></span>
-                <span v-text="sizeTitle"></span>
-              </div>
-              <div class="option-price">
-                <!-- 现价 -->
-                <span class="infoPrice">
-                  <span class="nowPrice"></span>
-                  <span>SAR</span>
-                </span>
-                <!-- 现价 -->
-                <del>
-                  <span class="allpricenodis oldPrice"></span>
-                  <span class="allpricenodis">SAR</span>
+        <article>
+          <div class="item-detail-info">
+            <div class="productInfo">
+              <div class="title">
+                <div>
+                  <span>CNY</span>
+                  <span>{{productInfo.price}}</span>
+                </div>
+                <del class="original-price">
+                  <span>CNY</span>
+                  <span>{{productInfo.old_price}}</span>
                 </del>
-                <!-- 原价 -->
+              </div>
+            </div>
+            <div class="item-ship-info">
+              <div class="block1">
+                <span class="line1">{{productInfo.sub_title}}</span>
               </div>
             </div>
           </div>
-          <div class="van-sku-body">
-            <div class="van-sku-group-container">
-              <div class="van-sku-row van-hairline--bottom">
-                <div class="van-sku-row__title productText">product</div>
-                <span
-                  class="van-sku-row__item typeId"
-                  ref="typeId"
-                  v-for="(item, index) in 3"
-                  :key="index"
-                  price="53.00"
-                  @click="productFun(index, 0)"
-                >
-                  <img
-                    src="https://img.yzcdn.cn/upload_files/2017/02/21/FjKTOxjVgnUuPmHJRdunvYky9OHP.jpg!100x100.jpg"
-                    class="van-sku-row__item-img"
-                  />
-                  <span class="van-sku-row__item-name typeName">type</span>
-                </span>
-              </div>
-            </div>
-            <div class="van-sku-stepper-stock">
-              <div class="van-sku-stepper-container">
-                <p>Quantity</p>
-                <div class="manuplator___3-16blr2">
-                  <button class="btn disabled___1oMwKMQL" @click="reduce">-</button>
-                  <input disabled="disabled" v-model="num" />
-                  <button class="btn last_btn" @click="addNum">+</button>
+        </article>
+        <div class="activeS">
+          <span class="select">活动</span>
+          <van-icon name="ellipsis" class="select" />
+        </div>
+        <!-- 已经选中，配送费 -->
+        <div class="features">
+          <div class="selectS" id="search">
+            <span class="select">已选</span>
+            <span class="selContent">已选内容</span>
+            <van-icon name="ellipsis" class="select" @click="show = true" />
+          </div>
+          <div class="free">
+            <span class="select">运费</span>
+            <span class="freeTitle">包邮</span>
+            <van-icon name="ellipsis" class="select" @click="show = true" />
+          </div>
+        </div>
+
+        <div ref="proContent" class="proContent" id="content"></div>
+        <van-popup
+          class="bottomPup"
+          :lazy-render="false"
+          round
+          v-model="show"
+          closeable
+          close-icon="close"
+          position="bottom"
+        >
+          <div class="content">
+            <div class="head">
+              <!-- 展示图片 -->
+              <img
+                src="//s4.forcloudcdn.com/merchant/upload/a3b0474768f19d435e6c0ee95e0fcc48.jpg_220.jpg"
+                @click="showImgFlag = true"
+              />
+              <!-- 展示图片 -->
+              <div class="select-info">
+                <!-- 产品名 -->
+                <div class="van-ellipsis">这是一段最多显示一行的文字，多余的内容会被省略</div>
+                <!-- 产品名 -->
+                <div class="selected-attr">
+                  <span>selected:</span>
+                  <span v-text="typeTitle"></span>
+                  <span v-text="colorTitle"></span>
+                  <span v-text="sizeTitle"></span>
+                </div>
+                <div class="option-price">
+                  <!-- 现价 -->
+                  <span class="infoPrice">
+                    <span class="nowPrice"></span>
+                    <span>SAR</span>
+                  </span>
+                  <!-- 现价 -->
+                  <del>
+                    <span class="allpricenodis oldPrice"></span>
+                    <span class="allpricenodis">SAR</span>
+                  </del>
+                  <!-- 原价 -->
                 </div>
               </div>
             </div>
+            <div class="van-sku-body">
+              <div class="van-sku-group-container">
+                <div class="van-sku-row van-hairline--bottom">
+                  <div class="van-sku-row__title productText">product</div>
+                  <span
+                    class="van-sku-row__item typeId"
+                    ref="typeId"
+                    v-for="(item, index) in 3"
+                    :key="index"
+                    price="53.00"
+                    @click="productFun(index, 0)"
+                  >
+                    <img
+                      src="https://img.yzcdn.cn/upload_files/2017/02/21/FjKTOxjVgnUuPmHJRdunvYky9OHP.jpg!100x100.jpg"
+                      class="van-sku-row__item-img"
+                    />
+                    <span class="van-sku-row__item-name typeName">type</span>
+                  </span>
+                </div>
+              </div>
+              <div class="van-sku-stepper-stock">
+                <div class="van-sku-stepper-container">
+                  <p>Quantity</p>
+                  <div class="manuplator___3-16blr2">
+                    <button class="btn disabled___1oMwKMQL" @click="reduce">-</button>
+                    <input disabled="disabled" v-model="num" />
+                    <button class="btn last_btn" @click="addNum">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 提交按钮开始 -->
+            <div class="commitBtn">
+              <van-goods-action-button type="warning" text="ADD TO BAG" @click="addCard" />
+            </div>
+            <!-- 提交按钮结束 -->
           </div>
-          <!-- 提交按钮开始 -->
-          <div class="commitBtn">
-            <van-goods-action-button type="warning" text="ADD TO BAG" @click="addCard" />
+        </van-popup>
+        <van-overlay :show="showImgFlag" @click="showImgFlag = false" class="overlayImg">
+          <div class="wrapper">
+            <img :src="itemImg" alt />
           </div>
-          <!-- 提交按钮结束 -->
-        </div>
-      </van-popup>
-      <van-overlay :show="showImgFlag" @click="showImgFlag = false" class="overlayImg">
-        <div class="wrapper">
-          <img :src="itemImg" alt />
-        </div>
-      </van-overlay>
-    </div>
-    <!-- 回顶部 -->
-    <div class="go-top" @click="goTop()" v-if="topShow">
-      <img src="../assets/img/timg.jpg" alt />
-    </div>
-    <footer>
-      <van-goods-action>
-        <van-goods-action-icon icon="cart-o" text="Cart" :badge="productNum" @click="goCar()" />
-        <van-goods-action-button type="warning" text="ADD TO BAG" @click="show = true" />
-      </van-goods-action>
-    </footer>
+        </van-overlay>
+      </div>
+      <!-- 回顶部 -->
+      <div class="go-top" @click="goTop" v-if="topShow">
+        <img src="../assets/img/timg.jpg" alt />
+      </div>
+      <footer>
+        <van-goods-action>
+          <van-goods-action-icon icon="cart-o" text="Cart" :badge="productNum" @click="goCar()" />
+          <van-goods-action-button type="warning" text="ADD TO BAG" @click="show = true" />
+        </van-goods-action>
+      </footer>
+    </ion-content>
   </div>
 </template>
 <script>
-// 
+//
 import { mapActions } from "vuex";
 
 export default {
@@ -184,10 +184,13 @@ export default {
       topShow: false,
       headTitle: [
         {
-          title: "Goods"
+          title: "商品"
         },
         {
-          title: "Recommend"
+          title: "详情"
+        },
+        {
+          title: "评论"
         }
       ],
       itemImg:
@@ -198,8 +201,7 @@ export default {
     };
   },
   methods: {
-
-    ...mapActions(['addGoods']),
+    ...mapActions(["addGoods"]),
     reduce() {
       this.num--;
     },
@@ -223,19 +225,9 @@ export default {
         this.changeType("sizeId", index);
       }
     },
-    onscroll() {
-      let scroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      if (scroll >= 300) {
-        this.topShow = true;
-      } else {
-        this.topShow = false;
-      }
-    },
     goTop() {
-      let scroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      document.documentElement.scrollTop = 0;
+      let content = document.querySelector("ion-content");
+      content.scrollToTop(400);
     },
     addCard() {
       this.show = false;
@@ -253,22 +245,50 @@ export default {
         picture: pro_pic,
         sellPrice: pro_price,
         pro_count: this.num,
-        selected: true,
+        selected: true
       };
 
-      this.addGoods(cartJson) 
+      this.addGoods(cartJson);
 
       this.productNum = this.$store.state.car.length;
     },
     goCar() {
       this.$router.push("/cart");
     },
+
+    presentActionSheet() {
+      return this.$ionic.actionSheetController
+        .create({
+          cssClass: "my-custom-class",
+          buttons: [
+            {
+              text: "Share",
+              icon: "share",
+              handler: () => {
+                console.log("Share clicked");
+              }
+            },
+            {
+              text: "Cancel",
+              icon: "close",
+              role: "cancel",
+              handler: () => {
+                console.log("Cancel clicked");
+              }
+            }
+          ]
+        })
+        .then(a => a.present());
+    },
     getIndex(index) {
       let item = this.$refs.topS;
       for (var i = 0; i < item.length; i++) {
-        item[i].style.borderBottom = "1px solid white";
+        item[i].style.borderBottom = "2px solid white";
+        item[i].style.color = "#666";
       }
-      item[index].style.borderBottom = "1px solid red";
+      item[index].style.borderBottom = "2px solid rgb(255,129,97)";
+      item[index].style.color = "rgb(255,129,97)";
+
       if (index == 0) {
         document.querySelector("#now").scrollIntoView(true);
       } else if (index == 1) {
@@ -282,8 +302,16 @@ export default {
     let that = this;
     that.productNum = that.$store.state.car.length;
 
-    console.log(that.$store.state.car.length);
-    window.addEventListener("scroll", this.onscroll);
+    var content = document.querySelector("ion-content");
+    content.scrollEvents = true;
+    content.addEventListener("ionScroll", ev => {
+      let flag = ev.detail.scrollTop;
+      if (flag >= 300) {
+        that.topShow = true;
+      } else {
+        that.topShow = false;
+      }
+    })
 
     this.$api.getData
       .getProductInfo(this.$route.query.id)
@@ -302,16 +330,14 @@ export default {
   header {
     display: flex;
     justify-content: space-around;
-    height: 44px;
+    height: 50px;
     font-size: 18px;
     background: white;
-    position: fixed;
     z-index: 10;
     width: 7.5rem;
     top: 0;
     i {
       width: 40px;
-      height: 44px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -327,18 +353,23 @@ export default {
         height: 43px;
         line-height: 43px;
         cursor: pointer;
+        color: #666;
         a {
           text-decoration: none;
           color: #333;
         }
       }
       li:nth-child(1) {
-        border-bottom: 1px solid red;
+        border-bottom: 2px solid rgb(255,129,97);
+        color: rgb(255,129,97);
       }
     }
   }
+  .ionContent {
+    height: calc(100vh - 100px);
+    width: 7.5rem;
+  }
   .infoContent {
-    margin-top: 44px;
     .activeS {
       border-radius: 5px 5px 0 0;
       background: #fff;
@@ -347,7 +378,6 @@ export default {
       display: flex;
       justify-content: space-between;
       position: relative;
-      margin-bottom: 15px;
       .select {
         font-size: 0.25rem;
         font-weight: 500;
@@ -356,10 +386,19 @@ export default {
       .selContent {
         flex: 1;
       }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 7.02rem;
+        border: 1px solid #f2f2f2;
+      }
     }
     section {
       .van-swipe {
         .van-swipe-item {
+          width: 7.5rem !important;
           img {
             width: 7.5rem;
             height: 7.5rem;
@@ -382,6 +421,7 @@ export default {
     }
     article {
       background: white;
+     color: #666;
       .item-detail-info {
         background-color: #fff;
         padding: 0.3rem 0.24rem 0.32rem;
@@ -392,7 +432,6 @@ export default {
           display: flex;
           line-height: 2;
           .original-price {
-            color: #999;
             margin: 0 0.14rem;
           }
         }
@@ -401,7 +440,6 @@ export default {
           .line1 {
             font-size: 0.3rem;
             font-weight: 600;
-            color: #333;
           }
         }
       }
@@ -410,6 +448,7 @@ export default {
       margin-bottom: 50px;
       width: 7.5rem;
       overflow: hidden;
+      padding: .24rem;
       .ssd-module {
         width: 7.5rem !important;
       }
@@ -506,6 +545,7 @@ export default {
       background: white;
       border-radius: 5px 5px 0 0;
       padding: 0 0.24rem;
+      color: #666;
       .selectS,
       .free {
         padding: 12px 0;

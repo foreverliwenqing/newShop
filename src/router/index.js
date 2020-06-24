@@ -48,6 +48,10 @@ export default new Router({
     {
       path: '/fullorder', 
       component: resolve => require(['@/components/fullorder'], resolve)
+    },
+    {
+      path: '/hello',
+      component: resolve => require(['@/components/HelloWorld'], resolve)
     }
   ]
 })

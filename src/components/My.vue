@@ -25,16 +25,21 @@
       <span>所有订单</span>
       <i class="iconfont iconyoubian"></i>
     </div>
+    <div class="myCard" @click="goAllorder()">
+      <i class="iconfont icondingdan"></i>
+      <span>所有订单</span>
+      <i class="iconfont iconyoubian"></i>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Center",
-  data(){
+  data() {
     return {
       loginText: "立即登录"
-    }
+    };
   },
   methods: {
     login() {
@@ -50,26 +55,30 @@ export default {
     goAllorder() {
       this.$router.push({
         path: "/allorder"
-      })
+      });
     }
   },
   mounted() {
-    if(localStorage.getItem("login")) {
+    if (localStorage.getItem("login")) {
       this.loginText = localStorage.getItem("login");
     }
   }
-
 };
 </script>
 
 <style lang="scss">
 .center-view {
   background: #f4f4f4;
+  width: 7.5rem;
   .avatar {
     text-align: center;
     height: 156px;
     padding-left: 22px;
-    background: url(https://assets.maizuo.com/h5/v5/public/app/img/bg.6837f67.png);
+    background: linear-gradient(
+      to right,
+      rgba(222, 157, 60, 0.28),
+      rgb(197, 150, 72)
+    );
     background-size: cover;
     display: -webkit-box;
     display: -ms-flexbox;

@@ -2,55 +2,91 @@
   <div class="addressList">
     <header>
       <div class="headerBox">
-        <i class="iconfont iconzuobian" @click="$router.back(-1)"></i>
+        <i class="iconfont iconzuobian" @click="goCar"></i>
         <span>AddressList</span>
       </div>
     </header>
-    <div class="list">
-      <van-address-list
-        v-model="chosenAddressId"
-        :list="addresList"
-        default-tag-text="默认"
-        @add="onAdd"
-        @edit="onEdit"
-        @select="choice"
-      />
-    </div>
+    <ion-content class="ionContent">
+      <div class="list">
+        <div class="van-address-list">
+          <van-radio-group v-model="radio">
+            <div class="van-address-item" v-for="(item, index) in addresList" :key="index">
+              <div class="van-cell van-cell--borderless">
+                <div class="van-cell__value van-cell__value--alone van-address-item__value">
+                  <van-radio :name="index" checked-color="#ee0a24" @click="onchoiceAddress(item)">
+                    <span class="van-radio__label">
+                      <div class="van-address-item__name">
+                        <span v-text="item.name"></span>
+                        <span v-text="item.phone"></span>
+                        <span class="van-tag van-tag--round van-tag--danger van-address-item__tag" v-if="item.default">默认</span>
+                      </div>
+                      <div class="van-address-item__address">
+                        <span v-text="item.province"></span>
+                        <span v-text="item.city"></span>
+                      </div>
+                    </span>
+                    <i class="van-icon van-icon-edit van-address-item__edit" @click="onEdit(item, $event)"></i>
+                  </van-radio>
+                </div>
+              </div>
+            </div>
+          </van-radio-group>
+          <div class="van-address-list__bottom" @click="onAdd">
+            <button
+              class="van-button van-button--danger van-button--normal van-button--block van-button--round van-address-list__add"
+            >
+              <div class="van-button__content">
+                <span class="van-button__text">新增地址</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </ion-content>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      chosenAddressId: "1",
       addresList: [],
-      addressFlag: false
+      radio: 0
     };
   },
   methods: {
     onAdd() {
       this.$router.push("/addressAdd");
     },
-    onEdit(item, index) {
-      item["index"] = index;
+    onEdit(item, e) {
+      e.stopPropagation ? e.stopPropagation() : (e.cancelBubble = true);
       this.$router.push({ path: "/addressAdd", query: item });
     },
-    choice(item, index) {
-      this.$router.push({ path: "/cart", query: item });
+    onchoiceAddress(item) {
+      this.Fun.set("choiceId", item._id)
+      this.$router.push("/cart");
+    },
+    goCar() {
+      this.$router.push("/cart");
     }
   },
   mounted() {
-    let flag = JSON.parse(localStorage.getItem("addList"));
-    if (flag && flag.length) {
-      this.addresList = JSON.parse(localStorage.getItem("addList"));
-    }
+    let that = this;
+    that.addresList = that.Fun.get("address") ? that.Fun.get("address") : [];
+
+    let flag = that.Fun.get("choiceId");
+
+    that.addresList.forEach((item, index) => {
+      if(item._id == flag) {
+        that.radio = index;
+      }
+    })
   }
 };
 </script>
 <style lang="scss">
 .addressList {
+  width: 7.5rem;
   header {
-    position: fixed;
     height: 55px;
     top: 0;
     width: 7.5rem;
@@ -78,12 +114,14 @@ export default {
       }
     }
   }
+  .ionContent {
+    height: calc(100vh - 100px);
+  }
   .list {
     box-sizing: border-box;
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh - 100px);
     padding-bottom: 20px;
     background: #f7f8fa;
-    margin-top: 55px;
     .van-address-list__bottom {
       width: 7.5rem;
       margin-left: calc(50% - 3.75rem);

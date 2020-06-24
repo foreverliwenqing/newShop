@@ -33,6 +33,19 @@ let Fun = {
       }
     }
     return sumprice;
+  },
+  // 保存在本地
+  get(key) {
+    return JSON.parse(localStorage.getItem(key));
+  },
+  set(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  },
+  removeAll(key) {
+    localStorage.removeItem(key);
+  },
+  text(){
+    console.log("测试，测试！！！")
   }
 }
 

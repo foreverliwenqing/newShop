@@ -1,38 +1,20 @@
 <template>
   <div class="userInfo">
-    <van-nav-bar
-      title="AddressEdit"
-      left-text
-      right-text
-      left-arrow
-      @click-left="onClickLeft"
-    />
+    <van-nav-bar title="AddressEdit" left-text right-text left-arrow @click-left="onClickLeft" />
     <div class="editContent">
       <div class="addressList">
         <van-field v-model="user.name" placeholder="请输入用户名" label="用户名" />
-        <van-field v-model="user.tel" placeholder="请输入手机号" type="tel" label="手机号" />
-        <van-field v-model="user.address" placeholder="请输入邮箱地址" type="tel" label="邮箱地址" />
-        <van-field
-          v-model="user.tel"
-          placeholder="请选择地区"
-          label="地区"
-          readonly
-          @click="changeCity()"
-        />
-        <van-field
-          v-model="user.address"
-          placeholder="请选择城市"
-          label="城市"
-          readonly
-          @click="areaShow = true"
-        />
+        <van-field v-model="user.phone" placeholder="请输入手机号" type="tel" label="手机号" />
+        <van-field v-model="user.email" placeholder="请输入邮箱地址" type="email" label="邮箱地址" />
+        <van-field v-model="user.province" placeholder="请选择地区" label="地区" readonly @click="changeCity()" />
+        <van-field v-model="user.city" placeholder="请选择城市" label="城市" readonly @click="areaShow = true" />
       </div>
       <div class="van-cell van-cell--center van-switch-cell van-address-edit__default moren">
         <div class="van-cell__title">
           <span>设为默认收货地址</span>
         </div>
         <div class="van-cell__value">
-          <van-switch v-model="user.isDefault" @input="onInput" />
+          <van-switch v-model="user.default" />
         </div>
       </div>
     </div>
@@ -90,48 +72,115 @@
   </div>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
+  name: "userInfo",
   data() {
     return {
-      user: {},
+      user: {
+        name: "",
+        phone: "",
+        email: "",
+        province: "",
+        city: "",
+        default: false
+      },
       stateShow: false,
       areaShow: false,
       indexList: [],
       arIndexList: [],
       list: [],
       areaList: [],
-      delFlag: false,
+      delFlag: false, //true为修改地址 false为添加地址
       checked: false,
-      localList: [],    //获取地址
+      stateList: {}
     };
   },
   methods: {
     onSave() {
-      if (!this.delFlag) {
-        // 添加地址
-        console.log(2);
-        for (var i in this.user) {
-          if (!this.user[i] && i != "isDefault") {
-            return false;
-          }
+      let index = 0;
+      for (var i in this.user) {
+        if (this.user[i] != "") {
+          index++;
         }
-        this.localList.push(this.user);
-        localStorage.setItem("addList", JSON.stringify(this.localList));
-        this.$router.push("/addressList");
+      }
+      if (index >= 5) {
+        if (this.delFlag) {
+          // 修改地址
+          if (this.user.default) {
+            this.receListAllFalse(); //清除默认地址
+          }
+
+          var address = this.Fun.get("address");
+          var fkey;
+
+          for (var i = 0; i < address.length; i++) {
+            if (this.user._id == address[i]._id) {
+              fkey = i;
+            }
+          }
+          this.addAddress();
+          address.splice(fkey, 1, this.user);
+
+          this.user["uptime"] = new Date().getTime();
+
+          this.Fun.set("address", address);
+        } else {
+          this.addAddress();
+        }
+      }
+      this.$router.push("/addressList");
+    },
+
+    //保存地址
+    addAddress() {
+      if (this.user.default) {
+        this.receListAllFalse(); //清除默认地址
+      }
+      var address = this.Fun.get("address");
+      this.user["addtime"] = new Date().getTime();
+      this.user["uptime"] = new Date().getTime();
+      this.user["_id"] =
+        this.generateReceId() + new Date().getTime().toString();
+
+      if (address && address.length > 0) {
+        address.push(this.user);
       } else {
-        console.log(this.user.index);
-        this.localList.splice(this.user.index, 1, this.user);
-        localStorage.setItem("addList", JSON.stringify(this.localList));
-        this.$router.push("/addressList");
+        address = [];
+        address.push(this.user);
+      }
+      this.Fun.set("address", address);
+    },
+
+    //将地址列表的默认地址全部改为false
+    receListAllFalse() {
+      var address = this.Fun.get("address");
+
+      if (address && address.length > 0) {
+        for (var i = 0; i < address.length; i++) {
+          address[i].default = false;
+        }
+
+        this.Fun.set("address", address);
       }
     },
-    onInput(checked) {
-      this.user.isDefault = checked;
-    },
+
     onDel() {
-      console.log(1);
+      var address = this.Fun.get("address"),
+        fkey;
+
+      for (var i = 0; i < address.length; i++) {
+        if (this.user._id == address[i]._id) {
+          fkey = i;
+        }
+      }
+
+      address.splice(fkey, 1);
+
+      this.Fun.set("address", address);
+      this.$router.push("/addressList");
     },
-    onClickLeft() { 
+    onClickLeft() {
       this.$router.push("/addressList");
     },
     changeCity() {
@@ -172,7 +221,8 @@ export default {
       };
     },
     van(e) {
-      this.city = e;
+      this.user.province = e;
+
       this.stateShow = false;
       this.state = "";
       this.stateShow = false;
@@ -184,29 +234,31 @@ export default {
       }
     },
     vanArea(e) {
-      this.state = e;
+      this.user.city = e;
       this.areaShow = false;
+    },
+    generateReceId() {
+      return Math.random()
+        .toString(36)
+        .substr(2, 4);
     }
   },
   mounted() {
     let that = this;
+    let stateList
     this.$api.getData.getCountry().then(res => {
       that.stateList = res.SA;
       that.indexList = that.getState(that.stateList).arr1;
       that.list = that.getState(that.stateList).arr2;
     });
-    if (JSON.stringify(this.$route.query) != "{}") {
-      that.delFlag = true;
-      that.user = this.$route.query;
-    }
 
-    // 获取地址
-    let falg = JSON.parse(localStorage.getItem("addList"));
-    if( falg && falg.length > 0 ) {
-      that.localList = JSON.parse(localStorage.getItem("addList"));
+    if (JSON.stringify(that.$route.query) != "{}") {
+      that.delFlag = true;  
+      that.user = that.$route.query;
     } else {
-      falg = []
+      that.delFlag = false;
     }
+    this.generateReceId();
   }
 };
 </script>

@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       tabbars: [
-        {
+        { 
           id: "home",
           name: "首页",
           icon: "iconfont iconshouyeshouye",
@@ -56,7 +56,7 @@ export default {
   z-index: 100;
   background: #fff;
   list-style: none;
-  height: 50px;
+  height: 1rem;
   border-top: 1px solid #f3f3f3;
   li {
     flex: 1;

@@ -5,7 +5,6 @@
         <span>购物车</span>
       </div>
     </header>
-    <div style="height: 44px"></div>
     <!-- 购物车内容添加 -->
     <div class="productList">
       <div class="list">
@@ -49,8 +48,11 @@
     >
       <van-icon name="location-o" />
       <div class="van-cell__value van-cell__value--alone van-contact-card__value">
-        <div>Street：{{ choiceAddress.address }}</div>
-        <div>Phone：{{ choiceAddress.tel }}</div>
+        <div>
+          Street：
+          <span v-text="choiceAddress.province + '·' + choiceAddress.city"></span>
+        </div>
+        <div>Phone：{{ choiceAddress.phone }}</div>
       </div>
       <i class="van-icon van-icon-arrow van-cell__right-icon"></i>
     </div>
@@ -65,7 +67,7 @@
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -80,7 +82,14 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['addNum', 'jianNum', 'select', 'selectAll', 'del', 'submit']),
+    ...mapActions([
+      "addNum",
+      "jianNum",
+      "select",
+      "selectAll",
+      "del",
+      "submit"
+    ]),
 
     onSubmit() {
       this.isLoading = true;
@@ -89,7 +98,7 @@ export default {
           this.submit();
           this.$router.push("/fullorder");
         } else {
-          alert("没有数据不能提交")
+          alert("没有数据不能提交");
         }
 
         this.isLoading = false;
@@ -99,7 +108,7 @@ export default {
 
     // 复选框
     toggleAll() {
-      this.selectAll()
+      this.selectAll();
     },
     // 选择单个
     onChange(index) {
@@ -111,8 +120,8 @@ export default {
       this.$router.push("/addressList");
     },
     onNum(index, id) {
-      if(index == 'add') {
-        this.addNum(id)
+      if (index == "add") {
+        this.addNum(id);
       } else {
         this.jianNum(id);
       }
@@ -124,22 +133,35 @@ export default {
     that.cartList = that.$store.getters.cartList;
     that.selectedAll = that.$store.state.all_selsect;
 
-    that.priceTotal = that.$store.getters.allMoney;   
+    that.priceTotal = that.$store.getters.allMoney;
+
+    let choiceId = that.Fun.get("choiceId");
+
+    let addressS = that.Fun.get("address") ? that.Fun.get("address") : [];
+
+    if (choiceId != undefined) {
+      that.addressFlag = true;
+      addressS.forEach(item => {
+        if (item._id == choiceId) {
+          that.choiceAddress = item;
+        }
+      });
+    }
   }
 };
 </script>
 <style lang="scss">
 .car {
   height: 100vh;
+  width: 7.5rem;
   header {
-    position: fixed;
-    height: 44px;
-    top: 0;
+    height: .8rem;
     width: 7.5rem;
     background: white;
     z-index: 10;
+    line-height: .8rem;
     .headerBox {
-      height: 44px;
+      height: .8rem;
       display: flex;
       align-items: center;
       span {
@@ -161,16 +183,18 @@ export default {
   }
   .productList {
     padding: 10px;
-    height: calc(100vh - 235px);
+    height: calc(100vh - 4rem);
     overflow: auto;
+    background: #f2f3f5;
     .list {
       .listCard {
         display: flex;
         padding-left: 10px;
         position: relative;
         padding-bottom: 10px;
-        box-shadow: 1px 11px 12px rgba(100, 101, 102, 0.08);
+        background: white;
         border-radius: 10px;
+        margin: .1rem;
         .shopImg {
           width: 60px;
           height: 60px;
@@ -188,6 +212,7 @@ export default {
           h4 {
             display: -webkit-box;
             overflow: hidden;
+            font-size: .3rem;
           }
           .shoprightbot {
             display: flex;
@@ -233,16 +258,22 @@ export default {
     padding: 0.2rem;
     color: #b8c0cc;
     width: 7.5rem;
-    bottom: 100px;
-    height: 70px;
+    bottom: 2rem;
+    height: 1.2rem;
     i {
       font-size: 23px;
     }
   }
   .van-submit-bar {
-    bottom: 50px;
+    bottom: 1rem;
     width: 7.5rem;
+    height: 1rem;
     left: calc(50% - 3.75rem);
+    display: flex;
+    align-items: center;
+    .van-submit-bar__bar {
+      width: 7.5rem;
+    }
   }
 }
 </style>
